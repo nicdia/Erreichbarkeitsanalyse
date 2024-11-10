@@ -1,66 +1,69 @@
 import geopandas
-import sqlalchemy
-import psycopg2
 import os
-import geoalchemy2
+import json
+from sqlalchemy import create_engine, text
 from dotenv import load_dotenv
+from util_fcts import connect2DB
 
-##########################################################################################################
-# these need to be configured
-db_schema = "außerschulBetreuungBildung"
-datasource = ""
-data_location  = "C:\\Master\\GeoinfoPrj_Sem1\\Rohdaten\\indikatoren_kids\\außerschuleBetreuungBildung"
-data_format = [".json", ".geojson"]
-#############################################################################################################
+# Konfigurationsdatei laden
+with open("config.json", "r") as file:
+    config = json.load(file)
 
+#######################################################################################
+def setup():
+    # Verbindung zur Datenbank herstellen
+    db_con = connect2DB()
+    data = config["geojson2localdb"]["data"]
+    config_settings = config["geojson2localdb"]["config"]
+    return (data, config_settings, db_con)
 
+def create_schema(data, db_con):
+    for schema in data.keys():
+        print(f"Erstelle Schema: {schema}")
+        try:
+            with db_con.connect() as connection:
+                # SQL-Anweisung zum Erstellen des Schemas
+                query = text(f"CREATE SCHEMA IF NOT EXISTS {schema};")
+                connection.execute(query)
+                print(f"Schema '{schema}' wurde erfolgreich erstellt.")
+        except Exception as e:
+            print(f"Fehler beim Erstellen des Schemas '{schema}': {e}")
 
-load_dotenv()
+def create_table_name(data, config):
+    file_names_and_path_and_schema = []
+    file_formats = config["data_format"]
+    for schema, folder_path in data.items():
+        for filename in os.listdir(folder_path):
+            for file_format in file_formats:
+                if filename.endswith(file_format):
+                    absolute_path = os.path.join(folder_path, filename)
+                    name_without_extension = os.path.splitext(filename)[0]
+                    upload_infos = {
+                        "name": name_without_extension,
+                        "path": absolute_path,
+                        "schema": schema
+                    }
+                    file_names_and_path_and_schema.append(upload_infos)
+    return file_names_and_path_and_schema
 
-# Zugangsdaten aus Umgebungsvariablen laden
-DB_HOST = os.getenv("DB_HOST")
-DB_NAME = os.getenv("DB_NAME")
-DB_USER = os.getenv("DB_USER")
-DB_PASSWORD = os.getenv("DB_PASSWORD")
-DB_PORT = os.getenv("DB_PORT")
+def upload2db(upload_config, db_con):
+    for config in upload_config:
+        gdf = geopandas.read_file(config["path"])
+        gdf.to_postgis(name=config["name"], con=db_con, schema=config["schema"])
+        print(f"The file '{config['name']}' was imported into the database.")
 
-#establish db connection
-engine = sqlalchemy.create_engine(f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}")
-try:
-    connection = engine.connect()
-    print("Verbindung erfolgreich hergestellt!")
-    connection.close()  # Verbindung schließen
-except Exception as e:
-    print("Fehler beim Herstellen der Verbindung:", e)
-# access the geojsons
-files_with_extension = os.listdir(data_location)
-files = []
-for file_with in files_with_extension:
-    for file_ending in data_format:
-        if file_with.endswith(file_ending):
-            file_without = os.path.splitext(file_with)
-            files.append(file_without[0])
-#print (files)
-# abs_paths = [os.path.abspath(os.path.join(os.path.dirname(file), os.pardir, os.pardir, origin_data_folder, file)) for file in files_with_extension]
-abs_paths = [os.path.join(data_location, file) for file in files_with_extension]
-#print (abs_paths)
-tpl_list = []
-file_count = 0
-for file in files:
-    tpl = (file, abs_paths[file_count])
-    tpl_list.append(tpl)
-    file_count += 1
+def main_geojson2localdb():
+    # Setup und Initialisierung
+    data, config_settings, db_con = setup()
+    
+    # Schema erstellen
+    create_schema(data, db_con)
+    
+    # Tabellennamen und Pfade erzeugen
+    table_names_and_paths_and_schema = create_table_name(data, config_settings)
+    
+    # Dateien in die Datenbank laden
+    upload2db(upload_config=table_names_and_paths_and_schema, db_con=db_con)
 
-file_and_abspath = { tpl[0] : tpl[1] for tpl in tpl_list }
-print (file_and_abspath)
-
-
-# convert geojson to geopandas frame
-for file, abspath in file_and_abspath.items():
-    gdf = geopandas.read_file(abspath)
-    # import into db
-    gdf.to_postgis(name= file + datasource, con= engine, schema = db_schema)
-    print (f"the geojson with the name {file} was imported into the db.")
-
-print ("Script finished.")
-
+# Hauptfunktion aufrufen
+main_geojson2localdb()

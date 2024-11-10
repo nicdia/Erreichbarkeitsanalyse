@@ -1,80 +1,49 @@
-import psycopg2
+from util_fcts import connect2DB
+from sqlalchemy import engine, text
+import json
+
+with open("config.json", "r") as file:
+    config = json.load(file)
+#############################################################
+def create_queries (config):
+    queries = []
+    for schema, tables in config["change_crs"].items():
+        for table_name, geom_field in tables.items():
+            query1 = f'''
+        ALTER TABLE {schema}."{table_name}"
+        ALTER COLUMN {geom_field} TYPE Geometry(Geometry, 25832)
+        USING ST_SetSRID({geom_field}, 25832);
+        '''
+            query2 = f'''
+        UPDATE {schema}."{table_name}"
+        SET {geom_field} = ST_Transform({geom_field}, 25832);
+        '''
+            qry_tpl = (table_name, query1, query2)
+            queries.append(qry_tpl)
+    return queries
 
 
-
-########################################################
-# adjust these vars here
-schema = "flurstuecke"
-tables = [
-    "flurstueck_alkis",
-    "gebaeude_alkis"
-]  
-geom_field = "geometry"
-#######################################################
-
-
-
-#####################################################
-DB_HOST = "sem1erreichbarkeitsanalyse.clgy8k22qvp0.eu-central-1.rds.amazonaws.com"
-DB_NAME = "stadt15min"
-DB_USER = "postgres"
-DB_PASSWORD = "jochenschiewe"
-DB_PORT = "5432"
-#######################################################
-
-
-########################################################################################################
-queries = []
-for table in tables:
-    qry1 = f'''
-    ALTER TABLE {schema}."{table}"
-    ALTER COLUMN {geom_field} TYPE Geometry(Geometry, 25832)
-    USING ST_SetSRID({geom_field}, 25832);
-    '''
-    qry2 = f'''
-    UPDATE {schema}."{table}"
-    SET {geom_field} = ST_Transform({geom_field}, 25832);
-    '''
-    qry_tpl = (qry1, qry2)
-    queries.append(qry_tpl)
-
-
-def establish_db_connection():
+def execute_queries(engine, queries):
     try:
-        connection = psycopg2.connect(
-            host=DB_HOST,
-            database=DB_NAME,
-            user=DB_USER,
-            password=DB_PASSWORD,
-            port=DB_PORT
-        )
-        cursor = connection.cursor()
-        print("Connection established.")
-        return connection, cursor
-    except (Exception, psycopg2.DatabaseError) as error:
+        with engine.connect() as connection:
+            with connection.begin():  # Transaktionsblock öffnen
+                for table_name, qry1, qry2 in queries:
+                    connection.execute(text(qry1))
+                    print(f"ALTER TABLE query executed successfully on {table_name} ")
+                    connection.execute(text(qry2))
+                    print(f"UPDATE query executed on successfully {table_name}")
+                print(f"All queries executed and changes committed in table {table_name}.")
+    except Exception as error:
         print(f"Fehler: {error}")
-        return None, None
 
-def execute_queries(queries, cursor, connection):
+
+def main_change_crs():
     try:
-        for qry in queries:
-            cursor.execute(qry[0])
-            print("ALTER TABLE query executed.")
-            cursor.execute(qry[1])
-            print("UPDATE query executed.")
-        connection.commit()  # Änderungen speichern
-        print("All queries executed and changes committed.")
-    except (Exception, psycopg2.DatabaseError) as error:
-        print(f"Fehler: {error}")
-        connection.rollback()  # Rollback bei Fehlern
-        print("Transaction rolled back.")
+        engine = connect2DB()
+        queries = create_queries(config)
+        execute_queries(engine, queries )
+    except Exception as error:
+        print ("Error in change_crs:", error)
 
-def main():
-    connection, db_cursor = establish_db_connection()
-    if db_cursor:
-        execute_queries(queries=queries, cursor=db_cursor, connection=connection)
-        db_cursor.close()
-        connection.close()
-        print("Connection closed.")
 
-main()
+main_change_crs()
