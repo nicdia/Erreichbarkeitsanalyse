@@ -6,24 +6,29 @@ import geoalchemy2
 
 ##########################################################################################################
 # these need to be configured
-db_schema = "bezirksgrenzen_gemarkungen"
+db_schema = "außerschulBetreuungBildung"
 datasource = ""
-data_location  = "C:\\Master\\GeoinfoPrj_Sem1\\Rohdaten\\alkis"
+data_location  = "C:\\Master\\GeoinfoPrj_Sem1\\Rohdaten\\indikatoren_kids\\außerschuleBetreuungBildung"
 data_format = [".json", ".geojson"]
 #############################################################################################################
 
 
 
 # default values, do not change
-DB_HOST = "sem1erreichbarkeitsanalyse.clgy8k22qvp0.eu-central-1.rds.amazonaws.com"
-DB_NAME = "stadt15min"
+DB_HOST = "localhost"
+DB_NAME = "erreichbarkeitsanalyse"
 DB_USER= "postgres"
-DB_PASSWORD = "jochenschiewe"
-DB_PORT = "5432"
+DB_PASSWORD = "dia"
+DB_PORT = "5433"
 
-# establish db connection
+#establish db connection
 engine = sqlalchemy.create_engine(f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}")
-
+try:
+    connection = engine.connect()
+    print("Verbindung erfolgreich hergestellt!")
+    connection.close()  # Verbindung schließen
+except Exception as e:
+    print("Fehler beim Herstellen der Verbindung:", e)
 # access the geojsons
 files_with_extension = os.listdir(data_location)
 files = []
