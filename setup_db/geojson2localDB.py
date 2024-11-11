@@ -2,21 +2,26 @@ import geopandas
 import os
 import json
 from sqlalchemy import create_engine, text
-from ..misc.util_fcts import connect2DB
+from ..misc.util_fcts import setup
 
-# Konfigurationsdatei laden
-with open("config_setup_db.json", "r") as file:
-    config = json.load(file)
+
 
 #######################################################################################
-def setup():
-    # Verbindung zur Datenbank herstellen
-    db_con = connect2DB()
+
+def handle_config_settings(config):
     data = config["geojson2localdb"]["data"]
     config_settings = config["geojson2localdb"]["config"]
-    return (data, config_settings, db_con)
+    return (data, config_settings)
 
 def create_schema(data, db_con):
+    """
+    Erstellt die angegebenen Schemata in der Datenbank, falls sie noch nicht existieren.
+
+    Parameters:
+    data (dict): Dict mit Schema-Namen als Key und ordnerpfad als Value.
+    db_con (sqlalchemy.engine.Engine): Verbindungsobjekt zur Datenbank
+    """
+    
     for schema in data.keys():
         print(f"Erstelle Schema: {schema}")
         try:
@@ -30,6 +35,19 @@ def create_schema(data, db_con):
             print(f"Fehler beim Erstellen des Schemas '{schema}': {e}")
 
 def create_table_name(data, config):
+    """
+    Erstellt eine Liste von Dictionaries, die die Dateienamen und den Pfad
+    zu den Dateien in den Datenordnern enthalten, die fuer die
+    Datenimportarbeiten verwendet werden.
+
+    Parameters:
+    data (dict): Dict mit Schema-Namen als Key und ordnerpfad als Value.
+    config (dict): Dict mit Konfigurationseinstellungen fuer geojson2localdb
+
+    Returns:
+    list: Liste von Dictionaries, die die Dateienamen, den Pfad und
+          das Schema der zu importierenden Dateien enthalten.
+    """
     file_names_and_path_and_schema = []
     file_formats = config["data_format"]
     for schema, folder_path in data.items():
@@ -47,15 +65,37 @@ def create_table_name(data, config):
     return file_names_and_path_and_schema
 
 def upload2db(upload_config, db_con):
+    """
+    Importiert die GeoJSON-Dateien in die Datenbank
+
+    Parameters:
+    upload_config (list of dict): Liste von Dictionaries, die die Dateienamen, den Pfad und
+                                  das Schema der zu importierenden Dateien enthalten.
+    db_con (sqlalchemy.engine.Engine): Eine SQLAlchemy-Engine-Instanz
+
+    Returns:
+    None
+    """
     for config in upload_config:
         gdf = geopandas.read_file(config["path"])
         gdf.to_postgis(name=config["name"], con=db_con, schema=config["schema"])
         print(f"The file '{config['name']}' was imported into the database.")
 
 def main_geojson2localdb():
-    # Setup und Initialisierung
-    data, config_settings, db_con = setup()
-    
+
+    #data, config_settings, db_con = setup()
+    """
+    Executes the geojson2localDB script.
+
+    The script imports GeoJSON files specified in the configuration file
+    into the database.
+
+    Returns:
+    list of dict: A list of dictionaries containing the table names, paths and
+                  schemas of the imported tables.
+    """
+    db_con, config = setup("config_setup_db.json")
+    data, config_settings = handle_config_settings(config)
     # Schema erstellen
     create_schema(data, db_con)
     

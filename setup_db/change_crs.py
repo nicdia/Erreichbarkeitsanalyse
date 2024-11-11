@@ -1,10 +1,25 @@
-from ..misc.util_fcts import connect2DB, get_config, get_logging
+from ..misc.util_fcts import setup, get_logging
 from sqlalchemy import engine, text
 
 
 
 #############################################################
 def create_queries (geom_field, data):
+    
+    """
+    Generates a list of SQL queries to change the coordinate reference system (CRS)
+    of geometry columns in specified database tables.
+
+    Parameters:
+    geom_field (str): The name of the geometry column to be altered in the tables.
+    data (list of dict): A list of configurations, where each configuration contains 
+                         'schema' and 'name' keys representing the schema and table name.
+
+    Returns:
+    list of tuples: Each tuple contains the table name and two SQL queries. The first query 
+                    alters the geometry column to set its SRID to 25832, and the second query 
+                    transforms the geometry to the new CRS.
+    """
     queries = []
     for config in data:
         schema = config.get("schema")
@@ -24,6 +39,20 @@ def create_queries (geom_field, data):
 
 
 def execute_queries(engine, queries, logger):
+    """
+    Executes a list of SQL queries to change the coordinate reference system (CRS)
+    of geometry columns in specified database tables.
+
+    Parameters:
+    engine (sqlalchemy.engine.Engine): A SQLAlchemy engine object.
+    queries (list of tuples): A list of tuples, where each tuple contains the table name and two SQL queries.
+                              The first query alters the geometry column to set its SRID to 25832, and the second query
+                              transforms the geometry to the new CRS.
+    logger (logging.Logger): A logger object to log any errors that occur during query execution.
+
+    Returns:
+    None
+    """
     try:
         with engine.connect() as connection:
             with connection.begin():  # Open a transaction block
@@ -52,11 +81,10 @@ def execute_queries(engine, queries, logger):
 
 def main_change_crs(geojson2localdb_data):
     try:
-        engine = connect2DB()  
-        configJSON = get_config()
+        db_con, config = setup("config_setup_db.json")
         logger = get_logging()  
-        queries = create_queries(geom_field=configJSON["change_crs"]["geom_field"], data=geojson2localdb_data)
-        execute_queries(engine, queries, logger)
+        queries = create_queries(geom_field=config["change_crs"]["geom_field"], data=geojson2localdb_data)
+        execute_queries(db_con, queries, logger)
     except Exception as error:
         print("Error in change_crs:", error)
         logger.error(f"Error in change_crs: {error}")

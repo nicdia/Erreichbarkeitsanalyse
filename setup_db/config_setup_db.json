@@ -18,6 +18,5 @@
   },
   "change_crs": {
     "geom_field": "geometry"
-  },
-  "table_processing": ""
+  }
 }

@@ -1,0 +1,12 @@
+{
+  "table_processing": {
+    "attribute_filtering": {
+      "table1": {
+        "field1": "value1"
+      }
+    },
+    "union_tables": {
+      "schema1": ["table1", "table2"]
+    }
+  }
+}
