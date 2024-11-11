@@ -1,3 +1,7 @@
+GetData:
+
+1. not started yet: Google API abfragen für Arztdaten
+
 SetupDB:
 
 1. Done: geojson2localDB --> Pfade angeben und files werden dann in tabellen + schemas hochgeladen
@@ -6,9 +10,10 @@ SetupDB:
 
 Data Processing:
 
-1.  Work in Progress: attribute_filtering --> filtert Tabellen basierend auf einem Wert
-2.  Work in Progress: union_data --> union operation auf ausgewählte tabellen
-3.  not started yet: spatial_filtering --> macht den spatial join mit alkis daten
+1.  Done: attribute_filtering --> filtert Tabellen basierend auf einem Wert
+2.  not started yet: field_filtering --> filtert nur relevante spalten heraus
+3.  Work in Progress: union_data --> union operation auf ausgewählte tabellen
+4.  not started yet: spatial_filtering --> macht den spatial join mit alkis daten
 
 Data Analysis:
 
@@ -19,7 +24,3 @@ Misc:
 short_filename --> passt den Namen von geojson files an
 unpackzip --> entpackt zip files
 util_fcts --> hilfsfunktionen, die die Umgebung einrichten
-
-noch ToDo:
-
-Arzt-Daten von Google maps api ziehen, sind nicht vorhanden
