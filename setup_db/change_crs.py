@@ -1,4 +1,4 @@
-from ..misc.util_fcts import setup, get_logging
+from misc.util_fcts import setup, get_logging
 from sqlalchemy import engine, text
 
 

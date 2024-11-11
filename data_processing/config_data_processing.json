@@ -1,12 +1,22 @@
 {
   "table_processing": {
     "attribute_filtering": {
-      "table1": {
-        "field1": "value1"
+      "schema1": {
+        "table1": {
+          "attribute": "column1",
+          "value": "value1",
+          "new_table_name": "filtered_table1"
+        },
+        "table2": {
+          "attribute": "column2",
+          "value": "value2",
+          "new_table_name": "filtered_table2"
+        }
       }
-    },
-    "union_tables": {
-      "schema1": ["table1", "table2"]
     }
-  }
+  },
+  "union_data": {
+    "schema1": ["table1", "table2"]
+  },
+  "join_with_alkis": {}
 }

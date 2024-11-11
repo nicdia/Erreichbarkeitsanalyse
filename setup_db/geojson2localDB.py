@@ -2,7 +2,7 @@ import geopandas
 import os
 import json
 from sqlalchemy import create_engine, text
-from ..misc.util_fcts import setup
+from misc.util_fcts import setup
 
 
 

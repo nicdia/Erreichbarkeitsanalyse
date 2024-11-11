@@ -1,53 +1,35 @@
-from sqlalchemy import create_engine, Table, text, select, union_all
+from sqlalchemy import text
 from sqlalchemy.exc import SQLAlchemyError
-from dotenv import load_dotenv
-import os
-import psycopg2
-from ..misc.util_fcts import setup, get_logging
 
-def handle_config_settings(config):
+def handle_conf_attrfilter(config):
+    attribute_filtering = config["table_processing"]["attribute_filtering"]
+    return attribute_filtering
 
 
+def filter_and_create_table(filter_settings, db_con):
+    required_keys = ["attribute", "value", "new_table_name"]
 
-
-def filter_and_create_table_sqlalchemy(schema, table, attribute, value, new_table_name, db_con):    
-    try:
-        query = f"""
-        CREATE TABLE {schema}.{new_table_name} AS
-        SELECT * FROM {schema}.{table}
-        WHERE {attribute} = :value
-        """
-
-        with db_con.connect() as conn:
-            conn.execute(text(query), {"value": value})
-            conn.commit()
-        
-        print(f"Neue Tabelle '{new_table_name}' wurde erfolgreich erstellt.")
-    
-    except SQLAlchemyError as e:
-        print(f"Ein Fehler ist aufgetreten: {e}")
-
-def union_tables_and_create_table(schema, table_names, new_table_name, db_con):
-    try:
-        with db_con.connect() as conn:
-            union_queries = []
-            for table_name in table_names:
-                table = Table(table_name, autoload_with=db_con)
-                query = select([table])
-                union_queries.append(query)
+    for schema, table_dict in filter_settings.items():
+        for table_name, config in table_dict.items():
+            if not all(key in config and config[key] for key in required_keys):
+                print(f"Warnung: '{table_name}' in Schema '{schema}' übersprungen, da notwendige Konfiguration fehlt oder leer ist.")
+                continue  
+            try:
+                query = f"""
+                CREATE TABLE {schema}.{config["new_table_name"]} AS
+                SELECT * FROM {schema}.{table_name}
+                WHERE {config["attribute"]} = :value
+                """
+                
+                with db_con.connect() as conn:
+                    conn.execute(text(query), {"value": config["value"]})
+                    conn.commit()
+                
+                print(f"Neue Tabelle '{config['new_table_name']}' wurde erfolgreich erstellt.")
             
-            union_query = union_all(*union_queries)
+            except SQLAlchemyError as e:
+                print(f"Ein Fehler ist aufgetreten bei Tabelle '{config['new_table_name']}': {e}")
 
-            create_query = f"CREATE TABLE {schema}.{new_table_name} AS {union_query}"
-            conn.execute(text(create_query))
-            conn.commit()
-            
-            print(f"Neue Tabelle '{new_table_name}' mit zusammengeführten Daten wurde erfolgreich erstellt.")
-    
-    except SQLAlchemyError as e:
-        print(f"Ein Fehler ist aufgetreten: {e}")
 
-def main_attribute_filtering():
-    db_con, config = setup("config_data_processing.json")
-    data = handle_config_settings(config)
-    logger = get_logging()
+
+
