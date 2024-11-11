@@ -1,16 +1,66 @@
 {
   "table_processing": {
     "attribute_filtering": {
-      "schema1": {
-        "table1": {
-          "attribute": "column1",
-          "value": "value1",
-          "new_table_name": "filtered_table1"
+      "ausserschulangebote": {
+        "bauspielplatz_meta": {
+          "attribute": "kinder_6_bis_unter_10_jahre",
+          "value": "Ja",
+          "new_table_name": "bauspielplatz_kids_6_10"
         },
-        "table2": {
-          "attribute": "column2",
-          "value": "value2",
-          "new_table_name": "filtered_table2"
+        "freizeitprogramm_junge_menschen_meta": {
+          "attribute": "kinder_6_bis_unter_10_jahre",
+          "value": "Ja",
+          "new_table_name": "okja_freizeitprogramm_6_10"
+        },
+        "haus_der_jugend_meta": {
+          "attribute": "kinder_6_bis_unter_10_jahre",
+          "value": "Ja",
+          "new_table_name": "haus_d_jugend_6_10"
+        },
+        "jugendangebot_stadtteil_kulturzentrum_meta": {
+          "attribute": "kinder_6_bis_unter_10_jahre",
+          "value": "Ja",
+          "new_table_name": "jugendangebot_6_10"
+        },
+        "jugendcafe_meta": {
+          "attribute": "kinder_6_bis_unter_10_jahre",
+          "value": "Ja",
+          "new_table_name": "jugendcafe_6_10"
+        },
+        "jugendklub_meta": {
+          "attribute": "kinder_6_bis_unter_10_jahre",
+          "value": "Ja",
+          "new_table_name": "jugendklub_6_10"
+        },
+        "jugendverband_meta": {
+          "attribute": "kinder_6_bis_unter_10_jahre",
+          "value": "Ja",
+          "new_table_name": "jugendverband_6_10"
+        },
+        "kinderangebot_stadtteil_kulturzentrum_meta": {
+          "attribute": "kinder_6_bis_unter_10_jahre",
+          "value": "Ja",
+          "new_table_name": "kinderangebot_kulturzentrum_6_10"
+        },
+        "kindertreff_meta": {
+          "attribute": "kinder_6_bis_unter_10_jahre",
+          "value": "Ja",
+          "new_table_name": "kindertreff_6_10"
+        },
+        "spielhaus_meta": {
+          "attribute": "kinder_6_bis_unter_10_jahre",
+          "value": "Ja",
+          "new_table_name": "spielhaus_6_10"
+        },
+        "spielmobil_meta": {
+          "attribute": "kinder_6_bis_unter_10_jahre",
+          "value": "Ja",
+          "new_table_name": "spielmobil_6_10"
+        },
+        "unterstuetzung_einrichtungsangebote_meta": {
+          "attribute": "kinder_6_bis_unter_10_jahre",
+          "value": "Ja",
+          "new_table_name": "support_einrichtungsangebote_6_10"
         }
       }
     }
@@ -18,5 +68,7 @@
   "union_data": {
     "schema1": ["table1", "table2"]
   },
-  "join_with_alkis": {}
+  "join_with_alkis": {
+    "indicator_table1": "alkis_data"
+  }
 }
