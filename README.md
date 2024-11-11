@@ -19,3 +19,7 @@ Misc:
 short_filename --> passt den Namen von geojson files an
 unpackzip --> entpackt zip files
 util_fcts --> hilfsfunktionen, die die Umgebung einrichten
+
+noch ToDo:
+
+Arzt-Daten von Google maps api ziehen, sind nicht vorhanden

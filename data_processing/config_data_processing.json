@@ -62,13 +62,14 @@
           "value": "Ja",
           "new_table_name": "support_einrichtungsangebote_6_10"
         }
+      },
+      "schools": {
+        "staatliche_schulen_meta": {
+          "attribute": "kapitelbezeichnung",
+          "value": "Grundschulen",
+          "new_table_name": "grundschulen"
+        }
       }
     }
-  },
-  "union_data": {
-    "schema1": ["table1", "table2"]
-  },
-  "join_with_alkis": {
-    "indicator_table1": "alkis_data"
   }
 }
