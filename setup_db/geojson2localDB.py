@@ -2,11 +2,10 @@ import geopandas
 import os
 import json
 from sqlalchemy import create_engine, text
-from dotenv import load_dotenv
-from util_fcts import connect2DB
+from ..misc.util_fcts import connect2DB
 
 # Konfigurationsdatei laden
-with open("config.json", "r") as file:
+with open("config_setup_db.json", "r") as file:
     config = json.load(file)
 
 #######################################################################################
@@ -21,7 +20,8 @@ def create_schema(data, db_con):
     for schema in data.keys():
         print(f"Erstelle Schema: {schema}")
         try:
-            with db_con.connect() as connection:
+            # Using a transaction to ensure the schema creation is committed
+            with db_con.begin() as connection:
                 # SQL-Anweisung zum Erstellen des Schemas
                 query = text(f"CREATE SCHEMA IF NOT EXISTS {schema};")
                 connection.execute(query)
@@ -65,5 +65,4 @@ def main_geojson2localdb():
     # Dateien in die Datenbank laden
     upload2db(upload_config=table_names_and_paths_and_schema, db_con=db_con)
 
-# Hauptfunktion aufrufen
-main_geojson2localdb()
+    return table_names_and_paths_and_schema

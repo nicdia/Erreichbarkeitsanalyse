@@ -1,6 +1,8 @@
 from dotenv import load_dotenv
 import os
 import sqlalchemy
+import json
+import logging
 
 def get_env():
     load_dotenv()
@@ -16,3 +18,15 @@ def connect2DB():
     params = get_env()
     engine = sqlalchemy.create_engine(f"postgresql://{params[0]}:{params[1]}@{params[2]}:{params[3]}/{params[4]}")
     return engine
+
+def get_config():
+    with open("config.json", "r") as file:
+        config = json.load(file)
+    
+    return config
+
+def get_logging():
+    logging.basicConfig(filename='query_errors.log', level=logging.ERROR,
+                        format='%(asctime)s - %(levelname)s - %(message)s')
+    logger = logging.getLogger(__name__)
+    return logger

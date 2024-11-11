@@ -1,0 +1,23 @@
+{
+  "geojson2localdb": {
+    "config": {
+      "data_format": [".json", ".geojson"]
+    },
+    "data": {
+      "ausserschulangebote": "C:\\Master\\GeoinfoPrj_Sem1\\Rohdaten\\indikatoren_kids\\ausserschuleBetreuungBildung",
+      "bezirksgrenzen_gemarkungen": "C:\\Master\\GeoinfoPrj_Sem1\\Rohdaten\\alkis",
+      "flurstuecke": "C:\\Master\\GeoinfoPrj_Sem1\\Rohdaten\\flurstuecke",
+      "mediallg": "C:\\Master\\GeoinfoPrj_Sem1\\Rohdaten\\indikatoren_kids\\medizinischeVersorgung",
+      "medispez": "C:\\Master\\GeoinfoPrj_Sem1\\Rohdaten\\indikatoren_kids\\medizinischeVersorgung",
+      "natuererfahrungen": "C:\\Master\\GeoinfoPrj_Sem1\\Rohdaten\\indikatoren_kids\\naturerfahrung",
+      "parks": "C:\\Master\\GeoinfoPrj_Sem1\\Rohdaten\\indikatoren_kids\\gruenflaechen",
+      "schools": "C:\\Master\\GeoinfoPrj_Sem1\\Rohdaten\\indikatoren_kids\\grundschulem",
+      "spielflaechen": "C:\\Master\\GeoinfoPrj_Sem1\\Rohdaten\\indikatoren_kids\\oefftlSpielflaechen",
+      "sporthobbies": "C:\\Master\\GeoinfoPrj_Sem1\\Rohdaten\\indikatoren_kids\\sportlicheHobbies"
+    }
+  },
+  "change_crs": {
+    "geom_field": "geometry"
+  },
+  "table_processing": ""
+}
