@@ -38,3 +38,4 @@ def add_column_based_on_table_name(db_con):
     
     except SQLAlchemyError as e:
         print(f"Ein Fehler ist aufgetreten: {e}")
+

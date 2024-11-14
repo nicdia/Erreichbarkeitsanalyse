@@ -70,6 +70,16 @@
           "new_table_name": "grundschulen"
         }
       }
+    },
+    "join_with_alkis": {
+      "mediallg": "gebaeude_alkis",
+      "medispez": "gebaeude_alkis",
+      "natuererfahrungen": "flurstueck_alkis",
+      "parks": "flurstueck_alkis",
+      "schools": "gebaeude_alkis",
+      "spielflaechen": "flurstueck_alkis",
+      "sporthobbies": "flurstueck_alkis",
+      "ausserschulangebote": "flurstueck_alkis"
     }
   }
 }

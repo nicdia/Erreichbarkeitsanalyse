@@ -1,5 +1,5 @@
-from misc.util_fcts import setup, get_logging
-from sqlalchemy import engine, text
+from util_fcts import connect2DB, get_logging
+from sqlalchemy import  text
 
 
 
@@ -38,7 +38,7 @@ def create_queries (geom_field, data):
     return queries
 
 
-def execute_queries(engine, queries, logger):
+def execute_queries(engine, queries):
     """
     Executes a list of SQL queries to change the coordinate reference system (CRS)
     of geometry columns in specified database tables.
@@ -63,7 +63,7 @@ def execute_queries(engine, queries, logger):
                     except Exception as e:
                         error_message = f"Failed to execute ALTER TABLE on {table_name}: {e}"
                         print(error_message)
-                        logger.error(error_message)  # Log the error
+
 
                     try:
                         connection.execute(text(qry2))
@@ -71,20 +71,18 @@ def execute_queries(engine, queries, logger):
                     except Exception as e:
                         error_message = f"Failed to execute UPDATE on {table_name}: {e}"
                         print(error_message)
-                        logger.error(error_message)  # Log the error
+
 
                 print("All queries executed and changes committed.")
     except Exception as error:
         print(f"Transaction Error: {error}")
-        logger.error(f"Transaction Error: {error}")
 
 
-def main_change_crs(geojson2localdb_data):
+
+def main_change_crs(geojson2localdb_data, config):
     try:
-        db_con, config = setup("config_setup_db.json")
-        logger = get_logging()  
+        db_con= connect2DB()
         queries = create_queries(geom_field=config["change_crs"]["geom_field"], data=geojson2localdb_data)
-        execute_queries(db_con, queries, logger)
+        execute_queries(db_con, queries)
     except Exception as error:
         print("Error in change_crs:", error)
-        logger.error(f"Error in change_crs: {error}")

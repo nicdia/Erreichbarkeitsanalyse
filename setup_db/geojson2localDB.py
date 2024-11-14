@@ -2,7 +2,7 @@ import geopandas
 import os
 import json
 from sqlalchemy import create_engine, text
-from misc.util_fcts import setup
+from util_fcts import setup
 
 
 
@@ -81,7 +81,7 @@ def upload2db(upload_config, db_con):
         gdf.to_postgis(name=config["name"], con=db_con, schema=config["schema"])
         print(f"The file '{config['name']}' was imported into the database.")
 
-def main_geojson2localdb():
+def main_geojson2localdb(db_con, config):
 
     #data, config_settings, db_con = setup()
     """
@@ -94,7 +94,7 @@ def main_geojson2localdb():
     list of dict: A list of dictionaries containing the table names, paths and
                   schemas of the imported tables.
     """
-    db_con, config = setup("config_setup_db.json")
+   
     data, config_settings = handle_config_settings(config)
     # Schema erstellen
     create_schema(data, db_con)
