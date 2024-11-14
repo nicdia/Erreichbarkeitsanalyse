@@ -5,20 +5,19 @@ from sqlalchemy import  text
 
 #############################################################
 def create_queries (geom_field, data):
-    
     """
-    Generates a list of SQL queries to change the coordinate reference system (CRS)
-    of geometry columns in specified database tables.
+    Generates a list of SQL queries to alter and transform the coordinate reference system (CRS)
+    of a geometry column in multiple tables.
 
     Parameters:
-    geom_field (str): The name of the geometry column to be altered in the tables.
-    data (list of dict): A list of configurations, where each configuration contains 
-                         'schema' and 'name' keys representing the schema and table name.
+    geom_field (str): The name of the geometry field to be altered and transformed.
+    data (list of dict): A list of dictionaries, each containing 'schema' and 'name' keys that 
+                         specify the schema and table name respectively.
 
     Returns:
-    list of tuples: Each tuple contains the table name and two SQL queries. The first query 
-                    alters the geometry column to set its SRID to 25832, and the second query 
-                    transforms the geometry to the new CRS.
+    list of tuple: A list of tuples, each containing a table name and two SQL query strings.
+                   The first query alters the type of the geometry column to a specific CRS,
+                   and the second query transforms the geometry data to that CRS.
     """
     queries = []
     for config in data:
@@ -40,18 +39,20 @@ def create_queries (geom_field, data):
 
 def execute_queries(engine, queries):
     """
-    Executes a list of SQL queries to change the coordinate reference system (CRS)
-    of geometry columns in specified database tables.
+    Executes a list of SQL queries to alter and transform the coordinate reference system (CRS)
+    of a geometry column in multiple tables.
 
     Parameters:
     engine (sqlalchemy.engine.Engine): A SQLAlchemy engine object.
-    queries (list of tuples): A list of tuples, where each tuple contains the table name and two SQL queries.
-                              The first query alters the geometry column to set its SRID to 25832, and the second query
-                              transforms the geometry to the new CRS.
-    logger (logging.Logger): A logger object to log any errors that occur during query execution.
+    queries (list of tuple): A list of tuples, each containing a table name and two SQL query strings.
+                             The first query alters the type of the geometry column to a specific CRS,
+                             and the second query transforms the geometry data to that CRS.
 
     Returns:
     None
+
+    Raises:
+    Exception: If any of the queries fail to execute.
     """
     try:
         with engine.connect() as connection:
@@ -80,6 +81,19 @@ def execute_queries(engine, queries):
 
 
 def main_change_crs(geojson2localdb_data, config):
+    """
+    Main function to change the coordinate reference system (CRS) of a geometry column in multiple tables.
+
+    Parameters:
+    geojson2localdb_data (list of dict): A list of dictionaries containing schema and table information.
+    config (dict): A configuration dictionary containing the geom_field key with the name of the geometry column.
+
+    Returns:
+    None
+
+    Raises:
+    Exception: If any of the queries fail to execute.
+    """
     try:
         db_con= connect2DB()
         queries = create_queries(geom_field=config["change_crs"]["geom_field"], data=geojson2localdb_data)

@@ -9,6 +9,15 @@ from util_fcts import setup
 #######################################################################################
 
 def handle_config_settings(config):
+    """
+    Extrahiert die Konfigurationseinstellungen fuer die geojson2localdb-Funktion aus dem config-Objekt.
+    
+    Parameters:
+    config (dict): Enthaelt die Konfigurationseinstellungen fuer die geojson2localdb-Funktion.
+    
+    Returns:
+    tuple: Enthaelt die Konfigurationseinstellungen fuer die geojson2localdb-Funktion.
+    """
     data = config["geojson2localdb"]["data"]
     config_settings = config["geojson2localdb"]["config"]
     return (data, config_settings)
@@ -36,17 +45,17 @@ def create_schema(data, db_con):
 
 def create_table_name(data, config):
     """
-    Erstellt eine Liste von Dictionaries, die die Dateienamen und den Pfad
-    zu den Dateien in den Datenordnern enthalten, die fuer die
-    Datenimportarbeiten verwendet werden.
+    Erstellt eine Liste von Dateinamen, Pfaden und zugehoerigem Schema fuer die Dateien, die in den Ordnern
+    unterhalb des angegebenen `data`-Objekts gefunden werden. Die Dateien werden nach dem Schema,
+    das im `data`-Objekt fuer den Ordner definiert wird, gruppiert.
 
     Parameters:
-    data (dict): Dict mit Schema-Namen als Key und ordnerpfad als Value.
-    config (dict): Dict mit Konfigurationseinstellungen fuer geojson2localdb
+    data (dict): Dict mit Schema-Namen als Key und Ordnerpfad als Value.
+    config (dict): Dict mit Konfigurationseinstellungen fuer die geojson2localdb-Funktion.
 
     Returns:
-    list: Liste von Dictionaries, die die Dateienamen, den Pfad und
-          das Schema der zu importierenden Dateien enthalten.
+    list: Liste mit Dateinamen, Pfaden und zugehoerigem Schema fuer die Dateien, die in den Ordnern
+    unterhalb des angegebenen `data`-Objekts gefunden werden.
     """
     file_names_and_path_and_schema = []
     file_formats = config["data_format"]
@@ -66,15 +75,16 @@ def create_table_name(data, config):
 
 def upload2db(upload_config, db_con):
     """
-    Importiert die GeoJSON-Dateien in die Datenbank
+    Importiert die Dateien, die in der Liste `upload_config` enthalten sind,
+    in die Datenbank. Jedes Element der Liste muss ein Dict mit den
+    folgenden Keys enthalten:
+    - "name": Der Name der Tabelle, in die die Datei importiert werden soll
+    - "path": Der absolute Pfad zu der Datei
+    - "schema": Der Name des Schemas, in dem die Tabelle erstellt werden soll
 
     Parameters:
-    upload_config (list of dict): Liste von Dictionaries, die die Dateienamen, den Pfad und
-                                  das Schema der zu importierenden Dateien enthalten.
-    db_con (sqlalchemy.engine.Engine): Eine SQLAlchemy-Engine-Instanz
-
-    Returns:
-    None
+    upload_config (list): Liste von Dicts mit den Import-Informationen
+    db_con (sqlalchemy.engine.Engine): Verbindung zur Datenbank
     """
     for config in upload_config:
         gdf = geopandas.read_file(config["path"])
@@ -82,19 +92,17 @@ def upload2db(upload_config, db_con):
         print(f"The file '{config['name']}' was imported into the database.")
 
 def main_geojson2localdb(db_con, config):
-
-    #data, config_settings, db_con = setup()
     """
-    Executes the geojson2localDB script.
+    Liest die Konfiguration fuer die geojson2localdb-Funktion aus einem dict aus und fuehrt die
+    Funktionen zur Erstellung der Schemata und zum Import der Dateien in die Datenbank aus.
 
-    The script imports GeoJSON files specified in the configuration file
-    into the database.
+    Parameters:
+    db_con (sqlalchemy.engine.Engine): Verbindung zur Datenbank
+    config (dict): Dict mit Konfigurationseinstellungen fuer die geojson2localdb-Funktion
 
     Returns:
-    list of dict: A list of dictionaries containing the table names, paths and
-                  schemas of the imported tables.
+    list: Liste von Dicts mit den Import-Informationen
     """
-   
     data, config_settings = handle_config_settings(config)
     # Schema erstellen
     create_schema(data, db_con)
