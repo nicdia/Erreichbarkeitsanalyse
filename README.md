@@ -38,3 +38,7 @@ Misc:
 short_filename --> passt den Namen von geojson files an
 unpackzip --> entpackt zip files
 util_fcts --> hilfsfunktionen, die die Umgebung einrichten
+
+Noch ToDO
+
+1. Logger einbauen!

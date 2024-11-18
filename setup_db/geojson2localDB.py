@@ -22,7 +22,7 @@ def handle_config_settings(config):
     config_settings = config["geojson2localdb"]["config"]
     return (data, config_settings)
 
-def create_schema(data, db_con):
+def create_schema(data, db_con, suffix):
     """
     Erstellt die angegebenen Schemata in der Datenbank, falls sie noch nicht existieren.
 
@@ -32,18 +32,19 @@ def create_schema(data, db_con):
     """
     
     for schema in data.keys():
-        print(f"Erstelle Schema: {schema}")
+        schema_name = schema + suffix
+        print(f"Erstelle Schema: {schema_name}")
         try:
             # Using a transaction to ensure the schema creation is committed
             with db_con.begin() as connection:
                 # SQL-Anweisung zum Erstellen des Schemas
-                query = text(f"CREATE SCHEMA IF NOT EXISTS {schema};")
+                query = text(f"CREATE SCHEMA IF NOT EXISTS {schema_name};")
                 connection.execute(query)
-                print(f"Schema '{schema}' wurde erfolgreich erstellt.")
+                print(f"Schema '{schema_name}' wurde erfolgreich erstellt.")
         except Exception as e:
-            print(f"Fehler beim Erstellen des Schemas '{schema}': {e}")
+            print(f"Fehler beim Erstellen des Schemas '{schema_name}': {e}")
 
-def create_table_name(data, config):
+def create_table_name(data, config, suffix):
     """
     Erstellt eine Liste von Dateinamen, Pfaden und zugehoerigem Schema fuer die Dateien, die in den Ordnern
     unterhalb des angegebenen `data`-Objekts gefunden werden. Die Dateien werden nach dem Schema,
@@ -66,9 +67,9 @@ def create_table_name(data, config):
                     absolute_path = os.path.join(folder_path, filename)
                     name_without_extension = os.path.splitext(filename)[0]
                     upload_infos = {
-                        "name": name_without_extension,
+                        "name": name_without_extension + suffix,
                         "path": absolute_path,
-                        "schema": schema
+                        "schema": schema + suffix
                     }
                     file_names_and_path_and_schema.append(upload_infos)
     return file_names_and_path_and_schema
@@ -91,7 +92,7 @@ def upload2db(upload_config, db_con):
         gdf.to_postgis(name=config["name"], con=db_con, schema=config["schema"])
         print(f"The file '{config['name']}' was imported into the database.")
 
-def main_geojson2localdb(db_con, config):
+def main_geojson2localdb(db_con, config, suffix):
     """
     Liest die Konfiguration fuer die geojson2localdb-Funktion aus einem dict aus und fuehrt die
     Funktionen zur Erstellung der Schemata und zum Import der Dateien in die Datenbank aus.
@@ -105,10 +106,10 @@ def main_geojson2localdb(db_con, config):
     """
     data, config_settings = handle_config_settings(config)
     # Schema erstellen
-    create_schema(data, db_con)
+    create_schema(data, db_con, suffix)
     
     # Tabellennamen und Pfade erzeugen
-    table_names_and_paths_and_schema = create_table_name(data, config_settings)
+    table_names_and_paths_and_schema = create_table_name(data, config_settings, suffix)
     
     # Dateien in die Datenbank laden
     upload2db(upload_config=table_names_and_paths_and_schema, db_con=db_con)

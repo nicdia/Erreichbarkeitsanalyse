@@ -21,9 +21,10 @@ def main():
     with open("C:\\Master\\GeoinfoPrj_Sem1\\Erreichbarkeitsanalyse\\setup_db\\config_setup_db.json", "r") as file:
             config = json.load(file)
     try:
-        crs_config = main_geojson2localdb(db_con, config)
-        if crs_config:
-            main_change_crs(crs_config, config)
+        original_tables = main_geojson2localdb(db_con, config, "_original")
+        to_be_modified_tables = main_geojson2localdb(db_con, config, "")
+        if to_be_modified_tables:
+            main_change_crs(to_be_modified_tables, config)
             add_column_based_on_table_name(db_con)
     except Exception as error:
         print (error)
