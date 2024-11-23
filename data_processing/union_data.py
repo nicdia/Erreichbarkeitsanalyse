@@ -1,11 +1,9 @@
 from sqlalchemy import text, Table, select, union_all, inspect
 from sqlalchemy.exc import SQLAlchemyError
 
-def handle_conf_union(config):
-    union_tables = config["union_data"]
-    return union_tables
 
 def union_tables_and_create_table(union_dict, db_con):
+    inspector = inspect(db_con)
     try:
         with db_con.connect() as conn:
             for key, table_list in union_dict.items():

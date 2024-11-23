@@ -80,6 +80,16 @@
       "spielflaechen": "flurstueck_alkis",
       "sporthobbies": "flurstueck_alkis",
       "ausserschulangebote": "flurstueck_alkis"
+    },
+    "join_with_flurstuecke": {
+      "mediallg": "flurstueck_alkis",
+      "medispez": "flurstueck_alkis",
+      "natuererfahrungen": "flurstueck_alkis",
+      "parks": "flurstueck_alkis",
+      "schools": "flurstueck_alkis",
+      "spielflaechen": "flurstueck_alkis",
+      "sporthobbies": "flurstueck_alkis",
+      "ausserschulangebote": "flurstueck_alkis"
     }
   }
 }

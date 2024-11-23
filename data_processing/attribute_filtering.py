@@ -8,10 +8,9 @@ def handle_conf_attrfilter(config):
 
 def filter_and_create_table(filter_settings, db_con):
     required_keys = ["attribute", "value", "new_table_name"]
-
     for schema, table_dict in filter_settings.items():
         # Altes Schema umbenennen und neues Schema mit dem ursprünglichen Namen erstellen
-        old_schema_name = f"{schema}_roh"
+        old_schema_name = f"{schema}_not_attr_filtered"
         
         try:
             with db_con.connect() as conn:

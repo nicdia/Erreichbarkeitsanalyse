@@ -41,4 +41,16 @@ util_fcts --> hilfsfunktionen, die die Umgebung einrichten
 
 Noch ToDO
 
-1. Logger einbauen!
+- Feldumbenennungen für ALKIS Join funktionieren nicht!
+- Logger einbauen!
+
+Ablauf
+
+Set-Up-DB-Teil: 1. lädt alle Tabellen 2x hoch - einmal \_original und einmal die Tabelle die dann modifiziert wird 2. Modifizierte Tabellen bekommen ihr Geometriefeld angepasst mit 25832 3. Modifizierte Tabellen bekommen neue Spalte mit dem Namen der Datenquelle
+
+Process Data Teil:
+
+1. die ALKIS Gebäude werden custom gefiltert! Ist gehardcoded --> alle Gebaeude mit Wohnfunktion in eine neue Tabelle
+2. Die To be modified Tabellen werden nach bestimmten Attributen gefiltert
+
+--> Grundsätzlich ist immer der "Originalname" der Tabellenname mit dem gearbeitet werden sollte! Wenn Datenoperationen durchgeführt werden wird die "alte Version" entsprechend benannt, z.b. original, not_attr_filtered usw.!
