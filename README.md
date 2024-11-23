@@ -51,6 +51,7 @@ Set-Up-DB-Teil: 1. lädt alle Tabellen 2x hoch - einmal \_original und einmal di
 Process Data Teil:
 
 1. die ALKIS Gebäude werden custom gefiltert! Ist gehardcoded --> alle Gebaeude mit Wohnfunktion in eine neue Tabelle
-2. Die To be modified Tabellen werden nach bestimmten Attributen gefiltert
+2. Die To be modified Tabellen werden nach bestimmten Feldattributen gefiltert
+3. Die Tabellen je Indikator werden zu einer gemeinsamen großen Tabelle UNIONed
 
 --> Grundsätzlich ist immer der "Originalname" der Tabellenname mit dem gearbeitet werden sollte! Wenn Datenoperationen durchgeführt werden wird die "alte Version" entsprechend benannt, z.b. original, not_attr_filtered usw.!
