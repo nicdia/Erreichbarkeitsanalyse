@@ -55,3 +55,8 @@ Process Data Teil:
 3. Die Tabellen je Indikator werden zu einer gemeinsamen großen Tabelle UNIONed
 
 --> Grundsätzlich ist immer der "Originalname" der Tabellenname mit dem gearbeitet werden sollte! Wenn Datenoperationen durchgeführt werden wird die "alte Version" entsprechend benannt, z.b. original, not_attr_filtered usw.!
+
+--> field modifications: noch google einbauen, derzeit nur osm und metaver gehardcodet
+
+CONFIG DATA PROCESSING NOTES
+union_data: in die Liste kommen alle !Originalnamen! der Schemas, welche nicht für die UnionOps berücksichtigt werden sollen. Es werden vorher ja automatisch \_original Tabellen erstellt, die werden sowieso nicht berücksichtigt.
