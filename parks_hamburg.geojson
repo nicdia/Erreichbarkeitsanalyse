@@ -1,0 +1,1187 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.1534013,
+                    53.5967181
+                ]
+            },
+            "properties": {
+                "name": "Hotel Eggers",
+                "address": "Rahlstedter Straße 78, Hamburg-Wandsbek",
+                "types": [
+                    "park",
+                    "spa",
+                    "lodging",
+                    "health",
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0525111,
+                    53.524291
+                ]
+            },
+            "properties": {
+                "name": "Water Art Elbinsel Kaltehofe",
+                "address": "Kaltehofe-Hauptdeich 6-7, Hamburg",
+                "types": [
+                    "tourist_attraction",
+                    "park",
+                    "museum",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.1542494,
+                    53.4865735
+                ]
+            },
+            "properties": {
+                "name": "Grüne Mitte",
+                "address": "Walter-Rothenburg-Weg 39, Hamburg",
+                "types": [
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9047867,
+                    53.4399329
+                ]
+            },
+            "properties": {
+                "name": "Freilichtmuseum am Kiekeberg",
+                "address": "Am Kiekeberg 1, Rosengarten-Ehestorf",
+                "types": [
+                    "tourist_attraction",
+                    "park",
+                    "museum",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0021279,
+                    53.4943828
+                ]
+            },
+            "properties": {
+                "name": "Wilhelmsburg Island Park",
+                "address": "Am Inselpark, Hamburg",
+                "types": [
+                    "park",
+                    "tourist_attraction",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9314444,
+                    53.59007159999999
+                ]
+            },
+            "properties": {
+                "name": "Campingplatz Buchholz Hamburg",
+                "address": "Kieler Straße 374, Hamburg-Eimsbüttel",
+                "types": [
+                    "campground",
+                    "park",
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.931131299999999,
+                    53.546357
+                ]
+            },
+            "properties": {
+                "name": "Elbgärten Hamburger Garten- und Landschaftsbau GmbH",
+                "address": "Rainvilleterrasse 1, Hamburg-Altona",
+                "types": [
+                    "park",
+                    "general_contractor",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9868653,
+                    53.5138735
+                ]
+            },
+            "properties": {
+                "name": "Eisen-Jens",
+                "address": "Veringstraße 49, Hamburg",
+                "types": [
+                    "store",
+                    "park",
+                    "home_goods_store",
+                    "general_contractor",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.928389999999998,
+                    53.65023999999999
+                ]
+            },
+            "properties": {
+                "name": "KNAUS Campingpark Hamburg",
+                "address": "Wunderbrunnen 2, Hamburg-Eimsbüttel",
+                "types": [
+                    "campground",
+                    "park",
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.993405200000002,
+                    53.4916462
+                ]
+            },
+            "properties": {
+                "name": "Gartenverein Wilhelmsburg von 1918 e.V.",
+                "address": "Kuckuckshorn, Hamburg",
+                "types": [
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0206957,
+                    53.5969843
+                ]
+            },
+            "properties": {
+                "name": "Stadtpark",
+                "address": "Germany",
+                "types": [
+                    "park",
+                    "tourist_attraction",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.989985,
+                    53.60845860000001
+                ]
+            },
+            "properties": {
+                "name": "Eppendorfer Moor",
+                "address": "Borsteler Chaussee, Hamburg",
+                "types": [
+                    "tourist_attraction",
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0007241,
+                    53.5742358
+                ]
+            },
+            "properties": {
+                "name": "Hundeauslaufzone",
+                "address": "Harvestehude, Hamburg",
+                "types": [
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0816954,
+                    53.62899169999999
+                ]
+            },
+            "properties": {
+                "name": "Garden Park Haidlanden West e.V.",
+                "address": "Haidlandsweg 27, Hamburg",
+                "types": [
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.943028300000003,
+                    53.60142130000001
+                ]
+            },
+            "properties": {
+                "name": "Amsinckpark",
+                "address": "Hartnitweg 1, Hamburg",
+                "types": [
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.8682237,
+                    53.5518873
+                ]
+            },
+            "properties": {
+                "name": "Jenischpark",
+                "address": "Baron-Voght-Straße 50, Hamburg",
+                "types": [
+                    "tourist_attraction",
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0448728,
+                    53.5562341
+                ]
+            },
+            "properties": {
+                "name": "Thörls Park",
+                "address": "Sievekingdamm 7, Hamburg",
+                "types": [
+                    "tourist_attraction",
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9191007,
+                    53.56738120000001
+                ]
+            },
+            "properties": {
+                "name": "Gewerbepark Bornkampsweg",
+                "address": "Bornkampsweg 60, Hamburg-Altona",
+                "types": [
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0595342,
+                    53.56503319999999
+                ]
+            },
+            "properties": {
+                "name": "Connectic GmbH",
+                "address": "Marienthaler Straße 173, Hamburg-Wandsbek",
+                "types": [
+                    "park",
+                    "general_contractor",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.966257,
+                    53.563458
+                ]
+            },
+            "properties": {
+                "name": "Bahn-Landwirtschaft Bezirk Hamburg e.V.",
+                "address": "Schanzenstraße 80, Hamburg-Altona",
+                "types": [
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0817682,
+                    53.5133431
+                ]
+            },
+            "properties": {
+                "name": "Baumdienst Nortis",
+                "address": "Sandwisch 45, Hamburg-Bergedorf",
+                "types": [
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9376424,
+                    53.6200925
+                ]
+            },
+            "properties": {
+                "name": "Herwyn Ehlers | Garden design, construction and maintenance",
+                "address": "Am Martensgehölz 19, Hamburg-Eimsbüttel",
+                "types": [
+                    "park",
+                    "general_contractor",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0312447,
+                    53.6071225
+                ]
+            },
+            "properties": {
+                "name": "Gartenbau-Verein „Heimat“ Alsterdorf e.V.",
+                "address": "Hebebrandstraße, Hamburg-Nord",
+                "types": [
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9959627,
+                    53.5433909
+                ]
+            },
+            "properties": {
+                "name": "PIERDREI Hotel HafenCity Hamburg",
+                "address": "Am Sandtorkai 46, Hamburg",
+                "types": [
+                    "campground",
+                    "park",
+                    "bar",
+                    "lodging",
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9812017,
+                    53.5579253
+                ]
+            },
+            "properties": {
+                "name": "Kleine Wallanlagen",
+                "address": "Jungiusstraße 3, Hamburg",
+                "types": [
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9744367,
+                    53.5537478
+                ]
+            },
+            "properties": {
+                "name": "Große Wallanlagen",
+                "address": "Holstenwall 30, Hamburg",
+                "types": [
+                    "tourist_attraction",
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.982065199999997,
+                    53.56201709999999
+                ]
+            },
+            "properties": {
+                "name": "Planten un Blomen",
+                "address": "Marseiller Promenade, Hamburg",
+                "types": [
+                    "tourist_attraction",
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0130704,
+                    53.5438207
+                ]
+            },
+            "properties": {
+                "name": "Citygarten",
+                "address": "Banksstraße 28, Hamburg",
+                "types": [
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9598471,
+                    53.5659905
+                ]
+            },
+            "properties": {
+                "name": "Spielplatz Lindenpark",
+                "address": "Lindenallee, Hamburg",
+                "types": [
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0360193,
+                    53.5303106
+                ]
+            },
+            "properties": {
+                "name": "Hundeauslauffläche",
+                "address": "Entenwerder, Hamburg",
+                "types": [
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9523726,
+                    53.5748786
+                ]
+            },
+            "properties": {
+                "name": "Isebek-Grünzug",
+                "address": "Henriettenstraße 69, Hamburg-Eimsbüttel",
+                "types": [
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0407855,
+                    53.5301702
+                ]
+            },
+            "properties": {
+                "name": "Grünanlagen",
+                "address": "Entenwerder Stieg 6, Hamburg",
+                "types": [
+                    "park",
+                    "tourist_attraction",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.984475900000001,
+                    53.58574780000001
+                ]
+            },
+            "properties": {
+                "name": "Gartenmagnet GmbH",
+                "address": "Haynstraße 9, Hamburg-Nord",
+                "types": [
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0609539,
+                    53.5576017
+                ]
+            },
+            "properties": {
+                "name": "Spielplatz im Hammer Park",
+                "address": "Hammer Hof 40, Hamburg",
+                "types": [
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0613406,
+                    53.5590041
+                ]
+            },
+            "properties": {
+                "name": "Kräutergarten",
+                "address": "Caspar-Voght-Straße, Hamburg",
+                "types": [
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.014343,
+                    53.5099183
+                ]
+            },
+            "properties": {
+                "name": "Kleingartenverein Hövelhof",
+                "address": "Langenhövel 13, Hamburg",
+                "types": [
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0674788,
+                    53.5451632
+                ]
+            },
+            "properties": {
+                "name": "Kleingartenverein 130, Die Sandhasen e. V.",
+                "address": "KlgV 130, Parzelle 81, Hamburg",
+                "types": [
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.990538600000002,
+                    53.5978131
+                ]
+            },
+            "properties": {
+                "name": "Park an der Meenkwiese",
+                "address": "Meenkwiese, Hamburg",
+                "types": [
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.966948799999999,
+                    53.5954671
+                ]
+            },
+            "properties": {
+                "name": "HSH Objektbetreuung GmbH",
+                "address": "Lokstedter Steindamm 31, Hamburg-Eimsbüttel",
+                "types": [
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0137365,
+                    53.5982496
+                ]
+            },
+            "properties": {
+                "name": "Forsthaus Stadt Park",
+                "address": "Otto-Wels-Straße 3, Hamburg-Nord",
+                "types": [
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0754503,
+                    53.54309060000001
+                ]
+            },
+            "properties": {
+                "name": "Kleingartenverein 142, Horner Marsch e.V.",
+                "address": "Meisenweg, KlgV 142 750, Hamburg",
+                "types": [
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.912769200000001,
+                    53.564545
+                ]
+            },
+            "properties": {
+                "name": "GartenHaus GmbH",
+                "address": "keine Verkaufsausstellung, Bahrenfelder Chaussee 49/Haus B, Hamburg",
+                "types": [
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9846557,
+                    53.601591
+                ]
+            },
+            "properties": {
+                "name": "Gartenverein 424 Tarpenbekufer e.V.",
+                "address": "Rosenbrook, Hamburg",
+                "types": [
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.935021200000001,
+                    53.5895222
+                ]
+            },
+            "properties": {
+                "name": "Gartenfreunde Wittkamp e.V.",
+                "address": "Stellingen, Hamburg",
+                "types": [
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.084616,
+                    53.5606538
+                ]
+            },
+            "properties": {
+                "name": "minigolf Hamburg Horn",
+                "address": "Rennbahnstraße 96, Hamburg",
+                "types": [
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0629119,
+                    53.5899515
+                ]
+            },
+            "properties": {
+                "name": "Gartenbauverein „Es blüht“ e.V. von 1921 (418)",
+                "address": "Lämmersieth, Hamburg",
+                "types": [
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0916189,
+                    53.5564322
+                ]
+            },
+            "properties": {
+                "name": "Gartengemeinschaft Horner Rennbahn e.V.",
+                "address": "Manshardtstraße 31A, Hamburg",
+                "types": [
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.8456613,
+                    53.5537933
+                ]
+            },
+            "properties": {
+                "name": "Das Fachwerk Ute Knapp - Hamburg",
+                "address": "Sophie-Rahel-Jansen-Straße 120, Hamburg",
+                "types": [
+                    "florist",
+                    "park",
+                    "general_contractor",
+                    "store",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0519525,
+                    53.6001343
+                ]
+            },
+            "properties": {
+                "name": "FuhlsGarden",
+                "address": "Steilshooper Straße 230, Hamburg-Nord",
+                "types": [
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.892347,
+                    53.57118509999999
+                ]
+            },
+            "properties": {
+                "name": "Businesspark Bahrenfeld",
+                "address": "Wichmannstraße 4/Haus 10, Hamburg-Altona",
+                "types": [
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9875729,
+                    53.61651819999999
+                ]
+            },
+            "properties": {
+                "name": "Kgv 426, Parz. 101, 22453 Hamburg",
+                "address": "Weg beim Jäger, Hamburg",
+                "types": [
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9452619,
+                    53.6103254
+                ]
+            },
+            "properties": {
+                "name": "Kleingartenverein Erlengrund e.V. 308",
+                "address": "Schmiedekoppel, Parzelle 26, Hamburg-Eimsbüttel",
+                "types": [
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0169912,
+                    53.6165482
+                ]
+            },
+            "properties": {
+                "name": "Hundeauslaufzone",
+                "address": "Sengelmannstraße 89, Hamburg-Nord",
+                "types": [
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0621011,
+                    53.6050727
+                ]
+            },
+            "properties": {
+                "name": "Appelhoffweiher",
+                "address": "Georg-Raloff-Ring 32, Hamburg-Wandsbek",
+                "types": [
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9926621,
+                    53.4828476
+                ]
+            },
+            "properties": {
+                "name": "Minitopia Plattform urbaner Selbstversorgung",
+                "address": "Georg-Wilhelm-Straße 322, Hamburg",
+                "types": [
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9535032,
+                    53.6189099
+                ]
+            },
+            "properties": {
+                "name": "Blumen Tomfort",
+                "address": "Promenadenstraße 19, Hamburg-Eimsbüttel",
+                "types": [
+                    "florist",
+                    "cemetery",
+                    "park",
+                    "general_contractor",
+                    "store",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0835778,
+                    53.4866099
+                ]
+            },
+            "properties": {
+                "name": "Garden Community Wolfskuhle 617 e.V.",
+                "address": "Tatenberger Deich 69, Hamburg",
+                "types": [
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9488902,
+                    53.6205647
+                ]
+            },
+            "properties": {
+                "name": "Blumen Tomfort Verkaufsgärtnerei Pflanzen-Überwinterunsgservice",
+                "address": "Niendorfer Kirchenweg 19 /21, Hamburg",
+                "types": [
+                    "florist",
+                    "park",
+                    "general_contractor",
+                    "store",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.849164799999999,
+                    53.5343049
+                ]
+            },
+            "properties": {
+                "name": "Garten und Gabel",
+                "address": "Laßdrift 1A, Hamburg",
+                "types": [
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.862573099999999,
+                    53.55623629999999
+                ]
+            },
+            "properties": {
+                "name": "Derby Park",
+                "address": "Baron-Voght-Straße 81, Hamburg-Altona",
+                "types": [
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        }
+    ]
+}

@@ -20,12 +20,13 @@ def main_processing():
     union_config = handle_conf_union(db_con, config["table_processing"]["union_data"])
 ###################################################
 
-    # if attr_filter_config:
-    #     filter_and_create_table(attr_filter_config, db_con)
-    #     custom_ALKIS_building_filtering(db_con)
+    if attr_filter_config:
+        filter_and_create_table(attr_filter_config, db_con)
+        custom_ALKIS_building_filtering(db_con)
+        custom_elementary_sports_halls(db_con)
 
-    if union_config:
-          union_ops(db_con, union_config, geom_field_name)
+    # if union_config:
+    #       union_ops(db_con, union_config, geom_field_name)
           
     #3. data source mismatch handling (delete osm features)
 

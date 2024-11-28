@@ -57,11 +57,6 @@
           "attribute": "kinder_6_bis_unter_10_jahre",
           "value": "Ja",
           "new_table_name": "spielmobil_6_10"
-        },
-        "unterstuetzung_einrichtungsangebote_meta": {
-          "attribute": "kinder_6_bis_unter_10_jahre",
-          "value": "Ja",
-          "new_table_name": "support_einrichtungsangebote_6_10"
         }
       },
       "schools": {

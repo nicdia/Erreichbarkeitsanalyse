@@ -74,3 +74,22 @@ OR funktion = 'Wohnheim';
             print("Die Tabelle 'wohngebaeude' wurde erfolgreich erstellt.")
     except Exception as e:
         print(f"Ein Fehler ist aufgetreten: {e}")
+
+def custom_elementary_sports_halls (db_con):
+    query = """create table sporthobbies.grundschule_sporthallen as 
+SELECT 
+    sporthalle_meta.* -- Alle Spalten aus der Schulsporthallen-Tabelle
+FROM 
+    sporthobbies.sporthalle_meta -- Tabelle 2: Schulsporthallen mit Schema-Präfix
+JOIN 
+    schools.grundschulen -- Tabelle 1: Grundschulen mit Schema-Präfix
+ON 
+    sporthalle_meta.schulname ILIKE '%' || grundschulen.schulname || '%' -- Bedingung für Namensabgleich
+;"""
+    try:
+        with db_con.connect() as connection:
+            connection.execute(text(query))
+            connection.commit()  
+            print("Die Tabelle 'wohngebaeude' wurde erfolgreich erstellt.")
+    except Exception as e:
+        print(f"Ein Fehler ist aufgetreten: {e}")

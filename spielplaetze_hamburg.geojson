@@ -1,0 +1,399 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.987170299999999,
+                    53.5488282
+                ]
+            },
+            "properties": {
+                "name": "Hamburg",
+                "address": "Hamburg",
+                "types": [
+                    "locality",
+                    "political"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.987735599999999,
+                    53.5523829
+                ]
+            },
+            "properties": {
+                "name": "Renaissance Hamburg Hotel",
+                "address": "Große Bleichen, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9856394,
+                    53.54924579999999
+                ]
+            },
+            "properties": {
+                "name": "Steigenberger Hotel Hamburg",
+                "address": "Heiligengeistbrücke 4, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.987508300000004,
+                    53.5547121
+                ]
+            },
+            "properties": {
+                "name": "Hamburg Marriott Hotel",
+                "address": "ABC-Straße 52, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0028826,
+                    53.5541437
+                ]
+            },
+            "properties": {
+                "name": "IntercityHotel Hamburg Hauptbahnhof",
+                "address": "Glockengießerwall 14/15, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.986638899999999,
+                    53.5566361
+                ]
+            },
+            "properties": {
+                "name": "SIDE Design Hotel Hamburg",
+                "address": "Drehbahn 49, Hamburg",
+                "types": [
+                    "spa",
+                    "lodging",
+                    "bar",
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.00226,
+                    53.55054860000001
+                ]
+            },
+            "properties": {
+                "name": "HENRI Hotel Hamburg Downtown",
+                "address": "Bugenhagenstraße 21, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9819454,
+                    53.5558831
+                ]
+            },
+            "properties": {
+                "name": "Scandic Hamburg Emporio",
+                "address": "Dammtorwall 19, Hamburg",
+                "types": [
+                    "lodging",
+                    "bar",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0006749,
+                    53.55439
+                ]
+            },
+            "properties": {
+                "name": "Barceló Hamburg",
+                "address": "Ferdinandstraße 15, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.991434399999997,
+                    53.5576028
+                ]
+            },
+            "properties": {
+                "name": "Kleinhuis Hotel Baseler Hof Hamburg",
+                "address": "Esplanade 11, Hamburg",
+                "types": [
+                    "lodging",
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.00502,
+                    53.5567731
+                ]
+            },
+            "properties": {
+                "name": "Hotel Atlantic Hamburg, Autograph Collection",
+                "address": "An der Alster 72-79, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.991167099999998,
+                    53.557637
+                ]
+            },
+            "properties": {
+                "name": "Hotel Alster-Hof",
+                "address": "Esplanade 12, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.989897700000002,
+                    53.5573044
+                ]
+            },
+            "properties": {
+                "name": "Hotel Bei Der Esplanade",
+                "address": "Colonnaden 45, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0044543,
+                    53.55674430000001
+                ]
+            },
+            "properties": {
+                "name": "ibis Hamburg Alster Centrum",
+                "address": "Holzdamm 4-12 + 16, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.991548600000002,
+                    53.55561780000001
+                ]
+            },
+            "properties": {
+                "name": "Fairmont Hotel Vier Jahreszeiten",
+                "address": "Neuer Jungfernstieg 9 14, Hamburg",
+                "types": [
+                    "lodging",
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0015972,
+                    53.55342599999999
+                ]
+            },
+            "properties": {
+                "name": "Hamburger Volksbank eG",
+                "address": "Rosenstraße 2, Hamburg",
+                "types": [
+                    "bank",
+                    "atm",
+                    "real_estate_agency",
+                    "finance",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9833224,
+                    53.5489046
+                ]
+            },
+            "properties": {
+                "name": "Kleinhuis Hotel Michaelis Hof in der Katholischen Akademie",
+                "address": "Herrengraben 4, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.996279200000004,
+                    53.54714800000001
+                ]
+            },
+            "properties": {
+                "name": "Gröninger Privatbrauerei Hamburg",
+                "address": "Willy-Brandt-Straße 47, Hamburg",
+                "types": [
+                    "bar",
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.987544200000002,
+                    53.5462461
+                ]
+            },
+            "properties": {
+                "name": "Restaurant Kartoffelkeller",
+                "address": "Deichstraße 21, Hamburg",
+                "types": [
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0123399,
+                    53.5539552
+                ]
+            },
+            "properties": {
+                "name": "St. Georg, Hamburg",
+                "address": "St. Georg, Hamburg",
+                "types": [
+                    "sublocality_level_2",
+                    "sublocality",
+                    "political"
+                ]
+            }
+        }
+    ]
+}
