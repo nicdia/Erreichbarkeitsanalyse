@@ -1,6 +1,7 @@
-from attribute_filtering import filter_and_create_table, handle_conf_attrfilter, custom_ALKIS_building_filtering
+from data_processing.general_attribute_filtering import filter_and_create_table, handle_conf_attrfilter, custom_ALKIS_building_filtering
+from data_processing.general_union_data import union_ops, handle_conf_union
+from data_processing.kids_specific_ops import custom_elementary_sports_halls, 
 
-from union_data import union_ops, handle_conf_union
 from util_fcts import connect2DB
 import json
 import os

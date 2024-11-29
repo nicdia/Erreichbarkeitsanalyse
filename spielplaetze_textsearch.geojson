@@ -6,24 +6,41 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    9.853395599999999,
-                    53.3424238
+                    9.995324100000001,
+                    53.54010599999999
                 ]
             },
             "properties": {
-                "name": "Flair Hotel zur Eiche, Buchholz & Stöver oHG",
-                "address": "Steinbecker Straße 111, Buchholz in der Nordheide-Steinbeck",
+                "name": "Grasbrookpark",
+                "address": "Am Grasbrookpark, 20457 Hamburg, Germany",
                 "types": [
-                    "bar",
                     "park",
-                    "restaurant",
-                    "lodging",
-                    "food",
+                    "tourist_attraction",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.5,
+                "user_ratings_total": 2831
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0055099,
+                    53.541416
+                ]
+            },
+            "properties": {
+                "name": "Playground in Lohsepark",
+                "address": "20457 Hamburg, Germany",
+                "types": [
                     "point_of_interest",
                     "establishment"
                 ],
                 "rating": 4.3,
-                "user_ratings_total": 562
+                "user_ratings_total": 155
             }
         },
         {
@@ -31,68 +48,19 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    10.1534013,
-                    53.5967181
+                    10.0138456,
+                    53.5383554
                 ]
             },
             "properties": {
-                "name": "Hotel Eggers",
-                "address": "Rahlstedter Straße 78, Hamburg-Wandsbek",
+                "name": "Spielplatz im Baakenpark",
+                "address": "20457, Hamburg, Germany",
                 "types": [
-                    "spa",
-                    "park",
-                    "restaurant",
-                    "lodging",
-                    "food",
-                    "point_of_interest",
-                    "health",
-                    "establishment"
-                ],
-                "rating": 4.5,
-                "user_ratings_total": 949
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    10.0306272,
-                    53.19258490000001
-                ]
-            },
-            "properties": {
-                "name": "Hotel Hof Sudermühlen",
-                "address": "Sudermühlen 1, Egestorf",
-                "types": [
-                    "park",
-                    "lodging",
-                    "point_of_interest",
-                    "establishment"
-                ],
-                "rating": 4.4,
-                "user_ratings_total": 1116
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    10.5041149,
-                    53.3441541
-                ]
-            },
-            "properties": {
-                "name": "Fehlingsbleck",
-                "address": "Brietlingen",
-                "types": [
-                    "park",
                     "point_of_interest",
                     "establishment"
                 ],
                 "rating": 4.6,
-                "user_ratings_total": 30
+                "user_ratings_total": 290
             }
         },
         {
@@ -100,479 +68,19 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    10.3134534,
-                    53.5311669
+                    9.9690225,
+                    53.5492328
                 ]
             },
             "properties": {
-                "name": "Hotel Waldesruh Am See",
-                "address": "Am Mühlenteich 2, Aumühle",
+                "name": "Elbpark Playground",
+                "address": "20359 Hamburg, Germany",
                 "types": [
-                    "park",
-                    "restaurant",
-                    "lodging",
-                    "food",
-                    "point_of_interest",
-                    "health",
-                    "establishment"
-                ],
-                "rating": 4.4,
-                "user_ratings_total": 374
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    9.918994400000003,
-                    53.1660833
-                ]
-            },
-            "properties": {
-                "name": "Lüneburg Heath",
-                "address": "Germany",
-                "types": [
-                    "tourist_attraction",
-                    "park",
-                    "point_of_interest",
-                    "establishment"
-                ],
-                "rating": 4.7,
-                "user_ratings_total": 9832
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    10.1542494,
-                    53.4865735
-                ]
-            },
-            "properties": {
-                "name": "Grüne Mitte",
-                "address": "Walter-Rothenburg-Weg 39, Hamburg",
-                "types": [
-                    "park",
-                    "point_of_interest",
-                    "establishment"
-                ],
-                "rating": 4.4,
-                "user_ratings_total": 158
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    9.9047867,
-                    53.4399329
-                ]
-            },
-            "properties": {
-                "name": "Freilichtmuseum am Kiekeberg",
-                "address": "Am Kiekeberg 1, Rosengarten-Ehestorf",
-                "types": [
-                    "tourist_attraction",
-                    "museum",
-                    "park",
-                    "point_of_interest",
-                    "establishment"
-                ],
-                "rating": 4.7,
-                "user_ratings_total": 4671
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    10.226599,
-                    53.4275245
-                ]
-            },
-            "properties": {
-                "name": "KZ-Gedenkstätte Neuengamme",
-                "address": "Jean-Dolidier-Weg 75, Hamburg-Bergedorf",
-                "types": [
-                    "tourist_attraction",
-                    "museum",
-                    "park",
-                    "point_of_interest",
-                    "establishment"
-                ],
-                "rating": 4.4,
-                "user_ratings_total": 2172
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    10.0525111,
-                    53.524291
-                ]
-            },
-            "properties": {
-                "name": "Water Art Elbinsel Kaltehofe",
-                "address": "Kaltehofe-Hauptdeich 6-7, Hamburg",
-                "types": [
-                    "tourist_attraction",
-                    "museum",
-                    "park",
-                    "point_of_interest",
-                    "establishment"
-                ],
-                "rating": 4.5,
-                "user_ratings_total": 1180
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    10.2542052,
-                    53.50729189999999
-                ]
-            },
-            "properties": {
-                "name": "Schloss Reinbek",
-                "address": "Schloßstraße 5, Reinbek",
-                "types": [
-                    "park",
-                    "point_of_interest",
-                    "establishment"
-                ],
-                "rating": 4.5,
-                "user_ratings_total": 1799
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    9.9158496,
-                    53.11279619999999
-                ]
-            },
-            "properties": {
-                "name": "Hotel Hof Tütsberg",
-                "address": "Hof Tütsberg, Schneverdingen",
-                "types": [
-                    "park",
-                    "lodging",
-                    "point_of_interest",
-                    "establishment"
-                ],
-                "rating": 4.6,
-                "user_ratings_total": 914
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    10.0021279,
-                    53.4943828
-                ]
-            },
-            "properties": {
-                "name": "Wilhelmsburg Island Park",
-                "address": "Am Inselpark, Hamburg",
-                "types": [
-                    "park",
-                    "tourist_attraction",
-                    "point_of_interest",
-                    "establishment"
-                ],
-                "rating": 4.5,
-                "user_ratings_total": 4885
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    10.2403801,
-                    53.68019409999999
-                ]
-            },
-            "properties": {
-                "name": "Ahrensburg Palace",
-                "address": "Lübecker Straße 1, Ahrensburg",
-                "types": [
-                    "tourist_attraction",
-                    "museum",
-                    "park",
-                    "point_of_interest",
-                    "establishment"
-                ],
-                "rating": 4.6,
-                "user_ratings_total": 2379
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    9.766890000000002,
-                    53.56384000000001
-                ]
-            },
-            "properties": {
-                "name": "ElbeCamp Camping",
-                "address": "Falkensteiner Ufer 101, Hamburg-Altona",
-                "types": [
-                    "campground",
-                    "park",
-                    "lodging",
-                    "point_of_interest",
-                    "establishment"
-                ],
-                "rating": 4.3,
-                "user_ratings_total": 1645
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    9.429429800000001,
-                    53.5282733
-                ]
-            },
-            "properties": {
-                "name": "Landhotel Deinster Mühle",
-                "address": "Hauptstraße 81, Fredenbeck",
-                "types": [
-                    "real_estate_agency",
-                    "bar",
-                    "park",
-                    "lodging",
-                    "travel_agency",
-                    "point_of_interest",
-                    "store",
-                    "establishment"
-                ],
-                "rating": 4.6,
-                "user_ratings_total": 147
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    9.9314444,
-                    53.59007159999999
-                ]
-            },
-            "properties": {
-                "name": "Campingplatz Buchholz Hamburg",
-                "address": "Kieler Straße 374, Hamburg-Eimsbüttel",
-                "types": [
-                    "campground",
-                    "park",
-                    "lodging",
-                    "point_of_interest",
-                    "establishment"
-                ],
-                "rating": 4.5,
-                "user_ratings_total": 788
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    10.4129448,
-                    53.2488136
-                ]
-            },
-            "properties": {
-                "name": "Lanzelot",
-                "address": "Wandfärberstraße 7, Lüneburg",
-                "types": [
-                    "restaurant",
-                    "bar",
-                    "park",
-                    "food",
-                    "point_of_interest",
-                    "establishment"
-                ],
-                "rating": 4.4,
-                "user_ratings_total": 915
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    9.7765213,
-                    53.716673
-                ]
-            },
-            "properties": {
-                "name": "Ellerhoop-Thiensen Arboretum",
-                "address": "Thiensen 4, Ellerhoop",
-                "types": [
-                    "tourist_attraction",
-                    "park",
-                    "point_of_interest",
-                    "establishment"
-                ],
-                "rating": 4.7,
-                "user_ratings_total": 2656
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    10.3441923,
-                    53.6121259
-                ]
-            },
-            "properties": {
-                "name": "Campingplatz Großensee",
-                "address": "Trittauer Straße 11, Großensee",
-                "types": [
-                    "campground",
-                    "park",
-                    "lodging",
-                    "point_of_interest",
-                    "establishment"
-                ],
-                "rating": 3.8,
-                "user_ratings_total": 493
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    9.931131299999999,
-                    53.546357
-                ]
-            },
-            "properties": {
-                "name": "Elbgärten Hamburger Garten- und Landschaftsbau GmbH",
-                "address": "Rainvilleterrasse 1, Hamburg-Altona",
-                "types": [
-                    "general_contractor",
-                    "park",
-                    "point_of_interest",
-                    "establishment"
-                ],
-                "rating": 3.7,
-                "user_ratings_total": 3
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    10.597277,
-                    53.40987630000001
-                ]
-            },
-            "properties": {
-                "name": "Camping Lanzer See",
-                "address": "Am Lanzer See 1, Basedow",
-                "types": [
-                    "campground",
-                    "lodging",
-                    "park",
-                    "point_of_interest",
-                    "establishment"
-                ],
-                "rating": 4.5,
-                "user_ratings_total": 830
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    9.928389999999998,
-                    53.65023999999999
-                ]
-            },
-            "properties": {
-                "name": "KNAUS Campingpark Hamburg",
-                "address": "Wunderbrunnen 2, Hamburg-Eimsbüttel",
-                "types": [
-                    "campground",
-                    "lodging",
-                    "park",
-                    "point_of_interest",
-                    "establishment"
-                ],
-                "rating": 3.8,
-                "user_ratings_total": 1242
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    9.9868653,
-                    53.5138735
-                ]
-            },
-            "properties": {
-                "name": "Eisen-Jens",
-                "address": "Veringstraße 49, Hamburg",
-                "types": [
-                    "store",
-                    "park",
-                    "home_goods_store",
-                    "general_contractor",
-                    "point_of_interest",
-                    "establishment"
-                ],
-                "rating": 4.9,
-                "user_ratings_total": 160
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    9.780836299999999,
-                    53.6648049
-                ]
-            },
-            "properties": {
-                "name": "REISS Erd- und Gartenbaugesellschaft mbH",
-                "address": "Am Hafen 62, Pinneberg",
-                "types": [
-                    "park",
-                    "general_contractor",
                     "point_of_interest",
                     "establishment"
                 ],
                 "rating": 4.2,
-                "user_ratings_total": 19
+                "user_ratings_total": 25
             }
         },
         {
@@ -580,22 +88,19 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    10.1730888,
-                    53.70992469999999
+                    9.9746083,
+                    53.5544985
                 ]
             },
             "properties": {
-                "name": "FKK - Sportgemeinschaft Hamburg e.V.",
-                "address": "Moordamm 1, Ammersbek",
+                "name": "Spielplatz Planten Un Blomen Große Wallanlagen",
+                "address": "Glacischaussee 1, 20359 Hamburg, Germany",
                 "types": [
-                    "campground",
-                    "lodging",
-                    "park",
                     "point_of_interest",
                     "establishment"
                 ],
-                "rating": 4.8,
-                "user_ratings_total": 28
+                "rating": 4.6,
+                "user_ratings_total": 844
             }
         },
         {
@@ -603,22 +108,60 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    9.3755563,
-                    53.758685
+                    9.9824029,
+                    53.5606586
                 ]
             },
             "properties": {
-                "name": "Camping at the lighthouse",
-                "address": "Leuchtturmweg 5a, Drochtersen-Krautsand",
+                "name": "Bullerberge Spielplatz",
+                "address": "Marseiller Str. 7, 20355 Hamburg, Germany",
                 "types": [
-                    "campground",
-                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.7,
+                "user_ratings_total": 312
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9803947,
+                    53.544915
+                ]
+            },
+            "properties": {
+                "name": "Stubbenhuk Playground",
+                "address": "Stubbenhuk 7, 20459 Hamburg, Germany",
+                "types": [
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.3,
+                "user_ratings_total": 53
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9598471,
+                    53.5659905
+                ]
+            },
+            "properties": {
+                "name": "Spielplatz Lindenpark",
+                "address": "Lindenallee, 20259 Hamburg, Germany",
+                "types": [
                     "park",
                     "point_of_interest",
                     "establishment"
                 ],
                 "rating": 4.3,
-                "user_ratings_total": 770
+                "user_ratings_total": 189
             }
         },
         {
@@ -626,22 +169,61 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    10.6294986,
-                    53.4619278
+                    9.995359599999999,
+                    53.5402011
                 ]
             },
             "properties": {
-                "name": "Campingplatz Forellensee",
-                "address": "FJ7H+CX, Forellensee 1, Witzeeze",
+                "name": "Wasserspielplatz am Grasbrookpark",
+                "address": "Am Grasbrookpark, 20457 Hamburg, Germany",
                 "types": [
-                    "campground",
-                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.6,
+                "user_ratings_total": 96
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9941683,
+                    53.5425611
+                ]
+            },
+            "properties": {
+                "name": "Sandtor Park",
+                "address": "Am Sandtorpark 4, 20457 Hamburg, Germany",
+                "types": [
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.3,
+                "user_ratings_total": 243
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0609539,
+                    53.5576017
+                ]
+            },
+            "properties": {
+                "name": "Spielplatz im Hammer Park",
+                "address": "Hammer Hof 40, 20535 Hamburg, Germany",
+                "types": [
                     "park",
                     "point_of_interest",
                     "establishment"
                 ],
                 "rating": 4.4,
-                "user_ratings_total": 316
+                "user_ratings_total": 238
             }
         },
         {
@@ -649,21 +231,21 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    10.706157,
-                    53.62251999999999
+                    10.0147083,
+                    53.5379939
                 ]
             },
             "properties": {
-                "name": "Möllner Wild Park",
-                "address": "Waldhallenweg 11, Mölln",
+                "name": "Baaken Park",
+                "address": "20457, Baakenallee, 20457 Hamburg, Germany",
                 "types": [
-                    "zoo",
+                    "tourist_attraction",
                     "park",
                     "point_of_interest",
                     "establishment"
                 ],
-                "rating": 4.6,
-                "user_ratings_total": 2276
+                "rating": 4.5,
+                "user_ratings_total": 1030
             }
         },
         {
@@ -671,22 +253,39 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    10.3011134,
-                    53.4282234
+                    9.9339272,
+                    53.5743088
                 ]
             },
             "properties": {
-                "name": "Camping Land an der Elbe bei Hamburg am Stover Strand",
-                "address": "Stover Strand 7, Drage-Stove",
+                "name": "Spielplatz und Park am Ziegelteich",
+                "address": "Am Ziegelteich 20, 22525 Hamburg, Germany",
                 "types": [
-                    "campground",
-                    "lodging",
-                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.4,
+                "user_ratings_total": 174
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0256255,
+                    53.5819911
+                ]
+            },
+            "properties": {
+                "name": "Spielplatz Johannes-Prassek-Park",
+                "address": "Weidestraße 132, 22083 Hamburg, Germany",
+                "types": [
                     "point_of_interest",
                     "establishment"
                 ],
                 "rating": 4.6,
-                "user_ratings_total": 1372
+                "user_ratings_total": 118
             }
         },
         {
@@ -694,21 +293,165 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    9.761440999999998,
-                    53.45215399999999
+                    9.952302399999999,
+                    53.5523239
                 ]
             },
             "properties": {
-                "name": "HotSpring® Whirlpools",
-                "address": "Carl-Zeiss-Straße 1, Buxtehude",
+                "name": "Spielplatz im Emil-Wendt Park",
+                "address": "Schomburgstraße 6, 22767 Hamburg, Germany",
                 "types": [
-                    "store",
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.4,
+                "user_ratings_total": 82
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0501639,
+                    53.5740146
+                ]
+            },
+            "properties": {
+                "name": "Spielplatz Friedrichsberger Park",
+                "address": "Friedrichsberger Str. 33B, 22081 Hamburg, Germany",
+                "types": [
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.5,
+                "user_ratings_total": 83
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.984127299999999,
+                    53.5157152
+                ]
+            },
+            "properties": {
+                "name": "Sanitaspark",
+                "address": "Industriestraße Wilhelmsburg, 21107 Hamburg, Germany",
+                "types": [
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.2,
+                "user_ratings_total": 55
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0072223,
+                    53.5567023
+                ]
+            },
+            "properties": {
+                "name": "Spielplatz St. Georgs Kirchhof",
+                "address": "St. Georgs Kirchhof 3, 20099 Hamburg, Germany",
+                "types": [
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.6,
+                "user_ratings_total": 17
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0050903,
+                    53.5424624
+                ]
+            },
+            "properties": {
+                "name": "Lohsepark",
+                "address": "20457 Hamburg, Germany",
+                "types": [
+                    "tourist_attraction",
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.3,
+                "user_ratings_total": 1431
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9791653,
+                    53.546535
+                ]
+            },
+            "properties": {
+                "name": "Michelwiese Playground",
+                "address": "Schaarsteinweg 22, 20459 Hamburg, Germany",
+                "types": [
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.9,
+                "user_ratings_total": 22
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9893212,
+                    53.5960335
+                ]
+            },
+            "properties": {
+                "name": "Hayns Park",
+                "address": "Eppendorfer Landstraße 148B, 20249 Hamburg, Germany",
+                "types": [
+                    "tourist_attraction",
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.5,
+                "user_ratings_total": 1822
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0344809,
+                    53.5433186
+                ]
+            },
+            "properties": {
+                "name": "Alter Recyclinghof / Alster-Bille-Elbe PARKS",
+                "address": "Bullerdeich 6, 20537 Hamburg, Germany",
+                "types": [
                     "park",
                     "point_of_interest",
                     "establishment"
                 ],
                 "rating": 4.7,
-                "user_ratings_total": 64
+                "user_ratings_total": 45
             }
         },
         {
@@ -716,22 +459,19 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    10.1653636,
-                    53.812857
+                    10.0134918,
+                    53.55658
                 ]
             },
             "properties": {
-                "name": "Campingplatz Itzstedt",
-                "address": "Oeringer Weg 4, Itzstedt",
+                "name": "Spielplatz Danziger Straße",
+                "address": "Danziger Str. 27-35, 20099 Hamburg, Germany",
                 "types": [
-                    "campground",
-                    "lodging",
-                    "park",
                     "point_of_interest",
                     "establishment"
                 ],
-                "rating": 3.5,
-                "user_ratings_total": 49
+                "rating": 4.1,
+                "user_ratings_total": 51
             }
         },
         {
@@ -739,20 +479,61 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    9.993405200000002,
-                    53.4916462
+                    10.0513493,
+                    53.5741519
                 ]
             },
             "properties": {
-                "name": "Gartenverein Wilhelmsburg von 1918 e.V.",
-                "address": "Kuckuckshorn, Hamburg",
+                "name": "Eilbek Park",
+                "address": "22081 Hamburg, Germany",
                 "types": [
+                    "tourist_attraction",
                     "park",
                     "point_of_interest",
                     "establishment"
                 ],
-                "rating": 4.2,
-                "user_ratings_total": 21
+                "rating": 4.5,
+                "user_ratings_total": 1361
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0045008,
+                    53.5427578
+                ]
+            },
+            "properties": {
+                "name": "Die Super-Rutsche im Lohsepark",
+                "address": "Lohseplatz 4, 20457 Hamburg, Germany",
+                "types": [
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.6,
+                "user_ratings_total": 7
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0039305,
+                    53.543875
+                ]
+            },
+            "properties": {
+                "name": "Schaukeln im Lohsepark",
+                "address": "Stockmeyerstraße 8, 20457 Hamburg, Germany",
+                "types": [
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.3,
+                "user_ratings_total": 14
             }
         },
         {
@@ -766,7 +547,7 @@
             },
             "properties": {
                 "name": "Stadtpark",
-                "address": "Germany",
+                "address": "Hamburg, Germany",
                 "types": [
                     "park",
                     "tourist_attraction",
@@ -782,43 +563,19 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    10.0454979,
-                    53.23809559999999
+                    10.0017221,
+                    53.5707734
                 ]
             },
             "properties": {
-                "name": "Wildpark Lüneburger Heide",
-                "address": "Wildpark 1, Hanstedt",
+                "name": "Sky Swing Alsterpark",
+                "address": "20148 Hamburg, Germany",
                 "types": [
-                    "zoo",
-                    "park",
-                    "tourist_attraction",
-                    "point_of_interest",
-                    "establishment"
-                ],
-                "rating": 4.7,
-                "user_ratings_total": 16593
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    10.0816954,
-                    53.62899169999999
-                ]
-            },
-            "properties": {
-                "name": "Garden Park Haidlanden West e.V.",
-                "address": "Haidlandsweg 27, Hamburg",
-                "types": [
-                    "park",
                     "point_of_interest",
                     "establishment"
                 ],
                 "rating": 4.4,
-                "user_ratings_total": 68
+                "user_ratings_total": 19
             }
         },
         {
@@ -826,21 +583,41 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    9.989985,
-                    53.60845860000001
+                    9.9529894,
+                    53.5579226
                 ]
             },
             "properties": {
-                "name": "Eppendorfer Moor",
-                "address": "Borsteler Chaussee, Hamburg",
+                "name": "Wohlers Park",
+                "address": "Norderreihe 2, 22767 Hamburg, Germany",
                 "types": [
-                    "park",
                     "tourist_attraction",
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.5,
+                "user_ratings_total": 1268
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.981507599999999,
+                    53.5609303
+                ]
+            },
+            "properties": {
+                "name": "Großer Spielplatz",
+                "address": "St. Petersburger Str. 1, 20355 Hamburg, Germany",
+                "types": [
                     "point_of_interest",
                     "establishment"
                 ],
                 "rating": 4.6,
-                "user_ratings_total": 680
+                "user_ratings_total": 95
             }
         },
         {
@@ -848,22 +625,20 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    10.2979661,
-                    53.42607830000001
+                    9.9535,
+                    53.55668499999999
                 ]
             },
             "properties": {
-                "name": "Stover Strand Camping",
-                "address": "Stover Strand 10, Drage-Stove",
+                "name": "Emil-Wendt-Park",
+                "address": "Norderreihe 1, 22767 Hamburg, Germany",
                 "types": [
-                    "campground",
-                    "lodging",
                     "park",
                     "point_of_interest",
                     "establishment"
                 ],
                 "rating": 4.3,
-                "user_ratings_total": 2684
+                "user_ratings_total": 19
             }
         },
         {
@@ -871,112 +646,20 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    9.9905889,
-                    53.6664348
+                    9.98163,
+                    53.59023
                 ]
             },
             "properties": {
-                "name": "Kai Wiechmann Teak Gartenmöbel Outlet",
-                "address": "Rugenbarg 71, Norderstedt",
-                "types": [
-                    "furniture_store",
-                    "park",
-                    "home_goods_store",
-                    "point_of_interest",
-                    "store",
-                    "establishment"
-                ],
-                "rating": 4.7,
-                "user_ratings_total": 9
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    9.825635600000002,
-                    53.4706528
-                ]
-            },
-            "properties": {
-                "name": "Harmony Gebäudemanagement GmbH",
-                "address": "Cuxhavener Straße 465A, Hamburg-Harburg",
+                "name": "Kinder-und Familienfreizeitzentrum Bauspielplatz & Spielhaus Eppendorfer Park",
+                "address": "Frickestraße 1, 20251 Hamburg, Germany",
                 "types": [
                     "park",
                     "point_of_interest",
-                    "establishment"
-                ],
-                "rating": 2.7,
-                "user_ratings_total": 9
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    10.0007241,
-                    53.5742358
-                ]
-            },
-            "properties": {
-                "name": "Hundeauslaufzone",
-                "address": "Harvestehude, Hamburg",
-                "types": [
-                    "park",
-                    "point_of_interest",
-                    "establishment"
-                ],
-                "rating": 4.5,
-                "user_ratings_total": 255
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    9.9314224,
-                    53.70708299999999
-                ]
-            },
-            "properties": {
-                "name": "Holmmoor",
-                "address": "Moorweg, Hasloh",
-                "types": [
-                    "park",
-                    "tourist_attraction",
-                    "point_of_interest",
-                    "establishment"
-                ],
-                "rating": 4.1,
-                "user_ratings_total": 545
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    9.604337299999997,
-                    53.63334529999999
-                ]
-            },
-            "properties": {
-                "name": "Plüschau Baustoffe, Inhaber Nicolai Plüschau e. K.",
-                "address": "Hauptstraße 15, Haseldorf",
-                "types": [
-                    "hardware_store",
-                    "park",
-                    "home_goods_store",
-                    "general_contractor",
-                    "point_of_interest",
-                    "store",
                     "establishment"
                 ],
                 "rating": 4.6,
-                "user_ratings_total": 12
+                "user_ratings_total": 108
             }
         },
         {
@@ -984,164 +667,13 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    9.728396900000002,
-                    53.51049459999999
+                    9.9209549,
+                    53.54762700000001
                 ]
             },
             "properties": {
-                "name": "Piepenbrink Jan Blumenhaus & Gärtnerei",
-                "address": "Steinweg 22, Jork-Estebrügge",
-                "types": [
-                    "florist",
-                    "park",
-                    "point_of_interest",
-                    "store",
-                    "establishment"
-                ],
-                "rating": 4.9,
-                "user_ratings_total": 7
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    9.8682237,
-                    53.5518873
-                ]
-            },
-            "properties": {
-                "name": "Jenischpark",
-                "address": "Baron-Voght-Straße 50, Hamburg",
-                "types": [
-                    "park",
-                    "tourist_attraction",
-                    "point_of_interest",
-                    "establishment"
-                ],
-                "rating": 4.7,
-                "user_ratings_total": 2896
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    10.1469739,
-                    53.6230815
-                ]
-            },
-            "properties": {
-                "name": "Carsten Bremer GmbH",
-                "address": "Berner Straße 114, Hamburg-Wandsbek",
-                "types": [
-                    "park",
-                    "general_contractor",
-                    "point_of_interest",
-                    "establishment"
-                ],
-                "rating": 4.7,
-                "user_ratings_total": 18
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    10.1766749,
-                    53.4897248
-                ]
-            },
-            "properties": {
-                "name": "Vertigo - Arbeiten am Seil",
-                "address": "Fockenweide 11, Lohbrügge-Bergedorf",
-                "types": [
-                    "park",
-                    "point_of_interest",
-                    "establishment"
-                ],
-                "rating": 4.5,
-                "user_ratings_total": 2
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    10.2024346,
-                    53.3597912
-                ]
-            },
-            "properties": {
-                "name": "Luhepark",
-                "address": "Schloßring 20, Winsen (Luhe)",
-                "types": [
-                    "park",
-                    "point_of_interest",
-                    "establishment"
-                ],
-                "rating": 4.2,
-                "user_ratings_total": 311
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    9.943028300000003,
-                    53.60142130000001
-                ]
-            },
-            "properties": {
-                "name": "Amsinckpark",
-                "address": "Hartnitweg 1, Hamburg",
-                "types": [
-                    "park",
-                    "point_of_interest",
-                    "establishment"
-                ],
-                "rating": 4.4,
-                "user_ratings_total": 177
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    9.8078225,
-                    53.5648913
-                ]
-            },
-            "properties": {
-                "name": "Gossler's Park",
-                "address": "Goßlers Park 1, Hamburg-Altona",
-                "types": [
-                    "park",
-                    "point_of_interest",
-                    "establishment"
-                ],
-                "rating": 4.4,
-                "user_ratings_total": 252
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    9.806955499999999,
-                    53.6524837
-                ]
-            },
-            "properties": {
-                "name": "Rosengarten",
-                "address": "Rehmen 34A, Pinneberg",
+                "name": "Fischers Park",
+                "address": "Fischers Allee 24, 22763 Hamburg, Germany",
                 "types": [
                     "park",
                     "tourist_attraction",
@@ -1149,7 +681,7 @@
                     "establishment"
                 ],
                 "rating": 4.5,
-                "user_ratings_total": 421
+                "user_ratings_total": 595
             }
         },
         {
@@ -1157,21 +689,21 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    10.0448728,
-                    53.5562341
+                    10.0021278,
+                    53.4943828
                 ]
             },
             "properties": {
-                "name": "Thörls Park",
-                "address": "Sievekingdamm 7, Hamburg",
+                "name": "Wilhelmsburg Island Park",
+                "address": "Am Inselpark, 21109 Hamburg, Germany",
                 "types": [
                     "park",
                     "tourist_attraction",
                     "point_of_interest",
                     "establishment"
                 ],
-                "rating": 4.2,
-                "user_ratings_total": 407
+                "rating": 4.5,
+                "user_ratings_total": 4885
             }
         },
         {
@@ -1179,24 +711,168 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    9.7635661,
-                    53.7864791
+                    9.9746401,
+                    53.5465273
                 ]
             },
             "properties": {
-                "name": "Minigolf am Rantzauer See",
-                "address": "Seestraße 0, Barmstedt",
+                "name": "Eichholz Playground",
+                "address": "Eichholz 52, 20459 Hamburg, Germany",
                 "types": [
-                    "amusement_park",
-                    "cafe",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.2,
+                "user_ratings_total": 61
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9748915,
+                    53.5544057
+                ]
+            },
+            "properties": {
+                "name": "Spielplatz an den Wallanlagen",
+                "address": "20355 Hamburg, Germany",
+                "types": [
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.7,
+                "user_ratings_total": 23
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0328618,
+                    53.5962824
+                ]
+            },
+            "properties": {
+                "name": "Spielplatz Am Park",
+                "address": "Alte Wöhr 50, 22307 Hamburg, Germany",
+                "types": [
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.6,
+                "user_ratings_total": 30
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9794767,
+                    53.5893598
+                ]
+            },
+            "properties": {
+                "name": "Eppendorfer Park",
+                "address": "20251 Hamburg, Germany",
+                "types": [
+                    "tourist_attraction",
                     "park",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.5,
+                "user_ratings_total": 1186
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9812017,
+                    53.5579253
+                ]
+            },
+            "properties": {
+                "name": "Kleine Wallanlagen",
+                "address": "Jungiusstraße 3, 20355 Hamburg, Germany",
+                "types": [
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.7,
+                "user_ratings_total": 268
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -78.8304441,
+                    42.72266459999999
+                ]
+            },
+            "properties": {
+                "name": "Hamburg Community Playground",
+                "address": "107 Prospect Ave, Hamburg, NY 14075, United States",
+                "types": [
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.8,
+                "user_ratings_total": 492
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.958923799999999,
+                    53.55369659999999
+                ]
+            },
+            "properties": {
+                "name": "Adventure playground at the Brunnenhof",
+                "address": "Am Brunnenhof 14, 22767 Hamburg, Germany",
+                "types": [
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.6,
+                "user_ratings_total": 26
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.1548702,
+                    53.4816647
+                ]
+            },
+            "properties": {
+                "name": "SpielScheune der Geschichten | Hamburg",
+                "address": "Marie-Henning-Weg 1, 21035 Hamburg, Germany",
+                "types": [
+                    "meal_takeaway",
+                    "museum",
+                    "restaurant",
                     "food",
                     "point_of_interest",
                     "store",
                     "establishment"
                 ],
-                "rating": 3.9,
-                "user_ratings_total": 106
+                "rating": 4.2,
+                "user_ratings_total": 1353
             }
         },
         {
@@ -1204,20 +880,20 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    9.983029999999998,
-                    53.65900999999999
+                    10.0362538,
+                    53.5848054
                 ]
             },
             "properties": {
-                "name": "Oase Products GmbH",
-                "address": "Gutenbergring 67B, Norderstedt",
+                "name": "Osterbek-Park",
+                "address": "Osterbekstraße, 22083 Hamburg, Germany",
                 "types": [
                     "park",
                     "point_of_interest",
                     "establishment"
                 ],
-                "rating": null,
-                "user_ratings_total": null
+                "rating": 4.4,
+                "user_ratings_total": 95
             }
         },
         {
@@ -1225,20 +901,40 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    9.9191007,
-                    53.56738120000001
+                    9.9150756,
+                    53.5993443
                 ]
             },
             "properties": {
-                "name": "Gewerbepark Bornkampsweg",
-                "address": "Bornkampsweg 60, Hamburg-Altona",
+                "name": "rabatzz! Indoorspielplatz",
+                "address": "Kieler Str. 575a/floor 1, 22525 Hamburg, Germany",
+                "types": [
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.5,
+                "user_ratings_total": 3483
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.990538599999999,
+                    53.5978131
+                ]
+            },
+            "properties": {
+                "name": "Park an der Meenkwiese",
+                "address": "Meenkwiese, 20251 Hamburg, Germany",
                 "types": [
                     "park",
                     "point_of_interest",
                     "establishment"
                 ],
-                "rating": null,
-                "user_ratings_total": null
+                "rating": 4.5,
+                "user_ratings_total": 33
             }
         },
         {
@@ -1246,20 +942,245 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    9.631610000000002,
-                    53.75337
+                    9.925675499999999,
+                    53.55249939999999
                 ]
             },
             "properties": {
-                "name": "Baumpflege Tiedemann - Fachbetrieb für Baumpflege Baumsanierung",
-                "address": "Am Deich 26, Raa-Besenbek-Besenbek",
+                "name": "Playground Kemal Altun",
+                "address": "Ottenser Hauptstraße 54, 22765 Hamburg, Germany",
+                "types": [
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.3,
+                "user_ratings_total": 231
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.979391,
+                    53.5517285
+                ]
+            },
+            "properties": {
+                "name": "Spielplatz Markussstraße \"Onkel Rudi\"",
+                "address": "Markusstraße 9-10, 20355 Hamburg, Germany",
+                "types": [
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.8,
+                "user_ratings_total": 71
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0157044,
+                    53.5593491
+                ]
+            },
+            "properties": {
+                "name": "Spielplatz",
+                "address": "Bülaustraße 30, 20099 Hamburg, Germany",
+                "types": [
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.2,
+                "user_ratings_total": 89
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9631817,
+                    53.55449170000001
+                ]
+            },
+            "properties": {
+                "name": "Spielplatz Paulinenplatz",
+                "address": "Paulinenpl. 11, 20359 Hamburg, Germany",
+                "types": [
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.2,
+                "user_ratings_total": 114
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9820652,
+                    53.5620171
+                ]
+            },
+            "properties": {
+                "name": "Planten un Blomen",
+                "address": "Marseiller Promenade, 20355 Hamburg, Germany",
+                "types": [
+                    "tourist_attraction",
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.8,
+                "user_ratings_total": 23434
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0132422,
+                    53.5828571
+                ]
+            },
+            "properties": {
+                "name": "Playground Schinkelstraße",
+                "address": "Preystraße 12, 22303 Hamburg, Germany",
+                "types": [
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.4,
+                "user_ratings_total": 64
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.982986,
+                    53.57794999999999
+                ]
+            },
+            "properties": {
+                "name": "Innocentia Park",
+                "address": "Brahmsallee 75, 20144 Hamburg, Germany",
                 "types": [
                     "park",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.5,
+                "user_ratings_total": 333
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9950216,
+                    53.5571383
+                ]
+            },
+            "properties": {
+                "name": "Kleiner Park Binnenalster",
+                "address": "20354 Hamburg, Germany",
+                "types": [
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.8,
+                "user_ratings_total": 15
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.898489099999999,
+                    53.58302639999999
+                ]
+            },
+            "properties": {
+                "name": "Altonaer Volkspark",
+                "address": "August-Kirch-Straße 19, 22525 Hamburg, Germany",
+                "types": [
+                    "tourist_attraction",
+                    "park",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.6,
+                "user_ratings_total": 4392
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0105301,
+                    53.5841426
+                ]
+            },
+            "properties": {
+                "name": "Playground Goldbekplatz",
+                "address": "Goldbekpl. 4, 22303 Hamburg, Germany",
+                "types": [
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.3,
+                "user_ratings_total": 128
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9819149,
+                    53.5626519
+                ]
+            },
+            "properties": {
+                "name": "Wasserspiele",
+                "address": "St. Pauli, Hamburg, Germany",
+                "types": [
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.5,
+                "user_ratings_total": 45
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9670612,
+                    53.57421859999999
+                ]
+            },
+            "properties": {
+                "name": "Pirate-themed playground Goebenbrücke",
+                "address": "Kaiser-Friedrich-Ufer, 20253 Hamburg, Germany",
+                "types": [
                     "point_of_interest",
                     "establishment"
                 ],
                 "rating": 4.1,
-                "user_ratings_total": 14
+                "user_ratings_total": 74
             }
         },
         {
@@ -1267,20 +1188,21 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    9.663119299999998,
-                    53.74507269999999
+                    10.0576894,
+                    53.5588062
                 ]
             },
             "properties": {
-                "name": "KGV Elmshorn e.V. Ulf Schmidt",
-                "address": "Holzweg 2A, Elmshorn",
+                "name": "Hammer Park",
+                "address": "Hammerpark, 20535 Hamburg, Germany",
                 "types": [
+                    "tourist_attraction",
                     "park",
                     "point_of_interest",
                     "establishment"
                 ],
-                "rating": 4.1,
-                "user_ratings_total": 57
+                "rating": 4.4,
+                "user_ratings_total": 3675
             }
         },
         {
@@ -1288,20 +1210,20 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    10.1790374,
-                    53.44861629999999
+                    9.987522799999999,
+                    53.5592951
                 ]
             },
             "properties": {
-                "name": "Vierländer Gartenbaubetrieb Michael Bornhöft",
-                "address": "Kirchwerder Landweg 194, Hamburg-Bergedorf",
+                "name": "Dammtorpark, Planten un Blomen",
+                "address": "20354 Hamburg, Germany",
                 "types": [
                     "park",
                     "point_of_interest",
                     "establishment"
                 ],
                 "rating": 4.7,
-                "user_ratings_total": 98
+                "user_ratings_total": 2095
             }
         },
         {
@@ -1309,131 +1231,21 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    9.861289,
-                    53.67118730000001
+                    9.9744367,
+                    53.5537478
                 ]
             },
             "properties": {
-                "name": "Viering Otmar Inh. Stephan Viering e. K. Garten- und Landschaftsbau",
-                "address": "Jacob-Behrmann-Weg 1a, Tangstedt",
+                "name": "Große Wallanlagen",
+                "address": "Holstenwall 30, 20355 Hamburg, Germany",
                 "types": [
-                    "park",
-                    "general_contractor",
-                    "point_of_interest",
-                    "establishment"
-                ],
-                "rating": 5,
-                "user_ratings_total": 1
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    10.2494771,
-                    53.47909809999999
-                ]
-            },
-            "properties": {
-                "name": "Blumenpavillon und Friedhofsgärtnerei Burmester GbR",
-                "address": "August-Bebel-Straße 206, Hamburg",
-                "types": [
-                    "florist",
-                    "park",
-                    "general_contractor",
-                    "point_of_interest",
-                    "store",
-                    "establishment"
-                ],
-                "rating": 4.8,
-                "user_ratings_total": 141
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    9.9926897,
-                    53.709986
-                ]
-            },
-            "properties": {
-                "name": "Heidberg Park",
-                "address": "i, Alter Heidberg 23, Norderstedt",
-                "types": [
+                    "tourist_attraction",
                     "park",
                     "point_of_interest",
                     "establishment"
                 ],
-                "rating": 4.1,
-                "user_ratings_total": 99
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    10.04971,
-                    53.099
-                ]
-            },
-            "properties": {
-                "name": "Biohotel Spöktal",
-                "address": "Spöktal 1-2, Bispingen",
-                "types": [
-                    "lodging",
-                    "park",
-                    "point_of_interest",
-                    "establishment"
-                ],
-                "rating": 4.3,
-                "user_ratings_total": 223
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    10.0595342,
-                    53.56503319999999
-                ]
-            },
-            "properties": {
-                "name": "Connectic GmbH",
-                "address": "Marienthaler Straße 173, Hamburg-Wandsbek",
-                "types": [
-                    "park",
-                    "general_contractor",
-                    "point_of_interest",
-                    "establishment"
-                ],
-                "rating": null,
-                "user_ratings_total": null
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    10.0817682,
-                    53.5133431
-                ]
-            },
-            "properties": {
-                "name": "Baumdienst Nortis",
-                "address": "Sandwisch 45, Hamburg-Bergedorf",
-                "types": [
-                    "park",
-                    "point_of_interest",
-                    "establishment"
-                ],
-                "rating": 5,
-                "user_ratings_total": 2
+                "rating": 4.7,
+                "user_ratings_total": 1255
             }
         }
     ]

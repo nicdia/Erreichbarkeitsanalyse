@@ -17,6 +17,8 @@ def add_column_based_on_table_name(db_con):
                             new_column_value = "metaver"
                         elif "osm" in table:
                             new_column_value = "osm"
+                        elif "gmaps" in table:
+                            new_column_value = "gmaps"
                         else:
                             continue  
                         

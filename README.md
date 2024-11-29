@@ -40,17 +40,30 @@ Schulische Turnhallen --> Punkte (Grundschulen mit SportHallsMeta mit Feld Schul
 
 Daraus folgt:
 Fertig: 1. Grundschulen 2. Schulische Turnhallen 3. Kinderzahnärzte 4. Kinderärzte
+Noch nicht, aber mit generischen Funktionen lösbar: 1. Außerschulische Angebote (nur UNION), 2. Naturerfahrungen
+Das wird komplexer: 1. Parks, 2. Spielplätze
 
 Google Fetchen: Parks, Spielplatz
 Zentroide: Naturerfahrungen
 UNION: Außerschulangebote, Naturerfahrungen, (Parks), (Spielplatz)
 
 Als nächstes zu tun (DIA):
---> bessere Park und Spielplatzdaten von Google Maps ziehen (custom Field Funktion entweder mit google maps erweitern ist gehardcoded)
+--> bessere Park und Spielplatzdaten von Google Maps ziehen
 --> Centroid Funktion für Naturerfahrungen
 --> Union Funktion schreiben
 --> EVTL Da wo mehrere Datensätze für beides: Schauen wo ein Buffer um MetaverDaten gelegt werden muss um zu gucken inwiefern OSM und Metaver Daten voneinander abweichen
 --> Irgendwann: Logger einbauen!
+
+Notizen Parks:
+OSM Daten zeigen Grünflächen
+Meta Daten zeigen viele Parks aber auch Plätze, welche keine Parks sind
+Google Maps Daten (Text Search und Keyword Search) zeigen auch Parks
+--> Parks Vorgehen:
+
+- Meta Daten (137 Fts.) + GMAPS Daten (60Fts) buffern - wenn in dem Radius kein OSM Punkt liegt dann ist es vermutlich ein Platz oder etwas anderes
+  --> Funktioniert nicht richtig, manche Parks werden nicht genommen die eigentlich welche sind und manche Plätze die keine Parks sind werden genommen
+  --> Idee: Cluster Analyse?
+- gucken im Feld "name" ob Duplikate vorliegen. Wenn ja, werden die rausgeschmissen und das Ergebnis wird der Parks-Indikator
 
 Ablauf
 Set-Up-DB-Teil: 1. lädt alle Tabellen 2x hoch - einmal \_original und einmal die Tabelle die dann modifiziert wird 2. Modifizierte Tabellen bekommen ihr Geometriefeld angepasst mit 25832 3. Modifizierte Tabellen bekommen neue Spalte mit dem Namen der Datenquelle

@@ -16,7 +16,9 @@
                 "types": [
                     "locality",
                     "political"
-                ]
+                ],
+                "rating": null,
+                "user_ratings_total": null
             }
         },
         {
@@ -35,7 +37,9 @@
                     "lodging",
                     "point_of_interest",
                     "establishment"
-                ]
+                ],
+                "rating": 4.4,
+                "user_ratings_total": 1417
             }
         },
         {
@@ -54,7 +58,9 @@
                     "lodging",
                     "point_of_interest",
                     "establishment"
-                ]
+                ],
+                "rating": 4.3,
+                "user_ratings_total": 2096
             }
         },
         {
@@ -73,7 +79,9 @@
                     "lodging",
                     "point_of_interest",
                     "establishment"
-                ]
+                ],
+                "rating": 4.3,
+                "user_ratings_total": 2196
             }
         },
         {
@@ -92,7 +100,9 @@
                     "lodging",
                     "point_of_interest",
                     "establishment"
-                ]
+                ],
+                "rating": 4,
+                "user_ratings_total": 1770
             }
         },
         {
@@ -115,26 +125,9 @@
                     "food",
                     "point_of_interest",
                     "establishment"
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    10.00226,
-                    53.55054860000001
-                ]
-            },
-            "properties": {
-                "name": "HENRI Hotel Hamburg Downtown",
-                "address": "Bugenhagenstraße 21, Hamburg",
-                "types": [
-                    "lodging",
-                    "point_of_interest",
-                    "establishment"
-                ]
+                ],
+                "rating": 4.5,
+                "user_ratings_total": 1932
             }
         },
         {
@@ -154,7 +147,897 @@
                     "bar",
                     "point_of_interest",
                     "establishment"
+                ],
+                "rating": 4.5,
+                "user_ratings_total": 3805
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.00502,
+                    53.5567731
                 ]
+            },
+            "properties": {
+                "name": "Hotel Atlantic Hamburg, Autograph Collection",
+                "address": "An der Alster 72-79, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.6,
+                "user_ratings_total": 3632
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9810638,
+                    53.54629139999999
+                ]
+            },
+            "properties": {
+                "name": "THE MADISON Hotel Hamburg",
+                "address": "Schaarsteinweg 4, Hamburg",
+                "types": [
+                    "lodging",
+                    "bar",
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.8,
+                "user_ratings_total": 1984
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.977883300000002,
+                    53.5510103
+                ]
+            },
+            "properties": {
+                "name": "Lindner Hotel Hamburg Am Michel - JDV by Hyatt",
+                "address": "Neanderstraße 20, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.5,
+                "user_ratings_total": 3155
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0093618,
+                    53.5527404
+                ]
+            },
+            "properties": {
+                "name": "Generator Hostel Hamburg",
+                "address": "Steintorplatz 3, Hamburg",
+                "types": [
+                    "lodging",
+                    "restaurant",
+                    "food",
+                    "bar",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.5,
+                "user_ratings_total": 4189
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.999256299999999,
+                    53.54142119999999
+                ]
+            },
+            "properties": {
+                "name": "25hours Hotel Hamburg HafenCity",
+                "address": "Überseeallee 5, Hamburg",
+                "types": [
+                    "lodging",
+                    "restaurant",
+                    "food",
+                    "bar",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.5,
+                "user_ratings_total": 2340
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.010716,
+                    53.5475307
+                ]
+            },
+            "properties": {
+                "name": "a&o Hostel Hamburg Hauptbahnhof",
+                "address": "Amsinckstraße 2-10, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.1,
+                "user_ratings_total": 7184
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.987446699999998,
+                    53.5615554
+                ]
+            },
+            "properties": {
+                "name": "Radisson Blu Hotel, Hamburg",
+                "address": "Congressplatz 2, Hamburg",
+                "types": [
+                    "lodging",
+                    "bar",
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.4,
+                "user_ratings_total": 4802
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0078546,
+                    53.5584582
+                ]
+            },
+            "properties": {
+                "name": "Le Méridien Hamburg",
+                "address": "An der Alster 52, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.4,
+                "user_ratings_total": 2511
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.974937599999999,
+                    53.5498506
+                ]
+            },
+            "properties": {
+                "name": "Hotel Motel One Hamburg Am Michel",
+                "address": "Ludwig-Erhard-Straße 26, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.4,
+                "user_ratings_total": 4662
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0096556,
+                    53.55825929999999
+                ]
+            },
+            "properties": {
+                "name": "Hotel Wedina",
+                "address": "Gurlittstraße 23, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.6,
+                "user_ratings_total": 372
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9905245,
+                    53.5630389
+                ]
+            },
+            "properties": {
+                "name": "Grand Elysée Hotel",
+                "address": "Rothenbaumchaussee 10, Hamburg-Eimsbüttel",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.6,
+                "user_ratings_total": 4252
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.974987899999999,
+                    53.5454204
+                ]
+            },
+            "properties": {
+                "name": "Hotel Stella Maris",
+                "address": "Reimarusstraße 12, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.3,
+                "user_ratings_total": 778
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0123399,
+                    53.5539552
+                ]
+            },
+            "properties": {
+                "name": "St. Georg, Hamburg",
+                "address": "St. Georg, Hamburg",
+                "types": [
+                    "sublocality_level_2",
+                    "sublocality",
+                    "political"
+                ],
+                "rating": null,
+                "user_ratings_total": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.971760000000002,
+                    53.54654300000001
+                ]
+            },
+            "properties": {
+                "name": "DJH Jugendherberge Hamburg „Auf dem Stintfang“",
+                "address": "Alfred-Wegener-Weg 5, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.1,
+                "user_ratings_total": 1997
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0160717,
+                    53.55546429999999
+                ]
+            },
+            "properties": {
+                "name": "ARCOTEL Rubin Hamburg",
+                "address": "Steindamm 63, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.2,
+                "user_ratings_total": 2592
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9694686,
+                    53.54696970000001
+                ]
+            },
+            "properties": {
+                "name": "Hotel Hafen Hamburg",
+                "address": "Seewartenstraße 9, Hamburg",
+                "types": [
+                    "lodging",
+                    "bar",
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.4,
+                "user_ratings_total": 7918
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0127748,
+                    53.5604681
+                ]
+            },
+            "properties": {
+                "name": "relexa hotel Bellevue Hamburg",
+                "address": "An der Alster 14, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.2,
+                "user_ratings_total": 1120
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9676268,
+                    53.5493503
+                ]
+            },
+            "properties": {
+                "name": "ARCOTEL Onyx Hamburg",
+                "address": "Reeperbahn 1a, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.5,
+                "user_ratings_total": 3467
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0109004,
+                    53.5527704
+                ]
+            },
+            "properties": {
+                "name": "Hotel Village",
+                "address": "Steindamm 4, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.8,
+                "user_ratings_total": 389
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0183493,
+                    53.5453458
+                ]
+            },
+            "properties": {
+                "name": "Mercure Hotel Hamburg City",
+                "address": "Amsinckstraße 53, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.2,
+                "user_ratings_total": 2704
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0147583,
+                    53.5610306
+                ]
+            },
+            "properties": {
+                "name": "The George - Hotel Hamburg",
+                "address": "Barcastraße 3, Hamburg",
+                "types": [
+                    "spa",
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.4,
+                "user_ratings_total": 1642
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.966677700000002,
+                    53.55092519999999
+                ]
+            },
+            "properties": {
+                "name": "ibis Hamburg St Pauli Messe",
+                "address": "Simon-von-Utrecht-Straße 63, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.1,
+                "user_ratings_total": 1690
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0200933,
+                    53.5565886
+                ]
+            },
+            "properties": {
+                "name": "Hotel Motel One Hamburg-Alster",
+                "address": "Steindamm 102, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.4,
+                "user_ratings_total": 3797
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0218768,
+                    53.5505897
+                ]
+            },
+            "properties": {
+                "name": "Superbude Hotel Hamburg St. Georg",
+                "address": "Spaldingstraße 152, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.5,
+                "user_ratings_total": 1550
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9646371,
+                    53.5507511
+                ]
+            },
+            "properties": {
+                "name": "Hostel Buch-ein-Bett.de",
+                "address": "Detlev-Bremer-Straße 44, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.9,
+                "user_ratings_total": 286
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.016405,
+                    53.55295700000001
+                ]
+            },
+            "properties": {
+                "name": "Best Western Plus Hotel St. Raphael",
+                "address": "Adenauerallee 41, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.3,
+                "user_ratings_total": 1212
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9633163,
+                    53.5472372
+                ]
+            },
+            "properties": {
+                "name": "Empire Riverside Hotel Hamburg",
+                "address": "Bernhard-Nocht-Straße 97, Hamburg",
+                "types": [
+                    "bar",
+                    "restaurant",
+                    "lodging",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.6,
+                "user_ratings_total": 7321
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.970816299999997,
+                    53.56399159999999
+                ]
+            },
+            "properties": {
+                "name": "Mövenpick Hamburg",
+                "address": "Sternschanze 6, Hamburg-Altona",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.4,
+                "user_ratings_total": 3009
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0196295,
+                    53.5627754
+                ]
+            },
+            "properties": {
+                "name": "Crowne Plaza Hamburg - City Alster, an IHG Hotel",
+                "address": "Graumannsweg 10, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.4,
+                "user_ratings_total": 2906
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0122222,
+                    53.55333330000001
+                ]
+            },
+            "properties": {
+                "name": "Hotel Residence",
+                "address": "Steindamm 24-26, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.1,
+                "user_ratings_total": 530
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.974400499999998,
+                    53.5505781
+                ]
+            },
+            "properties": {
+                "name": "Hotel Holstenwall",
+                "address": "Holstenwall 19, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.4,
+                "user_ratings_total": 1176
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9787231,
+                    53.5434955
+                ]
+            },
+            "properties": {
+                "name": "Das Feuerschiff LV 13",
+                "address": "City Sporthafen, Vorsetzen, Hamburg",
+                "types": [
+                    "cafe",
+                    "bar",
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.4,
+                "user_ratings_total": 3388
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9771553,
+                    53.5646718
+                ]
+            },
+            "properties": {
+                "name": "Mercure Hotel Hamburg Mitte",
+                "address": "Schröderstiftstraße 3, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.3,
+                "user_ratings_total": 1722
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.958746999999999,
+                    53.5497416
+                ]
+            },
+            "properties": {
+                "name": "a&o Hamburg Reeperbahn",
+                "address": "Reeperbahn 154, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 2.9,
+                "user_ratings_total": 5341
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.00226,
+                    53.55054860000001
+                ]
+            },
+            "properties": {
+                "name": "HENRI Hotel Hamburg Downtown",
+                "address": "Bugenhagenstraße 21, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.6,
+                "user_ratings_total": 802
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0044543,
+                    53.55674430000001
+                ]
+            },
+            "properties": {
+                "name": "ibis Hamburg Alster Centrum",
+                "address": "Holzdamm 4-12 + 16, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.9,
+                "user_ratings_total": 1781
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0094112,
+                    53.55576730000001
+                ]
+            },
+            "properties": {
+                "name": "Hotel Senator",
+                "address": "Lange Reihe 18-20, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.2,
+                "user_ratings_total": 614
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.973899000000001,
+                    53.556899
+                ]
+            },
+            "properties": {
+                "name": "Hotel NH Collection Hamburg City",
+                "address": "Feldstraße 53-58, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.6,
+                "user_ratings_total": 1922
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0086322,
+                    53.5539638
+                ]
+            },
+            "properties": {
+                "name": "Hotel Europäischer Hof",
+                "address": "Kirchenallee 45, Hamburg",
+                "types": [
+                    "bar",
+                    "lodging",
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.2,
+                "user_ratings_total": 2275
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.987216,
+                    53.56401789999999
+                ]
+            },
+            "properties": {
+                "name": "Hotel Amsterdam",
+                "address": "Moorweidenstraße 34, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.6,
+                "user_ratings_total": 266
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.965886200000002,
+                    53.55119029999999
+                ]
+            },
+            "properties": {
+                "name": "east Restaurant",
+                "address": "Simon-von-Utrecht-Straße 31, Hamburg",
+                "types": [
+                    "restaurant",
+                    "bar",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.3,
+                "user_ratings_total": 920
             }
         },
         {
@@ -173,7 +1056,201 @@
                     "lodging",
                     "point_of_interest",
                     "establishment"
+                ],
+                "rating": 4.4,
+                "user_ratings_total": 1945
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0150912,
+                    53.55336519999999
                 ]
+            },
+            "properties": {
+                "name": "Hotel City House",
+                "address": "Pulverteich 25, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.3,
+                "user_ratings_total": 583
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9636022,
+                    53.5498509
+                ]
+            },
+            "properties": {
+                "name": "Hotel Ambiente by Next Inn",
+                "address": "Reeperbahn 57, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 2.8,
+                "user_ratings_total": 176
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0143959,
+                    53.55285960000001
+                ]
+            },
+            "properties": {
+                "name": "Hotel Alte Wache",
+                "address": "Adenauerallee 25, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.9,
+                "user_ratings_total": 953
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0119329,
+                    53.55954089999999
+                ]
+            },
+            "properties": {
+                "name": "Aussen Alster Hotel",
+                "address": "Schmilinskystraße 11, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.4,
+                "user_ratings_total": 299
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0184014,
+                    53.55154009999999
+                ]
+            },
+            "properties": {
+                "name": "Junges Hotel Hamburg",
+                "address": "Kurt-Schumacher-Allee 14, Hamburg",
+                "types": [
+                    "bar",
+                    "lodging",
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.2,
+                "user_ratings_total": 904
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.014335,
+                    53.55346600000001
+                ]
+            },
+            "properties": {
+                "name": "Hotel Königshof Hamburg Innenstadt",
+                "address": "Pulverteich 18, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 2.9,
+                "user_ratings_total": 334
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0097852,
+                    53.5542332
+                ]
+            },
+            "properties": {
+                "name": "NYCE Hotel Hamburg City, Trademark Collection by Wyndham",
+                "address": "Ellmenreichstraße 20, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.1,
+                "user_ratings_total": 640
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.014206,
+                    53.5541702
+                ]
+            },
+            "properties": {
+                "name": "Hotel Savoy Hamburg",
+                "address": "Steindamm 54, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.5,
+                "user_ratings_total": 345
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9774532,
+                    53.5462189
+                ]
+            },
+            "properties": {
+                "name": "Clipper Boardinghouse Hamburg-Michel",
+                "address": "Ditmar-Koel-Straße 1, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.6,
+                "user_ratings_total": 772
             }
         },
         {
@@ -194,7 +1271,9 @@
                     "food",
                     "point_of_interest",
                     "establishment"
-                ]
+                ],
+                "rating": 4.3,
+                "user_ratings_total": 1518
             }
         },
         {
@@ -202,18 +1281,20 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    10.00502,
-                    53.5567731
+                    10.0116571,
+                    53.5535432
                 ]
             },
             "properties": {
-                "name": "Hotel Atlantic Hamburg, Autograph Collection",
-                "address": "An der Alster 72-79, Hamburg",
+                "name": "Hotel Lumen",
+                "address": "Steindamm 19, Hamburg",
                 "types": [
                     "lodging",
                     "point_of_interest",
                     "establishment"
-                ]
+                ],
+                "rating": 3.2,
+                "user_ratings_total": 619
             }
         },
         {
@@ -221,18 +1302,20 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    9.991167099999998,
-                    53.557637
+                    9.9933324,
+                    53.5783351
                 ]
             },
             "properties": {
-                "name": "Hotel Alster-Hof",
-                "address": "Esplanade 12, Hamburg",
+                "name": "Hotel Mittelweg",
+                "address": "Mittelweg 59, Hamburg-Eimsbüttel",
                 "types": [
                     "lodging",
                     "point_of_interest",
                     "establishment"
-                ]
+                ],
+                "rating": 4.5,
+                "user_ratings_total": 182
             }
         },
         {
@@ -240,18 +1323,20 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    9.989897700000002,
-                    53.5573044
+                    10.0318447,
+                    53.5858631
                 ]
             },
             "properties": {
-                "name": "Hotel Bei Der Esplanade",
-                "address": "Colonnaden 45, Hamburg",
+                "name": "Heikotel - Hotel Am Stadtpark",
+                "address": "Flüggestraße 5, Hamburg-Nord",
                 "types": [
                     "lodging",
                     "point_of_interest",
                     "establishment"
-                ]
+                ],
+                "rating": 4.4,
+                "user_ratings_total": 727
             }
         },
         {
@@ -259,18 +1344,44 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    10.0044543,
-                    53.55674430000001
+                    10.0175117,
+                    53.57111
                 ]
             },
             "properties": {
-                "name": "ibis Hamburg Alster Centrum",
-                "address": "Holzdamm 4-12 + 16, Hamburg",
+                "name": "Aspria Hamburg Uhlenhorst",
+                "address": "Hofweg 40, Hamburg-Nord",
+                "types": [
+                    "spa",
+                    "gym",
+                    "lodging",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.1,
+                "user_ratings_total": 925
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0152263,
+                    53.57505020000001
+                ]
+            },
+            "properties": {
+                "name": "Boulevard Hotel Hamburg",
+                "address": "Hofweg 73, Hamburg-Nord",
                 "types": [
                     "lodging",
                     "point_of_interest",
                     "establishment"
-                ]
+                ],
+                "rating": 4.3,
+                "user_ratings_total": 59
             }
         },
         {
@@ -278,20 +1389,105 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    9.991548600000002,
-                    53.55561780000001
+                    9.9876483,
+                    53.5838111
                 ]
             },
             "properties": {
-                "name": "Fairmont Hotel Vier Jahreszeiten",
-                "address": "Neuer Jungfernstieg 9 14, Hamburg",
+                "name": "Romantik Hotel das Smolka",
+                "address": "Isestraße 98, Hamburg-Eimsbüttel",
                 "types": [
                     "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.3,
+                "user_ratings_total": 171
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.98019,
+                    53.57924
+                ]
+            },
+            "properties": {
+                "name": "von Deska Townhouses",
+                "address": "Klosterallee 70 / 72, Hamburg-Eimsbüttel",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.8,
+                "user_ratings_total": 43
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0086291,
+                    53.58253119999999
+                ]
+            },
+            "properties": {
+                "name": "Hotel Cristobal",
+                "address": "Dorotheenstraße 52, Hamburg-Nord",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.3,
+                "user_ratings_total": 143
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.98824,
+                    53.57155
+                ]
+            },
+            "properties": {
+                "name": "Hotel Am Rothenbaum Hamburg",
+                "address": "Rothenbaumchaussee 107, Hamburg-Eimsbüttel",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.2,
+                "user_ratings_total": 281
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9875,
+                    53.5902778
+                ]
+            },
+            "properties": {
+                "name": "Restaurant Cornelia Poletto",
+                "address": "Eppendorfer Landstraße 80, Hamburg-Nord",
+                "types": [
                     "restaurant",
                     "food",
                     "point_of_interest",
                     "establishment"
-                ]
+                ],
+                "rating": 4.5,
+                "user_ratings_total": 487
             }
         },
         {
@@ -299,21 +1495,21 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    10.0015972,
-                    53.55342599999999
+                    9.986612700000002,
+                    53.590699
                 ]
             },
             "properties": {
-                "name": "Hamburger Volksbank eG",
-                "address": "Rosenstraße 2, Hamburg",
+                "name": "TK Maxx",
+                "address": "Eppendorfer Landstraße 77, Hamburg",
                 "types": [
-                    "bank",
-                    "atm",
-                    "real_estate_agency",
-                    "finance",
+                    "department_store",
                     "point_of_interest",
+                    "store",
                     "establishment"
-                ]
+                ],
+                "rating": 4,
+                "user_ratings_total": 2199
             }
         },
         {
@@ -321,18 +1517,1181 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    9.9833224,
-                    53.5489046
+                    10.0151673,
+                    53.57528569999999
                 ]
             },
             "properties": {
-                "name": "Kleinhuis Hotel Michaelis Hof in der Katholischen Akademie",
-                "address": "Herrengraben 4, Hamburg",
+                "name": "Hotel du Nord Alster",
+                "address": "Hofweg 75, Hamburg-Nord",
                 "types": [
                     "lodging",
                     "point_of_interest",
                     "establishment"
+                ],
+                "rating": 4.6,
+                "user_ratings_total": 353
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.997242,
+                    53.5707923
                 ]
+            },
+            "properties": {
+                "name": "Ristorante Portonovo",
+                "address": "Milchstraße 7, Hamburg",
+                "types": [
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.3,
+                "user_ratings_total": 793
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.027361,
+                    53.577028
+                ]
+            },
+            "properties": {
+                "name": "Bäderland Bartholomäustherme",
+                "address": "Bartholomäusstraße 95, Hamburg-Nord",
+                "types": [
+                    "spa",
+                    "point_of_interest",
+                    "health",
+                    "establishment"
+                ],
+                "rating": 4.3,
+                "user_ratings_total": 1554
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9904293,
+                    53.5896185
+                ]
+            },
+            "properties": {
+                "name": "Holthusenbad",
+                "address": "Goernestraße 21, Hamburg",
+                "types": [
+                    "spa",
+                    "point_of_interest",
+                    "health",
+                    "establishment"
+                ],
+                "rating": 4.2,
+                "user_ratings_total": 2421
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9883633,
+                    53.5783141
+                ]
+            },
+            "properties": {
+                "name": "von Deska Townhouses - White House",
+                "address": "Rothenbaumchaussee 197, Hamburg-Eimsbüttel",
+                "types": [
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 5,
+                "user_ratings_total": 8
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9948442,
+                    53.5718057
+                ]
+            },
+            "properties": {
+                "name": "Dr. med. Hans Ulrich Schmidt",
+                "address": "Mittelweg 123, Hamburg",
+                "types": [
+                    "point_of_interest",
+                    "doctor",
+                    "health",
+                    "establishment"
+                ],
+                "rating": 3.2,
+                "user_ratings_total": 101
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9857516,
+                    53.5826287
+                ]
+            },
+            "properties": {
+                "name": "Closed Women's Store Hamburg Eppendorf",
+                "address": "Eppendorfer Baum 13, Hamburg-Eimsbüttel",
+                "types": [
+                    "clothing_store",
+                    "point_of_interest",
+                    "store",
+                    "establishment"
+                ],
+                "rating": 4.2,
+                "user_ratings_total": 20
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0214125,
+                    53.5856621
+                ]
+            },
+            "properties": {
+                "name": "Jarre-Apartment",
+                "address": "Stammannstraße 3, Hamburg-Nord",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.3,
+                "user_ratings_total": 3
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.01571,
+                    53.588852
+                ]
+            },
+            "properties": {
+                "name": "Winterhude",
+                "address": "Winterhude",
+                "types": [
+                    "sublocality_level_2",
+                    "sublocality",
+                    "political"
+                ],
+                "rating": null,
+                "user_ratings_total": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0236668,
+                    53.589572
+                ]
+            },
+            "properties": {
+                "name": "Volkswagen Automobile Hamburg Wiesendamm",
+                "address": "Wiesendamm 120, Hamburg-Nord",
+                "types": [
+                    "car_repair",
+                    "car_dealer",
+                    "point_of_interest",
+                    "store",
+                    "establishment"
+                ],
+                "rating": 4.4,
+                "user_ratings_total": 1382
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0251975,
+                    53.57966880000001
+                ]
+            },
+            "properties": {
+                "name": "Café May",
+                "address": "Von-Axen-Straße 2, Hamburg-Nord",
+                "types": [
+                    "cafe",
+                    "food",
+                    "point_of_interest",
+                    "store",
+                    "establishment"
+                ],
+                "rating": 4,
+                "user_ratings_total": 616
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9982753,
+                    53.5951367
+                ]
+            },
+            "properties": {
+                "name": "Juwelier Harnisch",
+                "address": "Alsterdorfer Straße 5, Hamburg-Nord",
+                "types": [
+                    "jewelry_store",
+                    "point_of_interest",
+                    "store",
+                    "establishment"
+                ],
+                "rating": 4.3,
+                "user_ratings_total": 184
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0024695,
+                    53.5913178
+                ]
+            },
+            "properties": {
+                "name": "Restaurante Portomarin",
+                "address": "Dorotheenstraße 180, Hamburg-Nord",
+                "types": [
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.9,
+                "user_ratings_total": 217
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0218018,
+                    53.5833342
+                ]
+            },
+            "properties": {
+                "name": "Kampnagel",
+                "address": "Jarrestraße 20, Hamburg-Nord",
+                "types": [
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.5,
+                "user_ratings_total": 2182
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.992746,
+                    53.5930365
+                ]
+            },
+            "properties": {
+                "name": "Alma Hoppe",
+                "address": "Ludolfstraße 53, Hamburg-Nord",
+                "types": [
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.6,
+                "user_ratings_total": 1134
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9982556,
+                    53.5945611
+                ]
+            },
+            "properties": {
+                "name": "Restaurant Da Lui",
+                "address": "Hudtwalckerstraße 37, Hamburg-Nord",
+                "types": [
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.4,
+                "user_ratings_total": 654
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9858961,
+                    53.5898109
+                ]
+            },
+            "properties": {
+                "name": "Enddarmzentrum Eppendorf",
+                "address": "Robert-Koch-Straße 36, Hamburg-Nord",
+                "types": [
+                    "doctor",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.1,
+                "user_ratings_total": 93
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.01677,
+                    53.56993
+                ]
+            },
+            "properties": {
+                "name": "Aparthotel York",
+                "address": "Hofweg 19-21, Hamburg-Nord",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.7,
+                "user_ratings_total": 6
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.988659600000002,
+                    53.5939692
+                ]
+            },
+            "properties": {
+                "name": "Gandhi",
+                "address": "Eppendorfer Marktplatz 21, Hamburg",
+                "types": [
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.6,
+                "user_ratings_total": 301
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.986559999999999,
+                    53.58223
+                ]
+            },
+            "properties": {
+                "name": "Dr.med. Holger Radloff Facharzt für Dermatologie",
+                "address": "Eppendorfer Baum 7, Hamburg-Eimsbüttel",
+                "types": [
+                    "doctor",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.8,
+                "user_ratings_total": 78
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0082499,
+                    53.57463139999999
+                ]
+            },
+            "properties": {
+                "name": "Islamic Centre of Hamburg",
+                "address": "Schöne Aussicht 36, Hamburg-Nord",
+                "types": [
+                    "mosque",
+                    "tourist_attraction",
+                    "library",
+                    "place_of_worship",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.3,
+                "user_ratings_total": 613
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.028349,
+                    53.5832767
+                ]
+            },
+            "properties": {
+                "name": "Apothekerkammer Hamburg K.d.ö.R.",
+                "address": "Osterbekstraße 90c, Hamburg",
+                "types": [
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.8,
+                "user_ratings_total": 9
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0086525,
+                    53.5824538
+                ]
+            },
+            "properties": {
+                "name": "W E G",
+                "address": "Dorotheenstraße 52, Hamburg-Nord",
+                "types": [
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.5,
+                "user_ratings_total": 2
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0004162,
+                    53.5946429
+                ]
+            },
+            "properties": {
+                "name": "dm-drogerie markt",
+                "address": "Winterhuder Marktplatz 8, Hamburg-Nord",
+                "types": [
+                    "drugstore",
+                    "grocery_or_supermarket",
+                    "clothing_store",
+                    "food",
+                    "health",
+                    "point_of_interest",
+                    "store",
+                    "establishment"
+                ],
+                "rating": 4.1,
+                "user_ratings_total": 80
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0076061,
+                    53.5811432
+                ]
+            },
+            "properties": {
+                "name": "Gallo Nero Hamburg",
+                "address": "Sierichstraße 46, Hamburg",
+                "types": [
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.3,
+                "user_ratings_total": 1360
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.987567799999997,
+                    53.58235889999999
+                ]
+            },
+            "properties": {
+                "name": "BEISSER Hamburg 1836 - Eppendorf",
+                "address": "Eppendorfer Baum 4, Hamburg-Eimsbüttel",
+                "types": [
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "store",
+                    "establishment"
+                ],
+                "rating": 4.6,
+                "user_ratings_total": 38
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0200126,
+                    53.5748727
+                ]
+            },
+            "properties": {
+                "name": "La Sorpresa",
+                "address": "Zimmerstraße 54, Hamburg-Nord",
+                "types": [
+                    "meal_takeaway",
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.6,
+                "user_ratings_total": 624
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0118071,
+                    53.5807434
+                ]
+            },
+            "properties": {
+                "name": "TeeGschwendner",
+                "address": "Mühlenkamp 17, Hamburg-Nord",
+                "types": [
+                    "grocery_or_supermarket",
+                    "home_goods_store",
+                    "food",
+                    "point_of_interest",
+                    "store",
+                    "establishment"
+                ],
+                "rating": 4.6,
+                "user_ratings_total": 57
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.000731,
+                    53.59432349999999
+                ]
+            },
+            "properties": {
+                "name": "Praxis für Unfallchirurgie & Orthopädie. Handchirurgie. D-Ärzte. Ambulante Operationen. Dr. Rosenau & Dr. Schmidt",
+                "address": "Winterhuder Marktplatz 6, Hamburg-Nord",
+                "types": [
+                    "doctor",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.3,
+                "user_ratings_total": 216
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.983730000000001,
+                    53.58721999999999
+                ]
+            },
+            "properties": {
+                "name": "Dermatologische Praxis Dr. Berg & Kollegen",
+                "address": "Eppendorfer Landstraße 21, Hamburg-Nord",
+                "types": [
+                    "doctor",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.8,
+                "user_ratings_total": 101
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.982154699999999,
+                    53.58424950000001
+                ]
+            },
+            "properties": {
+                "name": "Radiologikum Eppendorfer Baum",
+                "address": "Eppendorfer Baum 35-37, Hamburg-Nord",
+                "types": [
+                    "doctor",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.7,
+                "user_ratings_total": 41
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.01751,
+                    53.58699409999999
+                ]
+            },
+            "properties": {
+                "name": "Sevine Tokdemir tax offices of General Medicine",
+                "address": "Barmbeker Straße 40, Hamburg-Nord",
+                "types": [
+                    "doctor",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.1,
+                "user_ratings_total": 87
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9942308,
+                    53.593674
+                ]
+            },
+            "properties": {
+                "name": "Komödie Winterhuder Fährhaus",
+                "address": "Hudtwalckerstraße 13, Hamburg-Nord",
+                "types": [
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.6,
+                "user_ratings_total": 2409
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.986614999999999,
+                    53.58224000000001
+                ]
+            },
+            "properties": {
+                "name": "Dr. Undine Schulz",
+                "address": "Eppendorfer Baum 7, Hamburg-Eimsbüttel",
+                "types": [
+                    "doctor",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 2.2,
+                "user_ratings_total": 12
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9853697,
+                    53.5874845
+                ]
+            },
+            "properties": {
+                "name": "Dermatology in Eppendorf",
+                "address": "Eppendorfer Landstraße 42, Hamburg-Nord",
+                "types": [
+                    "doctor",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.7,
+                "user_ratings_total": 57
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0131358,
+                    53.5735393
+                ]
+            },
+            "properties": {
+                "name": "ICS Ihr-Chiropraktor GmbH",
+                "address": "Gustav-Freytag-Straße 1, Hamburg-Nord",
+                "types": [
+                    "doctor",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.7,
+                "user_ratings_total": 115
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.011849,
+                    53.581598
+                ]
+            },
+            "properties": {
+                "name": "Urologikum Hamburg - Winterhude,",
+                "address": "Mühlenkamp 32, Hamburg",
+                "types": [
+                    "doctor",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.1,
+                "user_ratings_total": 77
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.996710400000001,
+                    53.5740697
+                ]
+            },
+            "properties": {
+                "name": "Wilhelm-Gymnasium",
+                "address": "Klosterstieg 17, Hamburg-Eimsbüttel",
+                "types": [
+                    "point_of_interest",
+                    "school",
+                    "establishment"
+                ],
+                "rating": 3.9,
+                "user_ratings_total": 19
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.98908,
+                    53.59270399999999
+                ]
+            },
+            "properties": {
+                "name": "SOUND & VISION Clemens Meyer",
+                "address": "2. Etage,, Eppendorfer Landstraße 112, Hamburg",
+                "types": [
+                    "home_goods_store",
+                    "electronics_store",
+                    "point_of_interest",
+                    "store",
+                    "establishment"
+                ],
+                "rating": 4.6,
+                "user_ratings_total": 21
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0106291,
+                    53.5836184
+                ]
+            },
+            "properties": {
+                "name": "Madrigal Tapas Bar (Winterhude)",
+                "address": "Semperstraße 4, Hamburg",
+                "types": [
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.3,
+                "user_ratings_total": 553
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.986867499999999,
+                    53.5943183
+                ]
+            },
+            "properties": {
+                "name": "Borchers",
+                "address": "Geschwister-Scholl-Straße 1, Hamburg-Nord",
+                "types": [
+                    "restaurant",
+                    "cafe",
+                    "food",
+                    "bar",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.3,
+                "user_ratings_total": 961
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0154882,
+                    53.5809014
+                ]
+            },
+            "properties": {
+                "name": "Sopra Steria",
+                "address": "Hans-Henny-Jahnn-Weg 29, Hamburg-Nord",
+                "types": [
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.4,
+                "user_ratings_total": 66
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0090963,
+                    53.5823711
+                ]
+            },
+            "properties": {
+                "name": "Sportorthopädie und Rückenzentrum Prof. Dr. med. M. Citak",
+                "address": "Dorotheenstraße 48, Hamburg",
+                "types": [
+                    "doctor",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.9,
+                "user_ratings_total": 152
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0140823,
+                    53.579648
+                ]
+            },
+            "properties": {
+                "name": "rugekrömer Arbeitsrecht.",
+                "address": "Hans-Henny-Jahnn-Weg 9, Hamburg-Nord",
+                "types": [
+                    "lawyer",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4,
+                "user_ratings_total": 11
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9814177,
+                    53.5855405
+                ]
+            },
+            "properties": {
+                "name": "MUTTERLAND Eppendorf",
+                "address": "Lenhartzstraße 1, Hamburg-Nord",
+                "types": [
+                    "cafe",
+                    "grocery_or_supermarket",
+                    "food",
+                    "point_of_interest",
+                    "store",
+                    "establishment"
+                ],
+                "rating": 4.3,
+                "user_ratings_total": 359
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0118588,
+                    53.5815984
+                ]
+            },
+            "properties": {
+                "name": "Praxisklinik Winterhude",
+                "address": "Mühlenkamp 32, Hamburg-Nord",
+                "types": [
+                    "doctor",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.5,
+                "user_ratings_total": 653
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.989041900000002,
+                    53.58267180000001
+                ]
+            },
+            "properties": {
+                "name": "Internisten am Klosterstern - Dr. med. Felix Thuneke und Dr. med. Simone Henne",
+                "address": "Oderfelder Straße 6, Hamburg-Eimsbüttel",
+                "types": [
+                    "doctor",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.7,
+                "user_ratings_total": 15
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0009647,
+                    53.5943368
+                ]
+            },
+            "properties": {
+                "name": "Dr. med. Gerhard Diehl Facharzt HNO, Allergologie und Plastische Operationen",
+                "address": "Winterhuder Marktplatz 6/7 A, Hamburg-Nord",
+                "types": [
+                    "doctor",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.1,
+                "user_ratings_total": 113
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0187636,
+                    53.5835967
+                ]
+            },
+            "properties": {
+                "name": "Glücksmarie",
+                "address": "Barmbeker Straße 13, Hamburg-Nord",
+                "types": [
+                    "home_goods_store",
+                    "point_of_interest",
+                    "store",
+                    "establishment"
+                ],
+                "rating": 4.4,
+                "user_ratings_total": 42
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9923323,
+                    53.5165511
+                ]
+            },
+            "properties": {
+                "name": "Hotel Hagemann",
+                "address": "Vogelhüttendeich 87, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.6,
+                "user_ratings_total": 1137
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0220068,
+                    53.52796610000001
+                ]
+            },
+            "properties": {
+                "name": "Leonardo Hotel Hamburg Elbbrücken",
+                "address": "Sieldeich 5-7, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.8,
+                "user_ratings_total": 1564
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9890989,
+                    53.54384289999999
+                ]
+            },
+            "properties": {
+                "name": "Miniatur Wunderland",
+                "address": "Kehrwieder 2/Block D, Hamburg",
+                "types": [
+                    "museum",
+                    "tourist_attraction",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.8,
+                "user_ratings_total": 94502
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0073895,
+                    53.51913810000001
+                ]
+            },
+            "properties": {
+                "name": "Hotel Class",
+                "address": "Schlinckstraße 1, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.2,
+                "user_ratings_total": 601
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.987544200000002,
+                    53.5462461
+                ]
+            },
+            "properties": {
+                "name": "Restaurant Kartoffelkeller",
+                "address": "Deichstraße 21, Hamburg",
+                "types": [
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.2,
+                "user_ratings_total": 2736
             }
         },
         {
@@ -353,7 +2712,9 @@
                     "food",
                     "point_of_interest",
                     "establishment"
-                ]
+                ],
+                "rating": 4.1,
+                "user_ratings_total": 1573
             }
         },
         {
@@ -361,19 +2722,42 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    9.987544200000002,
-                    53.5462461
+                    9.9833224,
+                    53.5489046
                 ]
             },
             "properties": {
-                "name": "Restaurant Kartoffelkeller",
-                "address": "Deichstraße 21, Hamburg",
+                "name": "Kleinhuis Hotel Michaelis Hof in der Katholischen Akademie",
+                "address": "Herrengraben 4, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.4,
+                "user_ratings_total": 191
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9769498,
+                    53.54620029999999
+                ]
+            },
+            "properties": {
+                "name": "Panthera Rodizio",
+                "address": "Ditmar-Koel-Straße 3, Hamburg",
                 "types": [
                     "restaurant",
                     "food",
                     "point_of_interest",
                     "establishment"
-                ]
+                ],
+                "rating": 4.6,
+                "user_ratings_total": 9298
             }
         },
         {
@@ -381,18 +2765,2553 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    10.0123399,
-                    53.5539552
+                    9.9727344,
+                    53.5444407
                 ]
             },
             "properties": {
-                "name": "St. Georg, Hamburg",
-                "address": "St. Georg, Hamburg",
+                "name": "Rickmer Rickmers",
+                "address": "Bei den Sankt Pauli-Landungsbrücken 1a, Hamburg",
+                "types": [
+                    "museum",
+                    "tourist_attraction",
+                    "bar",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.6,
+                "user_ratings_total": 3408
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9954127,
+                    53.5437872
+                ]
+            },
+            "properties": {
+                "name": "AMERON Hamburg Hotel Speicherstadt",
+                "address": "Am Sandtorkai 4, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.7,
+                "user_ratings_total": 2356
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0051291,
+                    53.5395358
+                ]
+            },
+            "properties": {
+                "name": "HafenCity",
+                "address": "HafenCity",
                 "types": [
                     "sublocality_level_2",
                     "sublocality",
                     "political"
+                ],
+                "rating": null,
+                "user_ratings_total": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.974447499999998,
+                    53.5456437
                 ]
+            },
+            "properties": {
+                "name": "Luigi's",
+                "address": "Ditmar-Koel-Straße 21, Hamburg",
+                "types": [
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.2,
+                "user_ratings_total": 10454
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.999811099999999,
+                    53.5433461
+                ]
+            },
+            "properties": {
+                "name": "International Maritime Museum Hamburg",
+                "address": "Koreastraße 1, Hamburg",
+                "types": [
+                    "museum",
+                    "book_store",
+                    "tourist_attraction",
+                    "point_of_interest",
+                    "store",
+                    "establishment"
+                ],
+                "rating": 4.7,
+                "user_ratings_total": 7741
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.986001900000002,
+                    53.5408888
+                ]
+            },
+            "properties": {
+                "name": "CARLS Brasserie",
+                "address": "Am Kaiserkai 69, Hamburg",
+                "types": [
+                    "bar",
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.2,
+                "user_ratings_total": 1522
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9729084,
+                    53.5458758
+                ]
+            },
+            "properties": {
+                "name": "Hotel Hafentor",
+                "address": "Hafentor 3, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.5,
+                "user_ratings_total": 285
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.993330099999998,
+                    53.5413235
+                ]
+            },
+            "properties": {
+                "name": "MSH Medical School Hamburg – University of Applied Sciences and Medical University",
+                "address": "Am Kaiserkai 1 Am Sandtorkai 74-76 Am Sandtorkai 37, Großer Grasbrook 15-17, Hamburg",
+                "types": [
+                    "university",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4,
+                "user_ratings_total": 91
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9977244,
+                    53.54549600000001
+                ]
+            },
+            "properties": {
+                "name": "Schönes Leben Speicherstadt",
+                "address": "Alter Wandrahm 15, Hamburg",
+                "types": [
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.3,
+                "user_ratings_total": 2979
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.975264800000001,
+                    53.54580360000001
+                ]
+            },
+            "properties": {
+                "name": "Restaurante Porto",
+                "address": "Ditmar-Koel-Straße 15, Hamburg",
+                "types": [
+                    "bar",
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.5,
+                "user_ratings_total": 2236
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9980876,
+                    53.54726909999999
+                ]
+            },
+            "properties": {
+                "name": "Adina Apartment Hotel Hamburg Speicherstadt",
+                "address": "Willy-Brandt-Straße 25, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.5,
+                "user_ratings_total": 1521
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.98944,
+                    53.5438402
+                ]
+            },
+            "properties": {
+                "name": "Hamburg Dungeon",
+                "address": "Dungeon Deutschland GmbH, Kehrwieder 2, Hamburg",
+                "types": [
+                    "tourist_attraction",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.5,
+                "user_ratings_total": 13246
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9800161,
+                    53.548111
+                ]
+            },
+            "properties": {
+                "name": "Krameramtsstuben",
+                "address": "Krayenkamp 10, Hamburg",
+                "types": [
+                    "restaurant",
+                    "bar",
+                    "tourist_attraction",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.6,
+                "user_ratings_total": 1928
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.987542600000003,
+                    53.54622270000001
+                ]
+            },
+            "properties": {
+                "name": "Gästezimmer an der Elbphilharmonie",
+                "address": "Deichstraße 21 20495, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": null,
+                "user_ratings_total": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.992840900000001,
+                    53.5429456
+                ]
+            },
+            "properties": {
+                "name": "Chilli Club",
+                "address": "Am Sandtorkai 54, Hamburg",
+                "types": [
+                    "restaurant",
+                    "night_club",
+                    "bar",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.3,
+                "user_ratings_total": 1786
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9766378,
+                    53.54543349999999
+                ]
+            },
+            "properties": {
+                "name": "Gaststätte A'Varina",
+                "address": "Karpfangerstraße 16, Hamburg",
+                "types": [
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.6,
+                "user_ratings_total": 967
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9787982,
+                    53.5484126
+                ]
+            },
+            "properties": {
+                "name": "St. Michael's Church",
+                "address": "Englische Planke 1, Hamburg",
+                "types": [
+                    "tourist_attraction",
+                    "church",
+                    "place_of_worship",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.7,
+                "user_ratings_total": 21607
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9933221,
+                    53.5496346
+                ]
+            },
+            "properties": {
+                "name": "mama trattoria Hamburg Rathaus",
+                "address": "Schauenburgerstraße 44, Hamburg",
+                "types": [
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.2,
+                "user_ratings_total": 1681
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9807463,
+                    53.5462612
+                ]
+            },
+            "properties": {
+                "name": "David Lloyd Meridian Hamburg Am Michel",
+                "address": "Schaarsteinweg 6, Hamburg",
+                "types": [
+                    "gym",
+                    "point_of_interest",
+                    "health",
+                    "establishment"
+                ],
+                "rating": 4.5,
+                "user_ratings_total": 734
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.993665599999998,
+                    53.5453252
+                ]
+            },
+            "properties": {
+                "name": "Restaurant Brook",
+                "address": "Bei den Mühren 91, Hamburg",
+                "types": [
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.5,
+                "user_ratings_total": 655
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9942049,
+                    53.5435197
+                ]
+            },
+            "properties": {
+                "name": "CONTIPARK Parkhaus Speicherstadt",
+                "address": "Am Sandtorkai 6, Hamburg",
+                "types": [
+                    "parking",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.8,
+                "user_ratings_total": 918
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9995677,
+                    53.51898749999999
+                ]
+            },
+            "properties": {
+                "name": "Wärtsilä Deutschland GmbH",
+                "address": "Schlenzigstraße 6, Hamburg",
+                "types": [
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.7,
+                "user_ratings_total": 15
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0069237,
+                    53.5446167
+                ]
+            },
+            "properties": {
+                "name": "Oberhafen-Kantine",
+                "address": "Stockmeyerstraße 39, Hamburg",
+                "types": [
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.5,
+                "user_ratings_total": 2472
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.987599999999997,
+                    53.543102
+                ]
+            },
+            "properties": {
+                "name": "Speicherstadtmuseum",
+                "address": "Am Sandtorkai 36, Hamburg",
+                "types": [
+                    "museum",
+                    "tourist_attraction",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.3,
+                "user_ratings_total": 2028
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9844647,
+                    53.5413305
+                ]
+            },
+            "properties": {
+                "name": "Elbphilharmonie Hamburg",
+                "address": "Platz der Deutschen Einheit 4, Hamburg",
+                "types": [
+                    "tourist_attraction",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.6,
+                "user_ratings_total": 82653
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9735687,
+                    53.5403528
+                ]
+            },
+            "properties": {
+                "name": "Skyline Restaurant by Käfer",
+                "address": "Norderelbstraße 6, Hamburg",
+                "types": [
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.7,
+                "user_ratings_total": 284
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.988288899999997,
+                    53.5431381
+                ]
+            },
+            "properties": {
+                "name": "Spicy's Gewürzmuseum",
+                "address": "Am Sandtorkai 34, Hamburg",
+                "types": [
+                    "museum",
+                    "travel_agency",
+                    "tourist_attraction",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.1,
+                "user_ratings_total": 3483
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.994317299999999,
+                    53.5498418
+                ]
+            },
+            "properties": {
+                "name": "Café Paris",
+                "address": "Rathausstraße 4, Hamburg",
+                "types": [
+                    "cafe",
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.2,
+                "user_ratings_total": 4661
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.989837999999999,
+                    53.550356
+                ]
+            },
+            "properties": {
+                "name": "Brauhaus Joh. Albrecht",
+                "address": "Adolphsbrücke 7, Hamburg",
+                "types": [
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.2,
+                "user_ratings_total": 1017
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0033217,
+                    53.5453977
+                ]
+            },
+            "properties": {
+                "name": "Hays",
+                "address": "Ericusspitze 2-4, Hamburg",
+                "types": [
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.9,
+                "user_ratings_total": 56
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0021178,
+                    53.5483224
+                ]
+            },
+            "properties": {
+                "name": "SAUSALITOS",
+                "address": "Fischertwiete 2, Hamburg",
+                "types": [
+                    "restaurant",
+                    "bar",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4,
+                "user_ratings_total": 3114
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9702185,
+                    53.5400464
+                ]
+            },
+            "properties": {
+                "name": "KRAEFT LOGISTIK GmbH",
+                "address": "Nordersand 2, Hamburg",
+                "types": [
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.3,
+                "user_ratings_total": 69
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0023777,
+                    53.5406547
+                ]
+            },
+            "properties": {
+                "name": "Techniker Health Insurance",
+                "address": "Überseeallee 6-8, Hamburg",
+                "types": [
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.1,
+                "user_ratings_total": 214
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.975578,
+                    53.546139
+                ]
+            },
+            "properties": {
+                "name": "Restaurant Casa Madeira",
+                "address": "Ditmar-Koel-Straße 14, Hamburg",
+                "types": [
+                    "bar",
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.2,
+                "user_ratings_total": 1946
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.985906400000001,
+                    53.5411544
+                ]
+            },
+            "properties": {
+                "name": "a-ja Resort and Hotel GmbH",
+                "address": "Am Kaiserkai 69, Hamburg",
+                "types": [
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.9,
+                "user_ratings_total": 11
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.988223,
+                    53.5456131
+                ]
+            },
+            "properties": {
+                "name": "Nordic Hamburg Shipmanagement GmbH & Co. KG",
+                "address": "Cremon 32, Hamburg",
+                "types": [
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.2,
+                "user_ratings_total": 21
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.986410099999999,
+                    53.54300799999999
+                ]
+            },
+            "properties": {
+                "name": "DGFP - Deutsche Gesellschaft für Privatpatienten GmbH",
+                "address": "Am Sandtorkai 37, Hamburg",
+                "types": [
+                    "insurance_agency",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.3,
+                "user_ratings_total": 3
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.987461800000002,
+                    53.54616660000001
+                ]
+            },
+            "properties": {
+                "name": "Deichgraf Restaurant",
+                "address": "Deichstraße 23, Hamburg",
+                "types": [
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.5,
+                "user_ratings_total": 716
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.973141399999998,
+                    53.53969489999999
+                ]
+            },
+            "properties": {
+                "name": "Theater im Hafen",
+                "address": "Norderelbstraße 6, Hamburg",
+                "types": [
+                    "point_of_interest",
+                    "store",
+                    "establishment"
+                ],
+                "rating": 4.7,
+                "user_ratings_total": 11263
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.992680699999998,
+                    53.5434278
+                ]
+            },
+            "properties": {
+                "name": "BMS Bernd-Michael Schröder - Sailing Wear GmbH",
+                "address": "Am Sandtorkai 25-26, Hamburg",
+                "types": [
+                    "clothing_store",
+                    "point_of_interest",
+                    "store",
+                    "establishment"
+                ],
+                "rating": 4.3,
+                "user_ratings_total": 510
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.99439,
+                    53.54911
+                ]
+            },
+            "properties": {
+                "name": "Le Plat du Jour",
+                "address": "Dornbusch 4, Hamburg",
+                "types": [
+                    "restaurant",
+                    "cafe",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.4,
+                "user_ratings_total": 942
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.983413900000002,
+                    53.5488594
+                ]
+            },
+            "properties": {
+                "name": "Catholic Academy Hamburg",
+                "address": "Herrengraben 4, Hamburg",
+                "types": [
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.5,
+                "user_ratings_total": 48
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9728739,
+                    53.5458559
+                ]
+            },
+            "properties": {
+                "name": "Beira Rio",
+                "address": "Hafentor 3, Hamburg",
+                "types": [
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.6,
+                "user_ratings_total": 849
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0305692,
+                    53.5362045
+                ]
+            },
+            "properties": {
+                "name": "Bridge Inn Hotel",
+                "address": "Billwerder Neuer Deich 2-4, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.3,
+                "user_ratings_total": 913
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0514455,
+                    53.547949
+                ]
+            },
+            "properties": {
+                "name": "Apartment-Hotel Hamburg Mitte - A home from home",
+                "address": "Borstelmannsweg 133, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.3,
+                "user_ratings_total": 2374
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0210187,
+                    53.5652132
+                ]
+            },
+            "properties": {
+                "name": "Hotel Miramar",
+                "address": "Armgartstraße 20, Hamburg-Nord",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.6,
+                "user_ratings_total": 271
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0240506,
+                    53.5604478
+                ]
+            },
+            "properties": {
+                "name": "City Apartment Hotel Hamburg",
+                "address": "Schröderstraße 35 - 35a, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.8,
+                "user_ratings_total": 220
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0174466,
+                    53.5561579
+                ]
+            },
+            "properties": {
+                "name": "Hotel Oase",
+                "address": "Steindamm 79, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.2,
+                "user_ratings_total": 84
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0315878,
+                    53.5353197
+                ]
+            },
+            "properties": {
+                "name": "Hotel International Hamburg",
+                "address": "Billwerder Neuer Deich 14, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.9,
+                "user_ratings_total": 4250
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0249949,
+                    53.55897079999999
+                ]
+            },
+            "properties": {
+                "name": "Novotel Hamburg City Alster",
+                "address": "Lübecker Straße 3, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.3,
+                "user_ratings_total": 2580
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.032512,
+                    53.56261120000001
+                ]
+            },
+            "properties": {
+                "name": "Holiday Inn Express Hamburg City Centre",
+                "address": "Lübecker Straße 109, Hamburg-Nord",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.9,
+                "user_ratings_total": 1600
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0084393,
+                    53.554627
+                ]
+            },
+            "properties": {
+                "name": "Hotel Continental Hamburg",
+                "address": "Kirchenallee 37, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.6,
+                "user_ratings_total": 890
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0127778,
+                    53.5539833
+                ]
+            },
+            "properties": {
+                "name": "Hotel Hamburg",
+                "address": "Steindamm 29, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.3,
+                "user_ratings_total": 1051
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0327104,
+                    53.5361881
+                ]
+            },
+            "properties": {
+                "name": "Elbbrücken Hotel",
+                "address": "Billhorner Mühlenweg 28, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.7,
+                "user_ratings_total": 501
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0073807,
+                    53.5556853
+                ]
+            },
+            "properties": {
+                "name": "Hotel Bee Fang",
+                "address": "Kirchenallee 26, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3,
+                "user_ratings_total": 670
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0198239,
+                    53.5649128
+                ]
+            },
+            "properties": {
+                "name": "Hotel Mare",
+                "address": "Armgartstraße 14, Hamburg-Nord",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.4,
+                "user_ratings_total": 289
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0095567,
+                    53.5531419
+                ]
+            },
+            "properties": {
+                "name": "acora City Apart Living the City",
+                "address": "Steintorweg 9, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.1,
+                "user_ratings_total": 179
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0099511,
+                    53.5528328
+                ]
+            },
+            "properties": {
+                "name": "Hotel Graf Moltke",
+                "address": "Steindamm 1, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.5,
+                "user_ratings_total": 1570
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0104368,
+                    53.5530163
+                ]
+            },
+            "properties": {
+                "name": "Hotel Terminus Garni GmbH",
+                "address": "Steindamm 5, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.9,
+                "user_ratings_total": 534
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0074989,
+                    53.55510779999999
+                ]
+            },
+            "properties": {
+                "name": "Hotel Lilienhof",
+                "address": "Ernst-Merck-Straße 4, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 2.2,
+                "user_ratings_total": 445
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0099195,
+                    53.5539204
+                ]
+            },
+            "properties": {
+                "name": "Kieler Hof",
+                "address": "Bremer Reihe 15, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.1,
+                "user_ratings_total": 324
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0094965,
+                    53.5533216
+                ]
+            },
+            "properties": {
+                "name": "Hotel Alt Nürnberg",
+                "address": "Steintorweg 15, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.5,
+                "user_ratings_total": 182
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0087591,
+                    53.5537576
+                ]
+            },
+            "properties": {
+                "name": "Hotel Kronprinz Hamburg",
+                "address": "Kirchenallee 46, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.4,
+                "user_ratings_total": 880
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0170379,
+                    53.5666976
+                ]
+            },
+            "properties": {
+                "name": "Alsterblick Boutique Hotel",
+                "address": "Schwanenwik 30, Hamburg-Nord",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.3,
+                "user_ratings_total": 551
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0120261,
+                    53.5526784
+                ]
+            },
+            "properties": {
+                "name": "Hotel Polo am ZOB",
+                "address": "Adenauerallee 7, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.1,
+                "user_ratings_total": 639
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.991167099999998,
+                    53.557637
+                ]
+            },
+            "properties": {
+                "name": "Hotel Alster-Hof",
+                "address": "Esplanade 12, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.2,
+                "user_ratings_total": 839
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0150301,
+                    53.55450320000001
+                ]
+            },
+            "properties": {
+                "name": "Novum Style Hotel Hamburg-Centrum",
+                "address": "Steindamm 68-70, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.7,
+                "user_ratings_total": 2336
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.954377699999998,
+                    53.5499926
+                ]
+            },
+            "properties": {
+                "name": "Egon Hotel Hamburg City",
+                "address": "Königstraße 4, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.1,
+                "user_ratings_total": 1553
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.946671100000001,
+                    53.5444737
+                ]
+            },
+            "properties": {
+                "name": "Clipper Boardinghouse Hamburg-Holzhafen",
+                "address": "Carsten-Rehder-Straße 71, Hamburg-Altona",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.6,
+                "user_ratings_total": 561
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.918720699999998,
+                    53.5628201
+                ]
+            },
+            "properties": {
+                "name": "Gastwerk Hotel Hamburg",
+                "address": "Beim Alten Gaswerk 3/EG, Hamburg-Altona",
+                "types": [
+                    "spa",
+                    "bar",
+                    "restaurant",
+                    "lodging",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.6,
+                "user_ratings_total": 1929
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.929758399999999,
+                    53.5632402
+                ]
+            },
+            "properties": {
+                "name": "B&B HOTEL Hamburg-Altona",
+                "address": "Stresemannstraße 318, Hamburg-Altona",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.3,
+                "user_ratings_total": 2834
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.933441899999998,
+                    53.5501288
+                ]
+            },
+            "properties": {
+                "name": "Centrum Hotel Commerz",
+                "address": "Lobuschstraße 26, Hamburg-Altona",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.3,
+                "user_ratings_total": 246
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.938211899999997,
+                    53.5544701
+                ]
+            },
+            "properties": {
+                "name": "MEININGER Hotel Hamburg City Center",
+                "address": "Goetheallee 11, Hamburg-Altona",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4,
+                "user_ratings_total": 3072
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.958757300000002,
+                    53.56007930000001
+                ]
+            },
+            "properties": {
+                "name": "Hotel Domicil Hamburg by Golden Tulip",
+                "address": "Stresemannstraße 62, Hamburg-Altona",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.5,
+                "user_ratings_total": 1024
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9576683,
+                    53.5490532
+                ]
+            },
+            "properties": {
+                "name": "Auto-Parkhotel",
+                "address": "Lincolnstraße 8, Hamburg-Altona",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.4,
+                "user_ratings_total": 859
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9388889,
+                    53.54888889999999
+                ]
+            },
+            "properties": {
+                "name": "Hotel Stephan",
+                "address": "Schmarjestraße 31, Hamburg-Altona",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.1,
+                "user_ratings_total": 232
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.957809,
+                    53.55064449999999
+                ]
+            },
+            "properties": {
+                "name": "St.Joseph Hotel Hamburg - Reeperbahn St. Pauli Kiez",
+                "address": "Große Freiheit 22, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.6,
+                "user_ratings_total": 1059
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.958058299999998,
+                    53.5493727
+                ]
+            },
+            "properties": {
+                "name": "Kiezbude Hotel",
+                "address": "Lincolnstraße 2, Hamburg-Altona",
+                "types": [
+                    "real_estate_agency",
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.9,
+                "user_ratings_total": 231
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.935867900000002,
+                    53.5527156
+                ]
+            },
+            "properties": {
+                "name": "IntercityHotel Hamburg-Altona",
+                "address": "Paul-Nevermann-Platz 17, Hamburg-Altona",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.1,
+                "user_ratings_total": 1339
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.952865299999997,
+                    53.5621401
+                ]
+            },
+            "properties": {
+                "name": "Boston Hotel Hamburg",
+                "address": "Missundestraße 2, Hamburg-Altona",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.4,
+                "user_ratings_total": 995
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9518648,
+                    53.5535769
+                ]
+            },
+            "properties": {
+                "name": "Altona-Altstadt",
+                "address": "Altona-Altstadt",
+                "types": [
+                    "sublocality_level_2",
+                    "sublocality",
+                    "political"
+                ],
+                "rating": null,
+                "user_ratings_total": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9362197,
+                    53.55352180000001
+                ]
+            },
+            "properties": {
+                "name": "Best Western Raphael Hotel Altona",
+                "address": "Präsident-Krahn-Straße 13, Hamburg-Altona",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.1,
+                "user_ratings_total": 460
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.921384,
+                    53.564194
+                ]
+            },
+            "properties": {
+                "name": "Hotel NH Hamburg Altona",
+                "address": "Stresemannstraße 363-369, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.3,
+                "user_ratings_total": 2888
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.96199,
+                    53.559884
+                ]
+            },
+            "properties": {
+                "name": "My Place Hotel",
+                "address": "Lippmannstraße 5, Hamburg-Altona",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.5,
+                "user_ratings_total": 198
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.964210299999998,
+                    53.54986729999999
+                ]
+            },
+            "properties": {
+                "name": "Cityhotel Monopol",
+                "address": "Reeperbahn 48-52, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.3,
+                "user_ratings_total": 1431
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.949383499999998,
+                    53.55951219999999
+                ]
+            },
+            "properties": {
+                "name": "Cabo Hotel",
+                "address": "Cabo Hotel, Holstenstraße 119, Hamburg-Altona",
+                "types": [
+                    "parking",
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.3,
+                "user_ratings_total": 239
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.95608,
+                    53.55055
+                ]
+            },
+            "properties": {
+                "name": "Hotel Lafayette",
+                "address": "Holstenstraße 3, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.4,
+                "user_ratings_total": 176
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9634752,
+                    53.5587621
+                ]
+            },
+            "properties": {
+                "name": "Altan Hotel",
+                "address": "Beim Grünen Jäger 23, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.1,
+                "user_ratings_total": 285
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9641667,
+                    53.555
+                ]
+            },
+            "properties": {
+                "name": "Hotel Budapester Hof",
+                "address": "Budapester Straße 43, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.9,
+                "user_ratings_total": 501
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9617205,
+                    53.5476776
+                ]
+            },
+            "properties": {
+                "name": "Hotel Hanseport Hamburg",
+                "address": "Erichstraße 18, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.4,
+                "user_ratings_total": 1010
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.966045899999997,
+                    53.55253299999999
+                ]
+            },
+            "properties": {
+                "name": "Hotel Commodore",
+                "address": "Budapester Straße 20, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.2,
+                "user_ratings_total": 850
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.957292299999999,
+                    53.5498334
+                ]
+            },
+            "properties": {
+                "name": "Beatles-Platz",
+                "address": "Reeperbahn 174, Hamburg-Altona",
+                "types": [
+                    "tourist_attraction",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4,
+                "user_ratings_total": 3998
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.965320000000002,
+                    53.55002999999999
+                ]
+            },
+            "properties": {
+                "name": "Pyjama Park Hotel & Hostel St.Pauli",
+                "address": "Reeperbahn 36, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.3,
+                "user_ratings_total": 1108
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9599796,
+                    53.5602236
+                ]
+            },
+            "properties": {
+                "name": "Superbude Hotel Hamburg St. Pauli",
+                "address": "Juliusstraße 1-7, Hamburg-Altona",
+                "types": [
+                    "bar",
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.7,
+                "user_ratings_total": 2093
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.963748400000002,
+                    53.5539684
+                ]
+            },
+            "properties": {
+                "name": "Hotel St. Annen",
+                "address": "Annenstraße 5, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.8,
+                "user_ratings_total": 876
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.957862500000001,
+                    53.5493711
+                ]
+            },
+            "properties": {
+                "name": "Paulibude",
+                "address": "Lincolnstraße 2, Hamburg-Altona",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.6,
+                "user_ratings_total": 30
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.933379599999999,
+                    53.55372879999999
+                ]
+            },
+            "properties": {
+                "name": "Hotel Hamburg Altona",
+                "address": "Hahnenkamp 8, Hamburg-Altona",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.7,
+                "user_ratings_total": 551
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9275071,
+                    53.55439379999999
+                ]
+            },
+            "properties": {
+                "name": "Zeise Kinos",
+                "address": "Friedensallee 7-9, Hamburg-Altona",
+                "types": [
+                    "movie_theater",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.6,
+                "user_ratings_total": 1598
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9362029,
+                    53.55374390000001
+                ]
+            },
+            "properties": {
+                "name": "Hotel Central",
+                "address": "Präsident-Krahn-Straße 15, Hamburg-Altona",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4,
+                "user_ratings_total": 243
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.927119099999997,
+                    53.5544162
+                ]
+            },
+            "properties": {
+                "name": "RESTAURANT EISENSTEIN | italienische Küche",
+                "address": "Friedensallee 9, Hamburg-Altona",
+                "types": [
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.1,
+                "user_ratings_total": 1034
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.966389999999999,
+                    53.55014
+                ]
+            },
+            "properties": {
+                "name": "Hotel Keese",
+                "address": "Reeperbahn 19-21, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.6,
+                "user_ratings_total": 485
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.967500000000001,
+                    53.5502778
+                ]
+            },
+            "properties": {
+                "name": "Hotel Imperial",
+                "address": "Millerntorplatz 3-5, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.9,
+                "user_ratings_total": 1146
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9341,
+                    53.54449
+                ]
+            },
+            "properties": {
+                "name": "am kai | restaurant. seafood. drinks. elbblick",
+                "address": "Große Elbstraße 145c, Hamburg",
+                "types": [
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.6,
+                "user_ratings_total": 990
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9611763,
+                    53.5679404
+                ]
+            },
+            "properties": {
+                "name": "Schlaflounge",
+                "address": "Vereinsstraße 54b, Hamburg-Eimsbüttel",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.4,
+                "user_ratings_total": 60
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9428462,
+                    53.5445849
+                ]
+            },
+            "properties": {
+                "name": "Henssler Henssler",
+                "address": "Große Elbstraße 160, Hamburg-Altona",
+                "types": [
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.4,
+                "user_ratings_total": 3603
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.965258,
+                    53.5640059
+                ]
+            },
+            "properties": {
+                "name": "Fritz im Pyjama Hotel",
+                "address": "Schanzenstraße 101/103, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.3,
+                "user_ratings_total": 212
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.930256,
+                    53.553659
+                ]
+            },
+            "properties": {
+                "name": "Hotel Schanzenstern Altona",
+                "address": "Kleine Rainstraße 24-26, Hamburg-Altona",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.3,
+                "user_ratings_total": 89
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.949238000000001,
+                    53.558122
+                ]
+            },
+            "properties": {
+                "name": "Stadthaushotel Hamburg",
+                "address": "Holstenstraße 118, Hamburg-Altona",
+                "types": [
+                    "cafe",
+                    "lodging",
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.7,
+                "user_ratings_total": 181
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9399633,
+                    53.5729968
+                ]
+            },
+            "properties": {
+                "name": "ibis budget Hamburg Altona",
+                "address": "Holstenkamp 3, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.6,
+                "user_ratings_total": 1666
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.935902,
+                    53.54454
+                ]
+            },
+            "properties": {
+                "name": "Fischereihafen Restaurant",
+                "address": "Große Elbstraße 143, Hamburg-Altona",
+                "types": [
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.7,
+                "user_ratings_total": 3163
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.949664,
+                    53.56267099999999
+                ]
+            },
+            "properties": {
+                "name": "Neue Flora",
+                "address": "Stresemannstraße 159A, Hamburg-Altona",
+                "types": [
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.7,
+                "user_ratings_total": 9244
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.949349999999999,
+                    53.55151
+                ]
+            },
+            "properties": {
+                "name": "Hotel Stadt Altona",
+                "address": "Louise-Schroeder-Straße 29, Hamburg-Altona",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.4,
+                "user_ratings_total": 640
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.956669999999999,
+                    53.550041
+                ]
+            },
+            "properties": {
+                "name": "Thomas Read Irish Pub",
+                "address": "Nobistor 10, Hamburg-Altona",
+                "types": [
+                    "night_club",
+                    "bar",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.2,
+                "user_ratings_total": 1903
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.958581799999997,
+                    53.5571971
+                ]
+            },
+            "properties": {
+                "name": "Backpackers St. Pauli",
+                "address": "Bernstorffstraße 98, Hamburg-Altona",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.2,
+                "user_ratings_total": 448
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9461451,
+                    53.5445633
+                ]
+            },
+            "properties": {
+                "name": "Zum Schellfischposten",
+                "address": "Carsten-Rehder-Straße 62, Hamburg-Altona",
+                "types": [
+                    "restaurant",
+                    "food",
+                    "bar",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.5,
+                "user_ratings_total": 4703
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.966792400000001,
+                    53.5501558
+                ]
+            },
+            "properties": {
+                "name": "North-Hotel Reeperbahn",
+                "address": "Reeperbahn 15, Hamburg",
+                "types": [
+                    "lodging",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 3.9,
+                "user_ratings_total": 384
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.966198200000001,
+                    53.5629733
+                ]
+            },
+            "properties": {
+                "name": "Bullerei",
+                "address": "Lagerstraße 34b, Hamburg-Altona",
+                "types": [
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.5,
+                "user_ratings_total": 9044
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9416207,
+                    53.5515976
+                ]
+            },
+            "properties": {
+                "name": "IKEA Hamburg-Altona",
+                "address": "Große Bergstraße 164, Hamburg",
+                "types": [
+                    "furniture_store",
+                    "home_goods_store",
+                    "restaurant",
+                    "food",
+                    "point_of_interest",
+                    "store",
+                    "establishment"
+                ],
+                "rating": 4.1,
+                "user_ratings_total": 12063
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.956527800000002,
+                    53.5500806
+                ]
+            },
+            "properties": {
+                "name": "Molotow Music Club",
+                "address": "Nobistor 14, Hamburg-Altona",
+                "types": [
+                    "night_club",
+                    "bar",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.6,
+                "user_ratings_total": 1452
             }
         }
     ]
