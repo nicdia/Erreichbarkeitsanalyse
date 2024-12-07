@@ -68,61 +68,24 @@
       }
     },
     "union_data": {
-      "mediallg": {
-        "krankenhaeuser_meta": ["name", "geometry"],
-        "krankenhaus_osm": ["amenity", "geometry"]
-      },
-      "medispez": {
-        "arzt_osm": ["Fachrichtung", "geometry"]
-      },
-      "natuererfahrungen": {
-        "badegewaesser_meta": ["name", "geometry"],
-        "badeseeenUSchwimmbaeder_meta": [
-          "name",
-          "kategorie",
-          "adresse",
-          "geometry"
-        ],
-        "bannwald_heuckenlock_meta": ["name", "geometry"],
-        "bannwald_stadtwald_hamburg_meta": [
-          "name",
-          "bezirk",
-          "bearb_stand",
-          "geometry"
-        ],
-        "schwimmgebiet_osm": ["name", "geometry"],
-        "stadtwald_meta": ["bezirk", "bearb_stand", "geometry"],
-        "uebriger_wald_meta": ["bezirk", "bearb_stand", "geometry"]
-      },
-      "parks": {
-        "park_osm": ["name", "geometry"],
-        "parks_meta": ["name", "geometry"]
-      },
-      "spielflaechen": {
-        "bauspielplatz_meta": ["einrichtung", "adresse", "geometry"],
-        "spielplaetze_meta": ["name", "geometry"],
-        "spielplaetze_osm": ["name, geometry"]
-      },
-      "sporthobbies": {
-        "buildingSportsHallHamburg_osm": ["name", "geometry"],
-        "leisureSwimmingPool_osm": ["name", "geometry"],
-        "sportstaetten_meta": ["typ", "name", "adresse", "geometry"],
-        "wassersport_segelfreizeitstaette_meta": [
-          "adresse",
-          "typ_der_einrichtung",
-          "geometry"
-        ]
-      },
       "ausserschulangebote": {
         "haus_d_jugend_6_10": ["einrichtung", "adresse", "geometry"],
         "jugendcafe_6_10": ["einrichtung", "adresse", "geometry"],
         "jugendklub_6_10": ["einrichtung", "adresse", "geometry"],
         "jugendverband_6_10": ["einrichtung", "adresse", "geometry"],
         "kindertreff_6_10": ["einrichtung", "adresse", "geometry"],
-        "okja_freizeitprogramm_6_10": ["einrichtung", "adresse", "geometry"],
         "spielhaus_6_10": ["einrichtung", "adresse", "geometry"],
         "spielmobil_6_10": ["einrichtung", "adresse", "geometry"]
       }
+    },
+    "create_centroids": {
+      "geometry": "geometry",
+      "natuererfahrung": [
+        "bannwald_heuckenlock_meta",
+        "bannwald_stadtwald_hamburg_meta",
+        "stadtwald_meta",
+        "uebriger_wald_meta"
+      ]
     }
   }
 }

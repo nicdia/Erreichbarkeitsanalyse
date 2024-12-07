@@ -3,6 +3,13 @@ from sqlalchemy.exc import SQLAlchemyError
 
 
 def add_column_based_on_table_name(db_con):
+    """
+    Fügt eine Spalte 'source' mit dem passenden Wert ('metaver', 'osm', 'gmaps') 
+    zu allen Tabellen hinzu, die 'meta', 'osm' oder 'gmaps' im Namen enthalten.
+    
+    Parameters:
+    db_con (sqlalchemy.engine.Engine): Datenbankverbindung
+    """
     try:
         with db_con.connect() as conn:
             with conn.begin():

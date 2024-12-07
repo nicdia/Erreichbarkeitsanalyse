@@ -4,8 +4,9 @@ Daran denken wenn man eine neue DB erstellt Postgis Extension zu aktivieren! All
 Fetch Data Folder:
 
 1. fetchGoogleMapsAPI: --> zieht von Google Maps Daten, muss man custom und individuell anpassen. An den API Key denken!
+   Google Fetchen KIDS : Parks, Spielplatz, Kinderzahnarzt, Kinderarzt
 
-SetupDB Folder:
+SetupDB Folder (FERTIG):
 
 1. Done: geojson2localDB --> Pfade angeben und files werden dann in tabellen + schemas hochgeladen
 2. Done: changeCRS --> passt das CRS von tabellen in einem schema an
@@ -13,13 +14,16 @@ SetupDB Folder:
 
 Data Processing Folder:
 
-1.  Done: attribute_filtering --> filtert Tabellen basierend auf einem Wert
-2.  Done: POI (Indikatoren) - Daten filtern nach Attributen
-3.  Done: Alkis Gebäude filtern: nur Gebäude mit Wohnfunktionen
+1.  Done: attribute_filtering --> filtert Tabellen basierend auf einem Attributswert
+2.  Done: Alkis Gebäude filtern: nur Gebäude mit Wohnfunktionen
+3.  Done: Union Tables --> Vereint Tabellen zu einer großen
+4.  CustomIndikator Operations --> Laufend
+    HÄNDISCH: Zentroide bauen
 
 Data Analysis Folder:
 
-1. not started yet
+1. Kommt
+   Sachen die wir in der Analyse klären m+ssen: Warum kommen diese Zacken bei den isochronen? Polygone glätten?
 
 Misc:
 
@@ -27,31 +31,47 @@ Misc:
 2. unpackzip --> entpackt zip files
    util_fcts --> hilfsfunktionen, die die Umgebung einrichten, sind mittlerweile in jedem übergeordneten Ordner wo sie gebraucht werden
 
+Ablauf
+Set-Up-DB-Teil:
+
+1. lädt alle Tabellen 2x hoch - einmal \_original und einmal die Tabelle die dann modifiziert wird
+2. Modifizierte Tabellen bekommen ihr Geometriefeld angepasst mit 25832
+3. Modifizierte Tabellen bekommen neue Spalte mit dem Namen der Datenquelle
+
+Process Data Teil:
+
+1. die ALKIS Gebäude werden custom gefiltert! Ist gehardcoded --> alle Gebaeude mit Wohnfunktion in eine neue Tabelle
+2. Weitere Custom Funktionen (DIA: Schulische Sporthallen)
+3. Die To be modified Tabellen werden nach bestimmten Feldattributen gefiltert
+   -- Work in Progress --
+
+Analyse Teil:
+-- Not started yet --
+
+Wichtig:
+--> Grundsätzlich ist immer der "Originalname" der Tabellenname mit dem gearbeitet werden sollte! Wenn Datenoperationen durchgeführt werden wird die "alte Version" entsprechend benannt, z.b. original, not_attr_filtered usw.!
+--> union_data: in die Liste kommen alle !Originalnamen! der Schemas, welche nicht für die UnionOps berücksichtigt werden sollen. Es werden vorher ja automatisch \_original Tabellen erstellt, die werden sowieso nicht berücksichtigt.
+
 DIA notes:
 Datenquellen nach Indikator:
-ausserschulangebote - nur metaver - Punkte - PASST SO NUR UNION
-mediallg - Kinderarzt GoogleMaps - punkte - VON GOOGLE MAPS ZIEHEN
-medispez - Kinderzahnarzt GoogleMaps - punkte - VON GOOGLE MAPS ZIEHEN
-naturerfahrungen - meta , polygone (wälder) + punkte (badeseen) - ZENTROIDE ERSTELLEN UND DANN UNION
+ausserschulangebote - nur metaver - Punkte - Fertig
+mediallg - Kinderarzt GoogleMaps - punkte - Fertig
+medispez - Kinderzahnarzt GoogleMaps - punkte - Fertig
+schools - staatl. grundschulen, meta, Punkte --> Fertig
+Schulische Turnhallen --> Punkte (Grundschulen mit SportHallsMeta mit Feld Schulname abgeglichen) - Fertig
+naturerfahrungen - meta , polygone (wälder) + punkte (badeseen) - ZENTROIDE HÄNDISCH ERSTELLEN UND DANN UNION
 parks - meta + Google Maps, Punkte --> VON GOOGLE MAPS ZIEHEN + MIT META VERSCHNEIDEN, ggf. UNION
-schools - staatl. grundschulen, meta, Punkte --> PASST SO
-Spielplätze - meta + osm, --> OSM Daten jedes Spielplatz Icon, Meta weniger --> GOOGLE MAPS DATEN ZIEHEN
-Schulische Turnhallen --> Punkte (Grundschulen mit SportHallsMeta mit Feld Schulname abgeglichen)
+Spielplätze - meta + osm, --> OSM Daten jedes Spielplatz Icon, Meta weniger, GMAPS auch schlecht --> NOCH ÜBERLEGEN
 
 Daraus folgt:
-Fertig: 1. Grundschulen 2. Schulische Turnhallen 3. Kinderzahnärzte 4. Kinderärzte
-Noch nicht, aber mit generischen Funktionen lösbar: 1. Außerschulische Angebote (nur UNION), 2. Naturerfahrungen (Zentroide + Union)
+Fertig: 1. Grundschulen 2. Schulische Turnhallen 3. Kinderzahnärzte 4. Kinderärzte 5. Außerschulische Angebote
+Noch nicht, aber mit generischen Funktionen lösbar: 1. Naturerfahrungen (Zentroide händisch + Union Config dann noch einrichten)
 Das wird komplexer: 1. Parks, 2. Spielplätze
 
-Google Fetchen: Parks, Spielplatz - DONE
-Zentroide: Naturerfahrungen
-UNION: Außerschulangebote, Naturerfahrungen, (Parks), (Spielplatz)
-
 Als nächstes zu tun (DIA):
---> bessere Park und Spielplatzdaten von Google Maps ziehen
---> Centroid Funktion für Naturerfahrungen
---> Union Funktion schreiben
---> EVTL Da wo mehrere Datensätze für beides: Schauen wo ein Buffer um MetaverDaten gelegt werden muss um zu gucken inwiefern OSM und Metaver Daten voneinander abweichen
+--> Händisch Zentroid für Naturerfahrungen erstellen, dann die union config dafür einrichten
+--> Skript einmal komplett von vorne bis hinten laufen lassen, damit man eine TempDB hat wo schonmal 6 Indikatoren sitzen
+--> Anfangen mit Parks - überlegen wie man da vorgehen kann (siehe Parks Notizen weiter unten)
 --> Irgendwann: Logger einbauen!
 
 Notizen Parks:
@@ -64,29 +84,3 @@ Google Maps Daten (Text Search und Keyword Search) zeigen auch Parks
   --> Funktioniert nicht richtig, manche Parks werden nicht genommen die eigentlich welche sind und manche Plätze die keine Parks sind werden genommen
   --> Idee: Cluster Analyse?
 - gucken im Feld "name" ob Duplikate vorliegen. Wenn ja, werden die rausgeschmissen und das Ergebnis wird der Parks-Indikator
-
-Ablauf
-Set-Up-DB-Teil: 1. lädt alle Tabellen 2x hoch - einmal \_original und einmal die Tabelle die dann modifiziert wird 2. Modifizierte Tabellen bekommen ihr Geometriefeld angepasst mit 25832 3. Modifizierte Tabellen bekommen neue Spalte mit dem Namen der Datenquelle
-
-Process Data Teil:
-
-1. die ALKIS Gebäude werden custom gefiltert! Ist gehardcoded --> alle Gebaeude mit Wohnfunktion in eine neue Tabelle
-2. Weitere Custom Funktionen (DIA: Schulische Sporthallen)
-3. Die To be modified Tabellen werden nach bestimmten Feldattributen gefiltert
-   -- Work in Progress --
-
-Analyse Teil:
--- Not started yet --
-
-Sachen die wir in der Analyse klären m+ssen: Warum kommen diese Zacken bei den isochronen? Polygone glätten?
-
-Wichtig:
---> Grundsätzlich ist immer der "Originalname" der Tabellenname mit dem gearbeitet werden sollte! Wenn Datenoperationen durchgeführt werden wird die "alte Version" entsprechend benannt, z.b. original, not_attr_filtered usw.!
---> union_data: in die Liste kommen alle !Originalnamen! der Schemas, welche nicht für die UnionOps berücksichtigt werden sollen. Es werden vorher ja automatisch \_original Tabellen erstellt, die werden sowieso nicht berücksichtigt.
-
-Funktionsspezifische Notizen:
-Centroid Workflow
---> multipolygon zu singlepolygon
---> Geometrien reparieren
---> Löscher löschen
---> Sammeln, wo was fehlschlägt

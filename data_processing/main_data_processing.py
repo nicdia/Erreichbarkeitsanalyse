@@ -1,6 +1,7 @@
-from data_processing.general_attribute_filtering import filter_and_create_table, handle_conf_attrfilter, custom_ALKIS_building_filtering
-from data_processing.general_union_data import union_ops, handle_conf_union
-from data_processing.kids_specific_ops import custom_elementary_sports_halls, 
+from general_attribute_filtering import filter_and_create_table, handle_conf_attrfilter, custom_ALKIS_building_filtering
+from general_union_data import union_tables, handle_conf_union
+from kids_specific_ops import custom_elementary_sports_halls 
+from create_centroid import create_centroids, handle_centroid_config
 
 from util_fcts import connect2DB
 import json
@@ -18,20 +19,24 @@ def main_processing():
     geom_field_name = config["table_processing"]["geom_field"]
     ############## get the configs#################
     attr_filter_config = handle_conf_attrfilter(config)
-    union_config = handle_conf_union(db_con, config["table_processing"]["union_data"])
+    centroid_creation_config = handle_centroid_config(config)
+    union_config = handle_conf_union(config)
 ###################################################
 
     if attr_filter_config:
         filter_and_create_table(attr_filter_config, db_con)
         custom_ALKIS_building_filtering(db_con)
-        custom_elementary_sports_halls(db_con)
+        #custom_elementary_sports_halls(db_con)
 
-    # if union_config:
-    #       union_ops(db_con, union_config, geom_field_name)
-          
-    #3. data source mismatch handling (delete osm features)
+    if union_config:
+          union_tables(db_con, union_config)
+    
+    # if centroid_creation_config:
+    #     create_centroids(centroid_creation_config, db_con)
 
-    # --> result: one dataset for every schema, with only polygons that match flurstuecke/gebauede
+
+
+    # --> result: one point dataset for every schema that can be passed into the analysis part
 
 
 main_processing()

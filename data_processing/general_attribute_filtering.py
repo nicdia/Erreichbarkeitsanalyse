@@ -2,14 +2,42 @@ from sqlalchemy import text
 from sqlalchemy.exc import SQLAlchemyError
 
 def handle_conf_attrfilter(config):
+    """
+    Handles the configuration for the attribute filtering operation.
+
+    Args:
+        config (dict): The configuration dictionary.
+
+    Returns:
+        dict: The configuration for the attribute filtering operation.
+    """
+
     attribute_filtering = config["table_processing"]["attribute_filtering"]
     return attribute_filtering
 
 
 def filter_and_create_table(filter_settings, db_con):
+    """
+    Filters tables in the database according to the given filter settings and creates a new table with the filtered data in a new schema.
+
+    Args:
+        filter_settings (dict): A dictionary with the following structure:
+            {
+                "schema_name": {
+                    "table_name": {
+                        "attribute": <attribute name as string>,
+                        "value": <value to filter on as string or number>,
+                        "new_table_name": <new table name as string>
+                    }
+                }
+            }
+        db_con (sqlalchemy.engine.Engine): The database connection object.
+
+    Returns:
+        None
+    """
     required_keys = ["attribute", "value", "new_table_name"]
     for schema, table_dict in filter_settings.items():
-        # Altes Schema umbenennen und neues Schema mit dem ursprünglichen Namen erstellen
         old_schema_name = f"{schema}_not_attr_filtered"
         
         try:
@@ -52,6 +80,11 @@ def filter_and_create_table(filter_settings, db_con):
 
 
 def custom_ALKIS_building_filtering(db_con):
+    """
+    Creates a new table "wohngebaeude" in the schema "flurstuecke" with all ALKIS buildings that have a specific function.
+
+    The functions are: 'Wohnhaus', 'Gebäude für Gewerbe und Industrie mit Wohnen', 'Gebäude für Handel und Dienstleistungen mit Wohnen', 'Gemischt genutztes Gebäude mit Wohnen', 'Land- und forstwirtschaftliches Wohngebäude', 'Land- und forstwirtschaftliches Wohn- und Betriebsgebäude', 'Wohngebäude mit Gemeinbedarf', 'Wohngebäude mit Gewerbe und Industrie', 'Wohngebäude mit Handel und Dienstleistungen', 'Wohnheim' --> so basically all that have some kind of "Wohn" in the name
+    """
     query = """
 CREATE TABLE flurstuecke.wohngebaeude AS
 SELECT funktion, aktualit, geometry
