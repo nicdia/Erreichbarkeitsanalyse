@@ -74,3 +74,4 @@ OR funktion = 'Wohnheim';
             print("Die Tabelle 'wohngebaeude' wurde erfolgreich erstellt.")
     except Exception as e:
         print(f"Ein Fehler ist aufgetreten: {e}")
+

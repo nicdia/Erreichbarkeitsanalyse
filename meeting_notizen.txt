@@ -1,0 +1,14 @@
+Notizen Meeting 28.11:
+Verwendung der verschiedenen "Findungsalgorithmen" der verschiedenen Programme --> inwiefern unterscheiden sich Here Maps Algorithemn von OpenTripPlanner --> das dann dokumentieren wie es aussieht und ob es Unterschiede gibt
+
+Datenbesorgung:
+Ggf. Daten mal stichprobenmäßig abgleichen mit Seiten von offiziellen Institutionen
+Google Maps Daten mehr berücksichtigen? Statt OSM?
+
+Analyse:
+OpentripPlanner: 2.x verwenden - kann aber dann kein qgis nehmen, alles programmatisch!
+
+Visualisierung am Ende:
+Für jede Zielgruppe einen Gesamtindex aus allen Indikatoren bilden
+Auffällige/Wichtige Indikatoren herausheben --> kann auch nur zur Illustration sein
+Mit den "Spezialisierungen" spielen - wie verändert sich das BIld der Karte von allen Ärzten in Verleich zu Zahnärzten oder so

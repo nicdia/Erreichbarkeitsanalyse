@@ -22,10 +22,10 @@ def main():
             config = json.load(file)
     try:
         original_tables = main_geojson2localdb(db_con, config, "_original")
+        main_change_crs(original_tables, config)
         to_be_modified_tables = main_geojson2localdb(db_con, config, "")
-        if to_be_modified_tables:
-            main_change_crs(to_be_modified_tables, config)
-            add_column_based_on_table_name(db_con)
+        main_change_crs(to_be_modified_tables, config)
+        add_column_based_on_table_name(db_con)
     except Exception as error:
         print (error)
 
