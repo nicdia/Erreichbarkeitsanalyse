@@ -40,10 +40,10 @@ Schulische Turnhallen --> Punkte (Grundschulen mit SportHallsMeta mit Feld Schul
 
 Daraus folgt:
 Fertig: 1. Grundschulen 2. Schulische Turnhallen 3. Kinderzahnärzte 4. Kinderärzte
-Noch nicht, aber mit generischen Funktionen lösbar: 1. Außerschulische Angebote (nur UNION), 2. Naturerfahrungen
+Noch nicht, aber mit generischen Funktionen lösbar: 1. Außerschulische Angebote (nur UNION), 2. Naturerfahrungen (Zentroide + Union)
 Das wird komplexer: 1. Parks, 2. Spielplätze
 
-Google Fetchen: Parks, Spielplatz
+Google Fetchen: Parks, Spielplatz - DONE
 Zentroide: Naturerfahrungen
 UNION: Außerschulangebote, Naturerfahrungen, (Parks), (Spielplatz)
 
@@ -77,6 +77,8 @@ Process Data Teil:
 
 Analyse Teil:
 -- Not started yet --
+
+Sachen die wir in der Analyse klären m+ssen: Warum kommen diese Zacken bei den isochronen? Polygone glätten?
 
 Wichtig:
 --> Grundsätzlich ist immer der "Originalname" der Tabellenname mit dem gearbeitet werden sollte! Wenn Datenoperationen durchgeführt werden wird die "alte Version" entsprechend benannt, z.b. original, not_attr_filtered usw.!
