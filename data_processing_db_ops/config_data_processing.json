@@ -8,21 +8,12 @@
           "value": "Ja",
           "new_table_name": "bauspielplatz_kids_6_10"
         },
-        "freizeitprogramm_junge_menschen_meta": {
-          "attribute": "kinder_6_bis_unter_10_jahre",
-          "value": "Ja",
-          "new_table_name": "okja_freizeitprogramm_6_10"
-        },
         "haus_der_jugend_meta": {
           "attribute": "kinder_6_bis_unter_10_jahre",
           "value": "Ja",
           "new_table_name": "haus_d_jugend_6_10"
         },
-        "jugendangebot_stadtteil_kulturzentrum_meta": {
-          "attribute": "kinder_6_bis_unter_10_jahre",
-          "value": "Ja",
-          "new_table_name": "jugendangebot_6_10"
-        },
+
         "jugendcafe_meta": {
           "attribute": "kinder_6_bis_unter_10_jahre",
           "value": "Ja",
@@ -37,11 +28,6 @@
           "attribute": "kinder_6_bis_unter_10_jahre",
           "value": "Ja",
           "new_table_name": "jugendverband_6_10"
-        },
-        "kinderangebot_stadtteil_kulturzentrum_meta": {
-          "attribute": "kinder_6_bis_unter_10_jahre",
-          "value": "Ja",
-          "new_table_name": "kinderangebot_kulturzentrum_6_10"
         },
         "kindertreff_meta": {
           "attribute": "kinder_6_bis_unter_10_jahre",
@@ -68,24 +54,33 @@
       }
     },
     "union_data": {
-      "ausserschulangebote": {
-        "haus_d_jugend_6_10": ["einrichtung", "adresse", "geometry"],
-        "jugendcafe_6_10": ["einrichtung", "adresse", "geometry"],
-        "jugendklub_6_10": ["einrichtung", "adresse", "geometry"],
-        "jugendverband_6_10": ["einrichtung", "adresse", "geometry"],
-        "kindertreff_6_10": ["einrichtung", "adresse", "geometry"],
-        "spielhaus_6_10": ["einrichtung", "adresse", "geometry"],
-        "spielmobil_6_10": ["einrichtung", "adresse", "geometry"]
+      "natuererfahrung": {
+        "badegewaesser_meta": {
+          "name": "name",
+          "source": "source",
+          "geometry": "geometry"
+        },
+        "zentroide_bannwald_heuckenlock_meta": {
+          "name": "name",
+          "source": "source",
+          "geometry": "geometry"
+        },
+        "zentroide_bannwald_stadtwald_hamburg": {
+          "name": "name",
+          "source": "source",
+          "geometry": "geometry"
+        },
+        "zentroide_stadtwald_meta": {
+          "name": "foersterei",
+          "source": "source",
+          "geometry": "geometry"
+        },
+        "zentroide_uebriger_wald_meta": {
+          "name": "bezirk",
+          "source": "source",
+          "geometry": "geometry"
+        }
       }
-    },
-    "create_centroids": {
-      "geometry": "geometry",
-      "natuererfahrung": [
-        "bannwald_heuckenlock_meta",
-        "bannwald_stadtwald_hamburg_meta",
-        "stadtwald_meta",
-        "uebriger_wald_meta"
-      ]
     }
   }
 }

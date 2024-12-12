@@ -64,7 +64,8 @@ parks - meta + Google Maps, Punkte --> VON GOOGLE MAPS ZIEHEN + MIT META VERSCHN
 Spielplätze - meta + osm, --> OSM Daten jedes Spielplatz Icon, Meta weniger, GMAPS auch schlecht --> NOCH ÜBERLEGEN
 
 Daraus folgt:
-Fertig: 1. Grundschulen 2. Schulische Turnhallen 3. Kinderzahnärzte 4. Kinderärzte 5. Außerschulische Angebote
+Fertig: 1. Grundschulen 2. Schulische Turnhallen 3. Kinderzahnärzte 4. Kinderärzte 5. Außerschulische Angebote 6. Naturerfahrungen
+
 Noch nicht, aber mit generischen Funktionen lösbar: 1. Naturerfahrungen (Zentroide händisch + Union Config dann noch einrichten)
 Das wird komplexer: 1. Parks, 2. Spielplätze
 
@@ -84,3 +85,12 @@ Google Maps Daten (Text Search und Keyword Search) zeigen auch Parks
   --> Funktioniert nicht richtig, manche Parks werden nicht genommen die eigentlich welche sind und manche Plätze die keine Parks sind werden genommen
   --> Idee: Cluster Analyse?
 - gucken im Feld "name" ob Duplikate vorliegen. Wenn ja, werden die rausgeschmissen und das Ergebnis wird der Parks-Indikator
+
+Händisch gemacht (DIA):
+Zentroide erstellt für die Polygone in Naturerfahrungen, dann union ops laufen lassen
+
+1.  Multi Polygon to Single Polygon
+2.  Repair Geometry
+3.  Create Centroids
+4.  Change Centroid layer name
+5.  Import to PostgreSQL Function - Achtung: Der Geometry-Field Name muss zum Rest passen, sonst klappt die UNION nicht!!

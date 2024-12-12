@@ -5,30 +5,41 @@ def handle_conf_union(config):
     union_config = config["table_processing"]["union_data"]
     return union_config
 
-from sqlalchemy import text, inspect
-from sqlalchemy.exc import SQLAlchemyError
+
 
 def union_tables(db_con, union_config):
     """
-    Unioniert Tabellen eines Schemas und nimmt nur bestimmte Felder. Welche Felder in welcher Tabelle genommen werden und zu welchem Schema die gehören muss vorab in der config_data_processing.json config angegeben werden 
+    Unioniert Tabellen eines Schemas und nimmt nur bestimmte Felder. Die Konfiguration muss vorab 
+    angeben, welche Felder aus welchen Tabellen genommen werden und wie sie einheitlich benannt werden. Links ist der Alias Name in der Query und rechts muss der Feldname genommen werden, der Inhalt wird dann entsprechend zusammengepackt mit den anderen Feldinhalten. Also das macht Sinn bei Namensfeldern aber nicht bei Namen-Alias das Geometry Field angeben!
 
     Args:
         db_con: SQLAlchemy-Datenbankverbindung.
-        union_config: Dictionary mit Schema, Tabellen und den zu wählenden Feldern.
+        union_config: Dictionary mit Schema, Tabellen und den zu wählenden Feldern. 
+                      Beispiel:
+                      {
+                          "schema_name": {
+                              "table1": {"name": "col1", "source": "col2", "geom": "geom_col"},
+                              "table2": {"name": "name_field", "source": "src_field", "geom": "geometry"},
+                          }
+                      }
     """
     with db_con.connect() as connection:
         for schema, tables in union_config.items():
             print(f"Processing schema: {schema}")
             union_queries = []
-            union_table_name = f"{schema}_union"  
+            union_table_name = f"{schema}_union"
             
-            for table_name, fields in tables.items():
-                if not fields:
+            for table_name, field_mapping in tables.items():
+                if not field_mapping:
                     print(f"No fields specified for table {table_name}, skipping.")
                     continue
 
-                # Erstelle den SELECT-Teil der Query basierend auf den Feldern
-                field_list = ", ".join(fields)
+                # Erstelle die SELECT-Abfrage mit Aliassen basierend auf der Konfiguration
+                select_parts = []
+                for unified_field, source_field in field_mapping.items():
+                    select_parts.append(f"{source_field} AS {unified_field}")
+                field_list = ", ".join(select_parts)
+
                 query = f"SELECT {field_list} FROM {schema}.{table_name}"
                 union_queries.append(query)
 
@@ -51,6 +62,6 @@ def union_tables(db_con, union_config):
             try:
                 result = connection.execute(complete_query)
                 connection.commit()
-
+                print(f"Successfully created table {schema}.{union_table_name}")
             except SQLAlchemyError as e:
                 print(f"An error occurred while processing schema {schema}: {e}")

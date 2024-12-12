@@ -13,23 +13,24 @@ def custom_elementary_sports_halls (db_con):
     
     :param db_con: Verbindungsobjekt zur Datenbank
     """
-    query = """create table sporthobbies.grundschule_sporthallen as 
-SELECT 
-    sporthalle_meta.* 
-FROM 
-    sporthobbies.sporthalle_meta 
-JOIN 
-    schools.grundschulen
-    sporthalle_meta.schulname ILIKE '%' || grundschulen.schulname || '%' 
-;"""
+    query = """
+    CREATE TABLE sporthobbies.grundschule_sporthallen AS
+    SELECT 
+        sporthalle_meta.* 
+    FROM 
+        sporthobbies.sporthalle_meta 
+    JOIN 
+        schools.grundschulen
+    ON 
+        sporthalle_meta.schulname ILIKE '%' || grundschulen.schulname || '%';
+    """
     try:
         with db_con.connect() as connection:
             connection.execute(text(query))
-            connection.commit()  
-            print("Die Tabelle 'wohngebaeude' wurde erfolgreich erstellt.")
+            print("Die Tabelle 'sporthobbies.grundschule_sporthallen' wurde erfolgreich erstellt.")
     except Exception as e:
         print(f"Ein Fehler ist aufgetreten: {e}")
-
+        
 def custom_parks(db_con):
     # - OSM Daten zeigen ALLE Grünflächen
     # - GMAPS und Metaver Datenssätze sind beide nicht vollständig
