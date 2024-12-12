@@ -4,8 +4,8 @@
       "data_format": [".json", ".geojson"]
     },
     "data": {
-      "ausserschulangebote": "C:\\Master\\GeoinfoPrj_Sem1\\Rohdaten\\indikatoren_kids\\ausserschuleBetreuungBildung",
-      "bezirksgrenzen_gemarkungen": "C:\\Master\\GeoinfoPrj_Sem1\\Rohdaten\\alkis",
+      "hausaerzte": "D:\\Uni\\Master\\Projekt GIT\\indikatoren_students\\hausaerzte",
+      "bars": "D:\\Uni\\Master\\Projekt GIT\\indikatoren_students\\bars",
       "flurstuecke": "C:\\Master\\GeoinfoPrj_Sem1\\Rohdaten\\flurstuecke",
       "mediallg": "C:\\Master\\GeoinfoPrj_Sem1\\Rohdaten\\indikatoren_kids\\Zahnaerzte",
       "medispez": "C:\\Master\\GeoinfoPrj_Sem1\\Rohdaten\\indikatoren_kids\\Kinderaerzte",

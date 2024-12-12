@@ -18,7 +18,7 @@ def main():
         Exception: If any error occurs during the execution of the database operations.
     """
     db_con = connect2DB()
-    with open("C:\\Master\\GeoinfoPrj_Sem1\\Erreichbarkeitsanalyse\\setup_db\\config_setup_db.json", "r") as file:
+    with open("D:\\Uni\\Master\\Projekt GIT\\Erreichbarkeitsanalyse-WiP-\\setup_db\\config_setup_db.json", "r") as file:
             config = json.load(file)
     try:
         original_tables = main_geojson2localdb(db_con, config, "_original")
