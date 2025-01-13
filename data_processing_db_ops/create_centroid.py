@@ -1,4 +1,5 @@
 from sqlalchemy import text
+import qgis
 
 def handle_centroid_config(config):
     """

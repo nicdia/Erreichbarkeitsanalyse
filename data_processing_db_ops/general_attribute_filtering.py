@@ -92,6 +92,7 @@ FROM flurstuecke."gebaeude_alkis"
 WHERE funktion = 'Wohnhaus'
 OR funktion = 'Gebäude für Gewerbe und Industrie mit Wohnen'
 OR funktion = 'Gebäude für Handel und Dienstleistungen mit Wohnen'
+OR funktion = 'Gebäude für Handel und Dienstleistung mit Wohnen'
 OR funktion = 'Gemischt genutztes Gebäude mit Wohnen'
 OR funktion = 'Land- und forstwirtschaftliches Wohngebäude'
 OR funktion = 'Land- und forstwirtschaftliches Wohn- und Betriebsgebäude'

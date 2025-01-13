@@ -21,11 +21,11 @@ def add_column_based_on_table_name(db_con):
                     
                     for table in tables:
                         if "meta" in table:
-                            new_column_value = "metaver"
+                            new_column_value = "metaver" + {table}
                         elif "osm" in table:
-                            new_column_value = "osm"
+                            new_column_value = "osm" + {table}
                         elif "gmaps" in table:
-                            new_column_value = "gmaps"
+                            new_column_value = "gmaps" + {table}
                         else:
                             continue  
                         
