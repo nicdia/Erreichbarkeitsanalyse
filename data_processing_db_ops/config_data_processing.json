@@ -3,11 +3,6 @@
     "geom_field": "geometry",
     "attribute_filtering": {
       "ausserschulangebote": {
-        "bauspielplatz_meta": {
-          "attribute": "kinder_6_bis_unter_10_jahre",
-          "value": "Ja",
-          "new_table_name": "bauspielplatz_kids_6_10"
-        },
         "haus_der_jugend_meta": {
           "attribute": "kinder_6_bis_unter_10_jahre",
           "value": "Ja",
@@ -51,6 +46,13 @@
           "value": "Grundschulen",
           "new_table_name": "grundschulen"
         }
+      },
+      "spielflaechen": {
+        "bauspielplatz_meta": {
+          "attribute": "kinder_6_bis_unter_10_jahre",
+          "value": "Ja",
+          "new_table_name": "bauspielplatz_6_10"
+        }
       }
     },
     "union_data": {
@@ -81,6 +83,11 @@
           "geometry": "geometry"
         }
       }
+    },
+    "isochrone_building_intersection": {
+      "source_schema": "isochrone",
+      "target_schema": "intersect_results",
+      "wohngebaeude_table": "flurstuecke.wohngebaeude"
     }
   }
 }

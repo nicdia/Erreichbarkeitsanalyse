@@ -1,7 +1,7 @@
 from general_attribute_filtering import filter_and_create_table, handle_conf_attrfilter, custom_ALKIS_building_filtering
 from general_union_data import union_tables, handle_conf_union
 from kids_specific_ops import custom_elementary_sports_halls 
-
+from intersect_with_buildings import intersect_buildings_isochrones, handle_conf_intersect
 
 from util_fcts import connect2DB
 import json
@@ -19,19 +19,20 @@ def main_processing():
     geom_field_name = config["table_processing"]["geom_field"]
     ############## get the configs#################
     attr_filter_config = handle_conf_attrfilter(config)
-
     union_config = handle_conf_union(config)
+    intersect_config = handle_conf_intersect(config)
 ###################################################
 
     # if attr_filter_config:
     #     filter_and_create_table(attr_filter_config, db_con)
-    #     custom_ALKIS_building_filtering(db_con)
-    #     custom_elementary_sports_halls(db_con)
+    #     #custom_ALKIS_building_filtering(db_con)
+    #     #custom_elementary_sports_halls(db_con)
 
-    if union_config:
-          union_tables(db_con, union_config)
+    # if union_config:
+    #       union_tables(db_con, union_config)
     
-
+    if intersect_config:
+        intersect_buildings_isochrones( intersect_config, db_con)
 
 
     # --> result: one point dataset for every schema that can be passed into the analysis part

@@ -3,6 +3,7 @@ from sqlalchemy import text
 
 
 
+
 def custom_elementary_sports_halls (db_con):
     """
     Erstellt die Tabelle 'sporthobbies.grundschule_sporthallen'.
@@ -27,7 +28,8 @@ def custom_elementary_sports_halls (db_con):
     try:
         with db_con.connect() as connection:
             connection.execute(text(query))
-            print("Die Tabelle 'sporthobbies.grundschule_sporthallen' wurde erfolgreich erstellt.")
+            connection.commit()
+            print("Die Tabelle 'sporthobbies.grundschule_sportha llen' wurde erfolgreich erstellt.")
     except Exception as e:
         print(f"Ein Fehler ist aufgetreten: {e}")
         
