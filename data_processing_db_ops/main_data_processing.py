@@ -1,7 +1,7 @@
 from general_attribute_filtering import filter_and_create_table, handle_conf_attrfilter, custom_ALKIS_building_filtering
 from general_union_data import union_tables, handle_conf_union
 from kids_specific_ops import custom_elementary_sports_halls 
-from intersect_with_buildings import intersect_buildings_isochrones, handle_conf_intersect
+from intersect_with_buildings import intersect_buildings_isochrones, handle_conf_intersect, execute_intersect_count_adding
 
 from util_fcts import connect2DB
 import json
@@ -32,7 +32,8 @@ def main_processing():
     #       union_tables(db_con, union_config)
     
     if intersect_config:
-        intersect_buildings_isochrones( intersect_config, db_con)
+        # intersect_buildings_isochrones( intersect_config, db_con)
+        execute_intersect_count_adding (intersect_config, db_con, "_with_iso_count")
 
 
     # --> result: one point dataset for every schema that can be passed into the analysis part

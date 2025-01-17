@@ -82,3 +82,82 @@ def intersect_buildings_isochrones(intersect_settings, db_con):
         except Exception as e:
                 conn.rollback() 
                 print(f"Ein Fehler ist aufgetreten: {e}")
+
+
+def duplicate_building_layer(db_con, prefix_new_table, target_schema, wohngebaeude_table,wohngebaeude_table_name):
+    print(f"Typ von conn in dupl building layer: {type(db_con)}")
+    new_table_name = f"{prefix_new_table}_{wohngebaeude_table_name}"
+    new_table_full_name = f"{target_schema}.{new_table_name}"
+
+    copy_query = text(f"""
+    CREATE TABLE {new_table_full_name} AS
+    SELECT * FROM {wohngebaeude_table};
+    """)
+    db_con.execute(copy_query)
+    return new_table_full_name
+
+def get_field_name(table):
+    extracted_name = table.split('_',1)[1] 
+    return extracted_name
+
+def get_tables(schema, db_con):
+    print(f"Typ von conn in get tables: {type(db_con)}")
+    fetch_tables_query = text(f"""
+    SELECT table_name
+    FROM information_schema.tables
+    WHERE table_schema = :schema;
+    """)
+    tables = db_con.execute(fetch_tables_query, {"schema": schema}).fetchall()
+    return tables
+
+def create_intersect_counting_field(duplicated_building_layer, db_con, prefix_new_field_name):
+    print(f"Typ von conn in create intersect field: {type(db_con)}")
+    alter_query = text(f"""
+    ALTER TABLE {duplicated_building_layer}
+    ADD COLUMN {prefix_new_field_name} INTEGER DEFAULT 0;
+    """)
+    db_con.execute(alter_query)
+
+def add_intersect_feature_count(table_name, schema_name, wohngebaeude_table,field_name, db_con):
+    print(f"Typ von conn in add ft count: {type(db_con)}")  
+    source_table_full_name = f"{schema_name}.{table_name}"
+    update_query = text(f"""
+    UPDATE {wohngebaeude_table} AS target
+    SET {field_name} = {field_name} + subquery.count
+    FROM (
+        SELECT COUNT(*) as count, target.id
+        FROM {wohngebaeude_table} AS target
+        JOIN {source_table_full_name} AS source
+        ON ST_Intersects(target.geometry, source.geometry)
+        GROUP BY target.id
+    ) AS subquery
+    WHERE target.id = subquery.id;
+    """)
+    db_con.execute(update_query)
+
+def execute_intersect_count_adding(intersect_settings, db_con, prefix_new_table):
+
+    # target_schema = intersect_results
+    intersect_results_schema = intersect_settings["target_schema"]
+    # wohngebaeude_table = flurstuecke.wohngebaeude
+    original_wohngebaeude_table = intersect_settings["wohngebaeude_table"]
+    wohngebaeude_schema, wohngebaeude_table_name = original_wohngebaeude_table.split(".")
+    with db_con.connect() as conn:
+        print(f"Typ von conn in execute fct: {type(db_con)}")
+        try:
+            duplicated_layer = duplicate_building_layer(conn, prefix_new_table, wohngebaeude_schema, original_wohngebaeude_table, wohngebaeude_table_name)
+            tables = get_tables(schema = intersect_results_schema, db_con= conn)
+            for table in tables:
+                print (f"try to get field name ...")
+                field_name = get_field_name(table[0])
+                print (f"this is the field name: {field_name}")
+                create_intersect_counting_field(duplicated_building_layer=duplicated_layer,db_con=conn, prefix_new_field_name=field_name)
+                add_intersect_feature_count(schema_name=intersect_results_schema,table_name = table, wohngebaeude_table=duplicated_layer, field_name=field_name, db_con=conn)
+                print (f"count was added for {table} in field {field_name}")
+
+            print(f"Intersect Count Adding completed for {duplicated_layer}.")
+            conn.commit()
+        
+        except Exception as e:
+                conn.rollback() 
+                print(f"Ein Fehler ist aufgetreten: {e}")
