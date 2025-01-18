@@ -33,10 +33,9 @@ def main_processing():
     
     if intersect_config:
         # intersect_buildings_isochrones( intersect_config, db_con)
-        execute_intersect_count_adding (intersect_config, db_con, "_with_iso_count")
+        execute_intersect_count_adding (intersect_config, db_con, "_with_iso_count2")
 
 
-    # --> result: one point dataset for every schema that can be passed into the analysis part
 
 
 main_processing()
