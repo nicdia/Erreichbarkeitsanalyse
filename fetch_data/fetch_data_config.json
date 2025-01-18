@@ -1,6 +1,14 @@
 {
   "fetch_otp": {
     "server_url": "http://localhost:8080/otp/routers/current/isochrone",
-    "calculation_params": {}
+    "calculation_params": {
+      "mode": {
+        "BICYCLE": 4.91
+      },
+      "date": "2024-12-12",
+      "time": "12:00:00",
+      "precisionMeters": 10,
+      "cutoffSec": 900
+    }
   }
 }

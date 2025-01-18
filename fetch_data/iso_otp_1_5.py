@@ -1,101 +1,51 @@
-import os
-import requests
-import geopandas as gpd
-from shapely.geometry import Point, MultiPoint
-from datetime import datetime
+import json
 
-# OTP 1.5.0 API-Endpunkt
-OTP_SERVER_URL = "http://localhost:8080/otp/routers/current/isochrone"
+######################################
+with open ("C:\\Master\\GeoinfoPrj_Sem1\\Erreichbarkeitsanalyse\\fetch_data\\fetch_data_config.json", "r") as file:
+    config = json.load(file)
+URL = config["fetch_otp"]["server_url"]
+MODE = list(config["fetch_otp"]["calculation_params"]["mode"].keys()[0])
+SPEED = list(config["fetch_otp"]["calculation_params"]["mode"].values()[0])
+DATE = config["fetch_otp"]["calculation_params"]["date"]
+TIME = config["fetch_otp"]["calculation_params"]["time"]
+PRECISION = config["fetch_otp"]["calculation_params"]["precisionMeters"]
+CUTOFF = config["fetch_otp"]["calculation_params"]["cutoffSec"]
 
-# Parameter für die Berechnung
-MODES = "WALK,TRANSIT"  # Transportmodi
-ARRIVE_BY = "TRUE"  # Ankunft statt Abfahrt
-MAX_WALK_DISTANCE = 99000  # Maximale Fußwegdistanz in Metern
-WALK_RELUCTANCE = 5  # Fußweg-Nachgiebigkeit (höhere Werte bedeuten ungern zu Fuß gehen)
-MIN_TRANSFER_TIME = 600  # Minimale Umstiegszeit in Sekunden
-CUTOFFS = [900]  # Zeitgrenzen in Sekunden
+#####################################
+# 1. get the data --> extract the cors from database layers
+def extract_cors():
+    pass
+    # get access to fertigepunktlayer schema
+    # loop through each table
+    # loop through each feature
+    # create a dict and as key the table name and as value the list of coordinates
 
-# Eingabe: GeoJSON-Datei
-GEOJSON_FILE = "de_hh_up_hochschulen.geojson"
+def fetch_otp_api():
+    pass
+    # input is the dict with the coordinates
+    # for each value in the cor list make a request
+    # save the response
 
-# GeoJSON-Daten laden
-points_gdf = gpd.read_file(GEOJSON_FILE)
+def create_geojson_from_otp_result():
+    pass
+    # do what is needed to create a geojon 
 
-# Koordinatensystem in EPSG:4326 transformieren (falls nicht vorhanden)
-if points_gdf.crs != "EPSG:4326":
-    points_gdf = points_gdf.to_crs(epsg=4326)
+def import_geojson_to_db():
+    # just copy the code from the other script or import that function!
+    pass
 
-# Ergebnisse speichern
-isochrone_features = []  # Liste für alle Isochronen-Features
+def get_otp_isos():
+    pass
 
-# Isochronen für jeden Punkt berechnen
-for idx, point in points_gdf.iterrows():
-    geometry = point.geometry
 
-    # Nur mit Point- oder MultiPoint-Geometrien arbeiten
-    if isinstance(geometry, Point):
-        lon, lat = geometry.x, geometry.y
-    elif isinstance(geometry, MultiPoint):
-        if len(geometry.geoms) > 0:
-            first_point = geometry.geoms[0]
-            lon, lat = first_point.x, first_point.y
-        else:
-            print(f"MultiPoint bei Punkt {idx} enthält keine Geometrien. Übersprungen.")
-            continue
-    else:
-        print(f"Geometrie-Typ {type(geometry)} bei Punkt {idx} wird übersprungen.")
-        continue
 
-    # Datum und Zeit generieren
-    iso_date = datetime(2024,12,12).strftime("%m-%d-%Y")
-    #iso_date = datetime.now().strftime("%m-%d-%Y")  # Format: MM-DD-YYYY
-    iso_time = datetime.now().strftime("%I:%M%p").lower()  # Format: HH:MMam/pm
+# only walk
+# http://localhost:8080/otp/routers/current/isochrone?algorithm=accSampling&fromPlace=53.59860878,9.99349447&mode=BICYCLE&bikeSpeed=4.916667&date=2024-12-12&time=10:00:00&precisionMeters=10&cutoffSec=900
 
-    # Anfrage-Parameter zusammenstellen
-    params = {
-        "toPlace": f"{lat},{lon}",
-        "fromPlace": f"{lat},{lon}",
-        "arriveBy": ARRIVE_BY,
-        "mode": MODES,
-        "date": iso_date,
-        "time": iso_time,
-        "maxWalkDistance": MAX_WALK_DISTANCE,
-        "walkReluctance": WALK_RELUCTANCE,
-        "minTransferTime": MIN_TRANSFER_TIME
-        #"precisionMeters": 10
-    }
+# walk transit
+# http://localhost:8080/otp/routers/current/isochrone?algorithm=accSampling&fromPlace=53.61542249,10.04778259&mode=WALK,TRANSIT&walkSpeed=1.34112&date=2024-12-12&time=10:00:00&precisionMeters=10&cutoffSec=900
 
-    # CUTOFFS hinzufügen
-    for cutoff in CUTOFFS:
-        params[f"cutoffSec"] = cutoff
+# bicycle
+# http://localhost:8080/otp/routers/current/isochrone?algorithm=accSampling&fromPlace=53.59860878,9.99349447&mode=BICYCLE&bikeSpeed=4.916667&date=2024-12-12&time=10:00:00&precisionMeters=10&cutoffSec=900
 
-    # Anfrage an den OTP-Server senden
-    try:
-        response = requests.get(OTP_SERVER_URL, params=params)
-        response.raise_for_status()  # Prüfen auf HTTP-Fehler
 
-        # Antwort als GeoJSON laden
-        isochrone_geojson = response.json()
-
-        # Feature-Collection erweitern
-        for feature in isochrone_geojson.get("features", []):
-            feature["properties"].update({"point_index": idx, "latitude": lat, "longitude": lon})
-            isochrone_features.append(feature)
-
-        print(f"Isochrone für Punkt {idx} erfolgreich verarbeitet.")
-
-    except requests.RequestException as e:
-        print(f"Fehler bei der Anfrage für Punkt {idx}: {e}")
-
-# Alle Isochronen in einer Datei speichern
-output_file = "all_isochrones_neu.geojson"
-output_geojson = {
-    "type": "FeatureCollection",
-    "features": isochrone_features,
-}
-
-with open(output_file, "w", encoding="utf-8") as f:
-    import json
-    json.dump(output_geojson, f, ensure_ascii=False, indent=2)
-
-print(f"Alle Isochronen wurden in '{output_file}' gespeichert.")
