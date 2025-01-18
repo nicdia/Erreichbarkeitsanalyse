@@ -33,7 +33,7 @@ def main_processing():
     
     if intersect_config:
         # intersect_buildings_isochrones( intersect_config, db_con)
-        execute_intersect_count_adding (intersect_config, db_con, "_with_iso_count2")
+        execute_intersect_count_adding (intersect_config, db_con, "_with_iso_count_and_score")
 
 
 

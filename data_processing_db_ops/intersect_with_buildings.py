@@ -1,4 +1,4 @@
-from sqlalchemy import create_engine, text
+from sqlalchemy import text
 
 def handle_conf_intersect(config):
     intersect_config = config["table_processing"]["isochrone_building_intersection"]
@@ -126,7 +126,18 @@ def create_intersect_counting_field(duplicated_building_layer, db_con, new_field
     """)
     db_con.execute(alter_query)
 
-def add_intersect_feature_count(table_name, schema_name, wohngebaeude_table, field_name, db_con):
+def extract_increment_factor(table_name, score_dict):
+    # take the table name string
+    for key in score_dict:
+        if key in table_name:
+            return score_dict[key]
+    print (f"WARNING: No increment factor found for table: {table_name}. Check the score system in your config and the names of your tables in db.")
+    return None
+    # check if  a key of score dict is in the string
+    # for that key return the value
+
+
+def add_intersect_feature_count(table_name, schema_name, wohngebaeude_table, field_name, db_con, score_factor):
     """
     Prüft für jedes Feature in der wohngebaeude_table, ob es in der source_table vorhanden ist,
     und erhöht das Integer-Feld um 1, wenn dies der Fall ist.
@@ -138,14 +149,12 @@ def add_intersect_feature_count(table_name, schema_name, wohngebaeude_table, fie
         field_name (str): Name der Spalte, die erhöht werden soll.
         db_con (sqlalchemy.engine.Engine): Datenbankverbindung.
     """
-    print(f"This is the input table name: {table_name}")
-    print(f"This is the input schema name: {schema_name}")
 
     source_table_full_name = f"{schema_name}.{table_name}"
 
     update_query = text(f"""
     UPDATE {wohngebaeude_table} AS target
-    SET {field_name} = {field_name} + 1
+    SET {field_name} = {field_name} + {score_factor}
     WHERE EXISTS (
         SELECT 1
         FROM {source_table_full_name} AS source
@@ -161,27 +170,33 @@ def execute_intersect_count_adding(intersect_settings, db_con, prefix_new_table)
     # wohngebaeude_table = flurstuecke.wohngebaeude
     original_wohngebaeude_table = intersect_settings["wohngebaeude_table"]
     wohngebaeude_schema, wohngebaeude_table_name = original_wohngebaeude_table.split(".")
+
+    #score system is a dict
+    score_system = intersect_settings["score_system"]
+
+
     with db_con.connect() as conn:
         try:
             created_fields = []
             duplicated_layer = duplicate_building_layer(conn, prefix_new_table, wohngebaeude_schema, original_wohngebaeude_table, wohngebaeude_table_name)
             tables = get_tables(schema = intersect_results_schema, db_con= conn)
-            print (f"this is al tables in execute: {tables}")
+            print (f"this is all tables in execute: {tables}")
             for table in tables:
                 field_name = get_field_name(table)
                 mode_and_settings = extract_mode_and_settings_from_field_name(field_name)
-                print (f"this is field name that will be used: {mode_and_settings}")
                 if mode_and_settings not in created_fields:
+                    print (f"this is field name that will be used: {mode_and_settings}")
                     create_intersect_counting_field(duplicated_building_layer=duplicated_layer,db_con=conn, new_field_name=mode_and_settings)
                     created_fields.append(mode_and_settings)
-            print (f"this is the current created fields: {created_fields}")
+            print (f"this is all created fields: {created_fields}")
             for table in tables:
                 for created_field in created_fields:
                     if created_field in table:
                         # created field looks for example like this: bicycle_iso_17_7km
                         # table name looks for example like this: intersect_bicycle_iso_17_7km_ausserschulisch
                         print (f"MATCH: {table} count will be added in field {created_field}")
-                        add_intersect_feature_count(schema_name=intersect_results_schema,table_name = table, wohngebaeude_table=duplicated_layer, field_name=created_field, db_con=conn)
+                        score_factor = extract_increment_factor(table, score_system)
+                        add_intersect_feature_count(schema_name=intersect_results_schema,table_name = table, wohngebaeude_table=duplicated_layer, field_name=created_field, db_con=conn, score_factor=score_factor)
                         print (f"count was added for {table} in field {mode_and_settings}")
                     else:
                         print (f"NO MATCH:{table} and {created_field}")

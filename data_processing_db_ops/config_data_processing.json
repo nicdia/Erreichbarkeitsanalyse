@@ -87,7 +87,17 @@
     "isochrone_building_intersection": {
       "source_schema": "isochrone",
       "target_schema": "intersect_results",
-      "wohngebaeude_table": "flurstuecke.wohngebaeude"
+      "wohngebaeude_table": "flurstuecke.wohngebaeude",
+      "score_system": {
+        "grundschulen": 5,
+        "sporthallen": 4,
+        "spielplatz": 3,
+        "kinderarzt": 1,
+        "kinderzahnarzt": 1,
+        "parks": 2,
+        "wald": 2,
+        "ausserschulisch": 3
+      }
     }
   }
 }

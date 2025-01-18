@@ -1,0 +1,6 @@
+{
+  "fetch_otp": {
+    "server_url": "http://localhost:8080/otp/routers/current/isochrone",
+    "calculation_params": {}
+  }
+}
