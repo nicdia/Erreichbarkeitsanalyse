@@ -1,3 +1,4 @@
 venv/
 .env
 OTP_1_5/
+__pycache__/

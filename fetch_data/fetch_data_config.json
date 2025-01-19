@@ -1,12 +1,14 @@
 {
   "fetch_otp": {
     "server_url": "http://localhost:8080/otp/routers/current/isochrone",
+    "schema": "fertigepunktlayer",
+    "geojson_dir": "C:\\temp",
     "calculation_params": {
       "mode": {
-        "BICYCLE": 4.91
+        "BICYCLE": 4.916667
       },
       "date": "2024-12-12",
-      "time": "12:00:00",
+      "time": "10:00:00",
       "precisionMeters": 10,
       "cutoffSec": 900
     }
