@@ -139,7 +139,11 @@ def get_otp_isos(db_con, params):
         print(f"Error: {e}")
 
 
-
+############################################################################
+1. Geojson wird nicht korrekt erstellt, die [] ganz am Anfang und Ende müssen weg
+2. Es wird nur ein Polygon eingespeist und nicht alle von Hamburg
+3. Ggf vorab nochmal gucken ob die fertigen Punktlayer auch wirklich alle nur im Raum Hamburg sind, sonst ist das ggf. ne Fehlerquelle
+4. Import in die DB kann man von set up db nehmen, müsste genau das gleiche sein
 ################################################################################
 with open ("C:\\Master\\GeoinfoPrj_Sem1\\Erreichbarkeitsanalyse\\fetch_data\\fetch_data_config.json", "r") as file:
     config = json.load(file)
