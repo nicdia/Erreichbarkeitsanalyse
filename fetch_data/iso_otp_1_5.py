@@ -8,10 +8,10 @@ from sqlalchemy import text
 ##########################################################################
 project_dir = os.path.abspath(os.path.dirname(__file__))
 parent_dir = os.path.dirname(project_dir)
-processing_dir = os.path.join(parent_dir,"data_processing_db_ops")
 sys.path.append(parent_dir)
 from data_processing_db_ops.intersect_with_buildings import get_tables
 from data_processing_db_ops.util_fcts import connect2DB
+from setup_db.geojson2localDB import create_schema, create_table_name, upload2db
 #########################################################################
 def extract_cors(schema, db_con):
     """
@@ -71,46 +71,165 @@ def extract_coordinates_from_wkt(wkt_geometry):
     wgs_coordinates = [transform_geometry_to_wgs84(coordinate) for coordinate in coordinates]
     return wgs_coordinates
 
+def aggregate_feature_collections(json_data_list):
+    """
+    Aggregiert mehrere FeatureCollections zu einer einzigen.
+    
+    Args:
+        json_data_list (list): Liste von GeoJSON-FeatureCollections.
+    
+    Returns:
+        dict: Eine einzige GeoJSON-FeatureCollection mit aggregierten Features.
+    """
+    # Initialisiere die endgültige FeatureCollection
+    aggregated_geojson = {
+        "type": "FeatureCollection",
+        "features": []
+    }
+
+    # Iteriere durch alle FeatureCollections und füge die Features hinzu
+    for feature_collection in json_data_list:
+        if isinstance(feature_collection, dict) and "features" in feature_collection:
+            aggregated_geojson["features"].extend(feature_collection["features"])  # Features hinzufügen
+    
+    return aggregated_geojson
 def convert_json_2_geojson(json_data, filename):
+    """
+    Aggregiert mehrere FeatureCollections und speichert sie als GeoJSON-Datei.
+    
+    Args:
+        json_data_list (list): Liste von GeoJSON-FeatureCollections.
+        filename (str): Der Name der Ausgabedatei.
+    """
+    # Aggregiere die Features
+    aggregated_geojson = aggregate_feature_collections(json_data)
+    
+    # GeoJSON in Datei speichern
     with open(filename, "w") as file:
-        json.dump(json_data[0], file)
+        json.dump(aggregated_geojson, file)
+    
     print(f"GeoJSON-Datei '{filename}' wurde erstellt.")
 
 
-def import_geojson_to_db():
-    # just copy the code from the other script or import that function!
-    pass
+def print_progress_bar(iteration, total, prefix='', suffix='', length=50, fill='█'):
+    """
+    Erstellt eine Fortschrittsanzeige im Terminal.
 
-def fetch_otp_api(cor_dict,url, precision, cutoff, mode, speed, date, time):
-    print ("gets here")
+    Args:
+        iteration (int): Der aktuelle Fortschritt (z. B. die aktuelle Iteration).
+        total (int): Die Gesamtanzahl der Iterationen.
+        prefix (str): Text vor der Fortschrittsanzeige.
+        suffix (str): Text nach der Fortschrittsanzeige.
+        length (int): Die Länge der Fortschrittsanzeige in Zeichen.
+        fill (str): Das Zeichen, das für den Fortschritt verwendet wird.
+    """
+    percent = ("{0:.1f}").format(100 * (iteration / float(total)))
+    filled_length = int(length * iteration // total)
+    bar = fill * filled_length + '-' * (length - filled_length)
+    sys.stdout.write(f'\r{prefix} |{bar}| {percent}% {suffix}')
+    sys.stdout.flush()
+    if iteration == total:
+        print()
+
+# def fetch_otp_api(cor_dict,url, precision, cutoff, mode, speed, date, time):
+#     print ("gets here")
+#     # http://localhost:8080/otp/routers/current/isochrone?algorithm=accSampling&fromPlace=53.59860878,9.99349447&mode=BICYCLE&bikeSpeed=4.916667&date=2024-12-12&time=10:00:00&precisionMeters=10&cutoffSec=900
+#     results = {}
+#     error_results = {}
+#     total_tables = len(cor_dict)
+#     current_table_index = 0
+
+#     for table in cor_dict.keys():
+#         current_table_index += 1
+#         print_progress_bar(current_table_index, total_tables, prefix='Processing tables:', suffix='Complete', length=50)
+
+#         results[table] = []
+#         error_results[table] = []
+#         total_coords = len(cor_dict[table])
+#         current_coord_index = 0
+
+#         for cor in cor_dict[table]:
+#             current_coord_index += 1
+#             print_progress_bar(current_coord_index, total_coords, prefix=f'Processing coordinates for table {table}:', suffix='Complete', length=50)
+#             request_url = f"{url}?algorithm=accSampling&fromPlace={cor[0][0]},{cor[0][1]}&mode={mode}&bikeSpeed={speed}&date={date}&time={time}&precisionMeters={precision}&cutoffSec={cutoff}"
+#             try: 
+#                 response = requests.get(request_url)
+#                 response.raise_for_status() 
+#                 response_data = response.json()
+#                 results[table].append(response_data)
+#             except requests.exceptions.RequestException as e:
+#                 print(f"Error fetching data for coordinates {cor} in table {table}: {e}")
+#                 results[table].append(None) 
+#                 error_results[table].append((cor, e))
+#     return results, error_results
+
+
+def fetch_otp_api(cor_dict, url, precision, cutoff, mode, speed, date, time):
+    print("gets here")
     # http://localhost:8080/otp/routers/current/isochrone?algorithm=accSampling&fromPlace=53.59860878,9.99349447&mode=BICYCLE&bikeSpeed=4.916667&date=2024-12-12&time=10:00:00&precisionMeters=10&cutoffSec=900
     results = {}
     error_results = {}
 
+    # Nur die erste Tabelle aus cor_dict für das Testen auswählen
+    if cor_dict:
+        first_table = next(iter(cor_dict.keys()))
+        print(f"Processing only the first table: {first_table}")
 
-    for table in cor_dict.keys():
-        for cor in cor_dict[table]:
-            print (f"this is cor: {cor}")
-        results[table] = []
-        error_results[table] = []
-        for cor in cor_dict[table]:
+        results[first_table] = []
+        error_results[first_table] = []
+
+        # Alle Features der ersten Tabelle abfragen
+        total_coords = len(cor_dict[first_table])
+        current_coord_index = 0
+
+        for cor in cor_dict[first_table]:
+            current_coord_index += 1
+            print_progress_bar(current_coord_index, total_coords, prefix=f'Processing coordinates for table {first_table}:', suffix='Complete', length=50)
             request_url = f"{url}?algorithm=accSampling&fromPlace={cor[0][0]},{cor[0][1]}&mode={mode}&bikeSpeed={speed}&date={date}&time={time}&precisionMeters={precision}&cutoffSec={cutoff}"
-            print (f"this is the url {request_url}")
+            print (f"this is the request url: {request_url}")
             try:
                 response = requests.get(request_url)
-                response.raise_for_status() 
+                response.raise_for_status()
                 response_data = response.json()
-                results[table].append(response_data)
+                results[first_table].append(response_data)
             except requests.exceptions.RequestException as e:
-                print(f"Error fetching data for coordinates {cor} in table {table}: {e}")
-                results[table].append(None) 
-                error_results[table].append((cor, e))
+                print(f"Error fetching data for coordinates {cor} in table {first_table}: {e}")
+                results[first_table].append(None)
+                error_results[first_table].append((cor, e))
+
     return results, error_results
 
-    # input is the dict with the coordinates
-    # for each value in the cor list make a request
-    # save the response
+def clean_geojson_file(filename):
+    with open(filename, "r") as file:
+        content = file.read()  # Die gesamte Datei als String lesen
 
+    # Die eckigen Klammern entfernen
+    if content.startswith("[") and content.endswith("]"):
+        content = content[1:-1].strip()  # Erstes und letztes Zeichen entfernen
+
+    # Den bereinigten Inhalt wieder in die Datei schreiben
+    with open(filename, "w") as file:
+        file.write(content)
+
+    print(f"Bereinigte GeoJSON-Datei '{filename}'.")
+def create_config_copy_like_config_setup_dbjsonfile(data_format, schema_name, geojson_path):
+    print (f"this is the geojson path in create config copy: {geojson_path}")
+    # this is the original config format: 
+# {
+#   "geojson2localdb": {
+#     "config": {
+#       "data_format": [".json", ".geojson"]
+#     },
+#     "data": {
+#       "ausserschulangebote": "C:\\Master\\GeoinfoPrj_Sem1\\Rohdaten\\indikatoren_kids\\ausserschuleBetreuungBildung",
+# this function transforms the generated data so that i can be passed into the already existing function
+    config = {
+        "data_format": data_format,
+    }
+    data = {
+        schema_name : geojson_path
+    }
+    return data, config
 
 def get_otp_isos(db_con, params):
     url = params["url"]
@@ -131,12 +250,28 @@ def get_otp_isos(db_con, params):
                 print ("3")
                 file_name = "otp_iso_" + table + ".geojson"
                 geojson_path = os.path.join(params["geojson_dir"], file_name)
-                geojson_data = convert_json_2_geojson(json_data = table_data, filename = geojson_path)
-                print ("4")
+                geojson_folder_path = params["geojson_dir"]
+                convert_json_2_geojson(json_data = table_data, filename = geojson_path)
+                
+                print (f"this is the geojson path: {geojson_path}")
+                #clean_geojson_file(filename = geojson_path)
+                data, config = create_config_copy_like_config_setup_dbjsonfile(data_format = [".geojson"], schema_name = params["new_isochrone_schema"], geojson_path = geojson_folder_path )
+                print (f"this is data: {data}")
+                print (f"this is config: {config}")
+                create_schema(data = data, db_con= db_con,suffix = "" )
+                table_names_and_paths_and_schema = create_table_name(data = data, config = config, suffix = "")
+                print (f"this is table_names_and_paths_and_schema: {table_names_and_paths_and_schema}")
+                upload2db(upload_config = table_names_and_paths_and_schema, db_con = db_con)
+                print (f"Uploaded {table} to database")
+            
+            print ("Get otp isos is finished!")
+            conn.commit()
 
             
     except Exception as e:
+
         print(f"Error: {e}")
+        conn.rollback()
 
 
 ############################################################################
@@ -149,6 +284,7 @@ with open ("C:\\Master\\GeoinfoPrj_Sem1\\Erreichbarkeitsanalyse\\fetch_data\\fet
     config = json.load(file)
 params = {
     "url": config["fetch_otp"]["server_url"],
+    "new_isochrone_schema" : config["fetch_otp"]["new_isochrone_schema"],
     "schema" : config["fetch_otp"]["schema"],
     "geojson_dir": config["fetch_otp"]["geojson_dir"],
     "mode": list(config["fetch_otp"]["calculation_params"]["mode"].keys())[0],

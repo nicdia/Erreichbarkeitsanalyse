@@ -1,8 +1,7 @@
 import geopandas
 import os
-import json
-from sqlalchemy import create_engine, text
-from util_fcts import setup
+from sqlalchemy import  text
+
 
 
 
@@ -62,6 +61,7 @@ def create_table_name(data, config, suffix):
     file_formats = config["data_format"]
     for schema, folder_path in data.items():
         for filename in os.listdir(folder_path):
+            print (filename)
             for file_format in file_formats:
                 if filename.endswith(file_format):
                     absolute_path = os.path.join(folder_path, filename)
@@ -72,6 +72,8 @@ def create_table_name(data, config, suffix):
                         "schema": schema + suffix
                     }
                     file_names_and_path_and_schema.append(upload_infos)
+
+    print (file_names_and_path_and_schema)
     return file_names_and_path_and_schema
 
 def upload2db(upload_config, db_con):

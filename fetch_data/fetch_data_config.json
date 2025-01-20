@@ -2,7 +2,8 @@
   "fetch_otp": {
     "server_url": "http://localhost:8080/otp/routers/current/isochrone",
     "schema": "fertigepunktlayer",
-    "geojson_dir": "C:\\temp",
+    "new_isochrone_schema": "automated_otp_isochrones",
+    "geojson_dir": "C:\\temp\\otpabfragen",
     "calculation_params": {
       "mode": {
         "BICYCLE": 4.916667

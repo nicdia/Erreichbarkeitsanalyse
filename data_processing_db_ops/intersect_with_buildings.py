@@ -105,7 +105,8 @@ def extract_mode_and_settings_from_field_name(field_name):
     # the input field name needs to have a structure like this: bicycle_iso_17_7km_ausserschulisch
     # it will return this part: bicycle_iso_17_7km
     mode_and_settings = field_name.rsplit('_', 1)[0]
-    return mode_and_settings
+    indicator_name = field_name.rsplit('_', 1)[1]
+    return mode_and_settings, indicator_name
 
 def get_tables(schema, db_con):
     fetch_tables_query = text(f"""
@@ -119,12 +120,26 @@ def get_tables(schema, db_con):
     only_string_names = [row[0] for row in sql_results_tables]
     return only_string_names
 
-def create_intersect_counting_field(duplicated_building_layer, db_con, new_field_name):
+def create_intersect_counting_field(duplicated_building_layer, db_con, new_aggregated_field_name):
     alter_query = text(f"""
     ALTER TABLE {duplicated_building_layer}
-    ADD COLUMN {new_field_name} INTEGER DEFAULT 0;
+    ADD COLUMN {new_aggregated_field_name} INTEGER DEFAULT 0;
     """)
+
+    ## to be implemented ##
+    # for each aggregated count field, create 8 more indicator fields, and for each write if that feature is in the isochrone table or not --> bool
     db_con.execute(alter_query)
+    print (f"Created new field: {new_aggregated_field_name}")
+
+def create_indicator_boolean_fields (duplicated_building_layer, db_con, field_name):
+    alter_boolean_query = text(f"""
+    ALTER TABLE {duplicated_building_layer}
+    ADD COLUMN {field_name} BOOLEAN DEFAULT FALSE;
+    """)
+    db_con.execute(alter_boolean_query)
+    print(f"8 additional boolean fields created successfully.")
+
+
 
 def extract_increment_factor(table_name, score_dict):
     # take the table name string
@@ -136,6 +151,17 @@ def extract_increment_factor(table_name, score_dict):
     # check if  a key of score dict is in the string
     # for that key return the value
 
+def add_intersect_boolean_values(table_name, schema_name, wohngebaeude_table, db_con, field_name):
+    source_table_full_name = f"{schema_name}.{table_name}"
+    update_query = text(f"""
+UPDATE {wohngebaeude_table} AS target
+SET {field_name} = EXISTS (
+    SELECT 1
+    FROM {source_table_full_name} AS source
+    WHERE ST_Intersects(target.geometry, source.geometry)
+);
+""")
+    db_con.execute(update_query)
 
 def add_intersect_feature_count(table_name, schema_name, wohngebaeude_table, field_name, db_con, score_factor):
     """
@@ -177,20 +203,24 @@ def execute_intersect_count_adding(intersect_settings, db_con, prefix_new_table)
 
     with db_con.connect() as conn:
         try:
-            created_fields = []
+            created_aggregated_fields = []
+            created_boolean_fields = []
             duplicated_layer = duplicate_building_layer(conn, prefix_new_table, wohngebaeude_schema, original_wohngebaeude_table, wohngebaeude_table_name)
             tables = get_tables(schema = intersect_results_schema, db_con= conn)
             print (f"this is all tables in execute: {tables}")
             for table in tables:
                 field_name = get_field_name(table)
-                mode_and_settings = extract_mode_and_settings_from_field_name(field_name)
-                if mode_and_settings not in created_fields:
-                    print (f"this is field name that will be used: {mode_and_settings}")
-                    create_intersect_counting_field(duplicated_building_layer=duplicated_layer,db_con=conn, new_field_name=mode_and_settings)
-                    created_fields.append(mode_and_settings)
-            print (f"this is all created fields: {created_fields}")
+                mode_and_settings, indicator_name = extract_mode_and_settings_from_field_name(field_name)
+                if mode_and_settings not in created_aggregated_fields:
+                    print (f"this is aggregated field name that will be used: {mode_and_settings}")
+                    create_intersect_counting_field(duplicated_building_layer=duplicated_layer,db_con=conn, new_aggregated_field_name=mode_and_settings)
+                    created_aggregated_fields.append(mode_and_settings)
+                create_indicator_boolean_fields(duplicated_building_layer=duplicated_layer, db_con=conn,field_name = field_name)
+                created_boolean_fields.append(field_name)
+            print (f"this is all created aggregated fields: {created_aggregated_fields}")
+            print (f"this is all created boolean fields: {created_boolean_fields}")
             for table in tables:
-                for created_field in created_fields:
+                for created_field in created_aggregated_fields:
                     if created_field in table:
                         # created field looks for example like this: bicycle_iso_17_7km
                         # table name looks for example like this: intersect_bicycle_iso_17_7km_ausserschulisch
@@ -199,7 +229,13 @@ def execute_intersect_count_adding(intersect_settings, db_con, prefix_new_table)
                         add_intersect_feature_count(schema_name=intersect_results_schema,table_name = table, wohngebaeude_table=duplicated_layer, field_name=created_field, db_con=conn, score_factor=score_factor)
                         print (f"count was added for {table} in field {mode_and_settings}")
                     else:
-                        print (f"NO MATCH:{table} and {created_field}")
+                        print (f"NO MATCH AGGREGATED:{table} and {created_field}")
+                for created_field in created_boolean_fields:
+                    if created_field in table:
+                        print (f"MATCH: {table} boolean will be added in field {created_field}")
+                        add_intersect_boolean_values(schema_name=intersect_results_schema,table_name = table, wohngebaeude_table=duplicated_layer, field_name=created_field, db_con=conn)
+                    else:
+                        print (f"NO MATCH BOOLEAN:{table} and {created_field}")
 
 
             print(f"Intersect Count Adding completed for {duplicated_layer}.")
