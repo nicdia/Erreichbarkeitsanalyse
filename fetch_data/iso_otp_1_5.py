@@ -178,11 +178,11 @@ def fetch_otp_api(cor_dict, url, precision, cutoff, mode, speed, date, time):
         results[first_table] = []
         error_results[first_table] = []
 
-        # Alle Features der ersten Tabelle abfragen
-        total_coords = len(cor_dict[first_table])
+        # Nur die ersten 10 Features der ersten Tabelle abfragen
+        total_coords = min(10, len(cor_dict[first_table]))
         current_coord_index = 0
 
-        for cor in cor_dict[first_table]:
+        for cor in cor_dict[first_table][:10]:
             current_coord_index += 1
             print_progress_bar(current_coord_index, total_coords, prefix=f'Processing coordinates for table {first_table}:', suffix='Complete', length=50)
             request_url = f"{url}?algorithm=accSampling&fromPlace={cor[0][0]},{cor[0][1]}&mode={mode}&bikeSpeed={speed}&date={date}&time={time}&precisionMeters={precision}&cutoffSec={cutoff}"
@@ -198,18 +198,6 @@ def fetch_otp_api(cor_dict, url, precision, cutoff, mode, speed, date, time):
                 error_results[first_table].append((cor, e))
 
     return results, error_results
-
-def clean_geojson_file(filename):
-    with open(filename, "r") as file:
-        content = file.read()  # Die gesamte Datei als String lesen
-
-    # Die eckigen Klammern entfernen
-    if content.startswith("[") and content.endswith("]"):
-        content = content[1:-1].strip()  # Erstes und letztes Zeichen entfernen
-
-    # Den bereinigten Inhalt wieder in die Datei schreiben
-    with open(filename, "w") as file:
-        file.write(content)
 
     print(f"Bereinigte GeoJSON-Datei '{filename}'.")
 def create_config_copy_like_config_setup_dbjsonfile(data_format, schema_name, geojson_path):
@@ -242,19 +230,18 @@ def get_otp_isos(db_con, params):
     try:
         with db_con.connect() as conn:
             cor_dict = extract_cors(db_con=conn, schema = params["schema"])
-            print ("1")
             fetch_results, error_results = fetch_otp_api(cor_dict = cor_dict,url = url, precision = precision, cutoff= cutoff, mode = mode, speed = speed, date = date, time = time)
             print ("2")
 
             for table, table_data in fetch_results.items():
-                print ("3")
-                file_name = "otp_iso_" + table + ".geojson"
+                print (f"this is table: {table}")
+
+                file_name = params["mode"].lower() + "_iso_" + str(params["speed"]).replace(".", "_") + "km_" + table.lower().replace(".", "_") + ".geojson"
                 geojson_path = os.path.join(params["geojson_dir"], file_name)
                 geojson_folder_path = params["geojson_dir"]
                 convert_json_2_geojson(json_data = table_data, filename = geojson_path)
                 
                 print (f"this is the geojson path: {geojson_path}")
-                #clean_geojson_file(filename = geojson_path)
                 data, config = create_config_copy_like_config_setup_dbjsonfile(data_format = [".geojson"], schema_name = params["new_isochrone_schema"], geojson_path = geojson_folder_path )
                 print (f"this is data: {data}")
                 print (f"this is config: {config}")

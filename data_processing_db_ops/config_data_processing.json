@@ -86,7 +86,7 @@
     },
     "isochrone_building_intersection": {
       "source_schema": "isochrone",
-      "target_schema": "intersect_results",
+      "target_schema": "automated_intersect_results",
       "wohngebaeude_table": "flurstuecke.wohngebaeude",
       "score_system": {
         "grundschulen": 5,
