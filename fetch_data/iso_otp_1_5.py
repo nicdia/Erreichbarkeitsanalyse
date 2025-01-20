@@ -28,6 +28,7 @@ def extract_cors(schema, db_con):
         tables_str_type = get_tables(schema, db_con) 
         result = {}
         for table in tables_str_type:
+            result[table] = []
             # Query to fetch features (assuming a geometry column exists)
             query = text(f"""
             SELECT ST_AsText(geometry) as wkt_geometry
@@ -40,7 +41,8 @@ def extract_cors(schema, db_con):
                 if wkt_geometry:
                     # Parse WKT to extract coordinates (example for POINT/LINESTRING/POLYGON)
                     coordinates = extract_coordinates_from_wkt(wkt_geometry)
-                    result[table] = coordinates
+                    result[table].append(coordinates)
+
         return result
 
     except Exception as e:
@@ -69,15 +71,9 @@ def extract_coordinates_from_wkt(wkt_geometry):
     wgs_coordinates = [transform_geometry_to_wgs84(coordinate) for coordinate in coordinates]
     return wgs_coordinates
 
-def convert_json_2_geojson(json_data, precision, cutoff, mode, speed, date, time, filename):
-    if not isinstance(json_data, dict) or not json_data:
-        raise ValueError("Input JSON data must be a non-empty dictionary.")
-
-    
-    for features in json_data.values():
-        print (f"this is features: {features}")
-        with open(filename, "w") as file:
-            json.dump(features, file)
+def convert_json_2_geojson(json_data, filename):
+    with open(filename, "w") as file:
+        json.dump(json_data[0], file)
     print(f"GeoJSON-Datei '{filename}' wurde erstellt.")
 
 
@@ -86,16 +82,20 @@ def import_geojson_to_db():
     pass
 
 def fetch_otp_api(cor_dict,url, precision, cutoff, mode, speed, date, time):
+    print ("gets here")
     # http://localhost:8080/otp/routers/current/isochrone?algorithm=accSampling&fromPlace=53.59860878,9.99349447&mode=BICYCLE&bikeSpeed=4.916667&date=2024-12-12&time=10:00:00&precisionMeters=10&cutoffSec=900
     results = {}
     error_results = {}
 
 
     for table in cor_dict.keys():
+        for cor in cor_dict[table]:
+            print (f"this is cor: {cor}")
         results[table] = []
         error_results[table] = []
         for cor in cor_dict[table]:
-            request_url = f"{url}?algorithm=accSampling&fromPlace={cor[0]},{cor[1]}&mode={mode}&bikeSpeed={speed}&date={date}&time={time}&precisionMeters={precision}&cutoffSec={cutoff}"
+            request_url = f"{url}?algorithm=accSampling&fromPlace={cor[0][0]},{cor[0][1]}&mode={mode}&bikeSpeed={speed}&date={date}&time={time}&precisionMeters={precision}&cutoffSec={cutoff}"
+            print (f"this is the url {request_url}")
             try:
                 response = requests.get(request_url)
                 response.raise_for_status() 
@@ -111,6 +111,7 @@ def fetch_otp_api(cor_dict,url, precision, cutoff, mode, speed, date, time):
     # for each value in the cor list make a request
     # save the response
 
+
 def get_otp_isos(db_con, params):
     url = params["url"]
     mode = params["mode"]
@@ -122,17 +123,16 @@ def get_otp_isos(db_con, params):
     try:
         with db_con.connect() as conn:
             cor_dict = extract_cors(db_con=conn, schema = params["schema"])
+            print ("1")
             fetch_results, error_results = fetch_otp_api(cor_dict = cor_dict,url = url, precision = precision, cutoff= cutoff, mode = mode, speed = speed, date = date, time = time)
+            print ("2")
 
-            
-            for index, (key, value) in enumerate(fetch_results.items()):
-                print(f"{index}: {key} -> {value}")
-
-
-            for table in fetch_results.keys():
+            for table, table_data in fetch_results.items():
+                print ("3")
                 file_name = "otp_iso_" + table + ".geojson"
                 geojson_path = os.path.join(params["geojson_dir"], file_name)
-                geojson_data = convert_json_2_geojson(fetch_results, cutoff= cutoff, mode = mode, speed = speed, date = date, time = time, precision = precision, filename = geojson_path)
+                geojson_data = convert_json_2_geojson(json_data = table_data, filename = geojson_path)
+                print ("4")
 
             
     except Exception as e:
@@ -140,10 +140,10 @@ def get_otp_isos(db_con, params):
 
 
 ############################################################################
-1. Geojson wird nicht korrekt erstellt, die [] ganz am Anfang und Ende müssen weg
-2. Es wird nur ein Polygon eingespeist und nicht alle von Hamburg
-3. Ggf vorab nochmal gucken ob die fertigen Punktlayer auch wirklich alle nur im Raum Hamburg sind, sonst ist das ggf. ne Fehlerquelle
-4. Import in die DB kann man von set up db nehmen, müsste genau das gleiche sein
+# 1. Geojson wird nicht korrekt erstellt, die [] ganz am Anfang und Ende müssen weg
+# 2. Es wird nur ein Polygon eingespeist und nicht alle von Hamburg
+# 3. Ggf vorab nochmal gucken ob die fertigen Punktlayer auch wirklich alle nur im Raum Hamburg sind, sonst ist das ggf. ne Fehlerquelle
+# 4. Import in die DB kann man von set up db nehmen, müsste genau das gleiche sein
 ################################################################################
 with open ("C:\\Master\\GeoinfoPrj_Sem1\\Erreichbarkeitsanalyse\\fetch_data\\fetch_data_config.json", "r") as file:
     config = json.load(file)
