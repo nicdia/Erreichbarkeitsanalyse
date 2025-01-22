@@ -5,7 +5,6 @@ from intersect_with_buildings import intersect_buildings_isochrones, handle_conf
 
 from util_fcts import connect2DB
 import json
-import os
 
 
 
@@ -32,8 +31,10 @@ def main_processing():
     #       union_tables(db_con, union_config)
     
     if intersect_config:
-        # intersect_buildings_isochrones( intersect_config, db_con)
-        execute_intersect_count_adding (intersect_config, db_con, "_with_iso_count_and_score")
+        for run in intersect_config:
+            print (f"this is run: {run}")
+            intersect_buildings_isochrones( run, db_con)
+            execute_intersect_count_adding (run, db_con, "test2")
 
 
 
