@@ -1,4 +1,5 @@
 from sqlalchemy import text
+import re
 
 def handle_conf_intersect(config):
     intersect_config = config["table_processing"]["isochrone_building_intersection"]
@@ -16,12 +17,56 @@ def get_geometry_column(conn, schema, table_name):
     """), {"schema": schema, "table": table_name}).fetchone()
     return result[0] if result else None
 
+def transform_otp_fetch_to_25832(intersect_settings, db_con):
+    source_schema = intersect_settings[0]["source_schema"]
+    with db_con.connect() as conn:
+        try:
+            tables = conn.execute(text(f"""
+                SELECT table_name 
+                FROM information_schema.tables 
+                WHERE table_schema = :schema
+            """), {"schema": source_schema}).fetchall()
+            for table in tables:
+                table_name = table[0]
+                print (f"THIS IS TABLE NAME {table_name}")
+                # Geometriespalte der Isochronen-Tabelle ermitteln
+                isochrone_geom_col = get_geometry_column(conn, source_schema, table_name)
+                if not isochrone_geom_col:
+                    print(f"Überspringe Tabelle {table_name}, da keine Geometriespalte gefunden wurde.")
+                    continue
+                transformed_table = f"{table_name}_25832"
+                existing_table = conn.execute(text(f"""
+                    SELECT EXISTS (
+                        SELECT 1 
+                        FROM information_schema.tables 
+                        WHERE table_schema = :schema AND table_name = :table
+                    );
+                """), {"schema": source_schema, "table": transformed_table}).scalar()
+
+                if not existing_table:
+                    print(f"Transformiere Tabelle: {table_name} -> {transformed_table}")
+                    conn.execute(text(f"""
+                        CREATE TABLE {source_schema}.{transformed_table} AS
+                        SELECT 
+                            ST_Transform({isochrone_geom_col}, 25832) AS geometry  -- Nur transformierte Geometrie behalten
+                        FROM {source_schema}.{table_name};
+                    """))
+                    conn.commit()
+                else:
+                    print(f"Tabelle {transformed_table} existiert bereits, überspringe Transformation.")
+        except Exception as e:
+            conn.rollback() 
+            print(f"Ein Fehler ist aufgetreten: {e}")
+
 def intersect_buildings_isochrones(intersect_settings, db_con):
 
     target_schema = intersect_settings["target_schema"]
     source_schema = intersect_settings["source_schema"]
     wohngebaeude_table = intersect_settings["wohngebaeude_table"]
-    wohngebaeude_schema, wohngebaeude_table_name = wohngebaeude_table.split(".")
+    score_system = intersect_settings["score_system"]
+    # keyword for each run with specific score systems
+    keyword = intersect_settings["keyword"]
+
     
     with db_con.connect() as conn:
         try:
@@ -41,68 +86,35 @@ def intersect_buildings_isochrones(intersect_settings, db_con):
             # Iteration über alle Tabellen
             for table in tables:
                 table_name = table[0]
-                print (f"THIS IS TABLE NAME {table_name}")
+                if "_25832" in table_name:
+                    table_name_no_srs = table_name.replace("_25832", "")
+                    intersect_table = f"{target_schema}.intersect_{table_name_no_srs}_{keyword}"
+                    existing_intersect_table = conn.execute(text(f"""
+                        SELECT EXISTS (
+                            SELECT 1 
+                            FROM information_schema.tables 
+                            WHERE table_schema = :schema AND table_name = :table
+                        );
+                    """), {"schema": target_schema, "table":intersect_table}).scalar()
 
-                # Geometriespalte der Isochronen-Tabelle ermitteln
-                isochrone_geom_col = get_geometry_column(conn, source_schema, table_name)
-                if not isochrone_geom_col:
-                    print(f"Überspringe Tabelle {table_name}, da keine Geometriespalte gefunden wurde.")
-                    continue
+                    if not existing_intersect_table:
+                        print(f"Erstelle Intersect-Tabelle: {intersect_table}")
+                        conn.execute(text(f"""
+                            CREATE TABLE {intersect_table} AS
+                            SELECT 
+                                geb.*
+                            FROM {wohngebaeude_table} geb
+                            JOIN {source_schema}.{table_name} iso
+                            ON ST_Intersects(geb.{wohngebaeude_geom_col}, iso.geometry);
+                        """))
 
-                # Neuer Tabellenname für transformierte Daten
-                transformed_table = f"{table_name}_25832"
-
-                # Prüfen, ob die transformierte Tabelle bereits existiert
-                existing_table = conn.execute(text(f"""
-                    SELECT EXISTS (
-                        SELECT 1 
-                        FROM information_schema.tables 
-                        WHERE table_schema = :schema AND table_name = :table
-                    );
-                """), {"schema": source_schema, "table": transformed_table}).scalar()
-
-                if not existing_table:
-                    # SRID-Transformation durchführen und neue Tabelle erstellen
-                    print(f"Transformiere Tabelle: {table_name} -> {transformed_table}")
-                    conn.execute(text(f"""
-                        CREATE TABLE {source_schema}.{transformed_table} AS
-                        SELECT 
-                            ST_Transform({isochrone_geom_col}, 25832) AS geometry  -- Nur transformierte Geometrie behalten
-                        FROM {source_schema}.{table_name};
-                    """))
-                else:
-                    print(f"Tabelle {transformed_table} existiert bereits, überspringe Transformation.")
-
-                # Intersect-Query ausführen und Ergebnisse speichern
-                intersect_table = f"{target_schema}.intersect_{table_name}"
-
-                # Prüfen, ob die Intersect-Tabelle bereits existiert
-                existing_intersect_table = conn.execute(text(f"""
-                    SELECT EXISTS (
-                        SELECT 1 
-                        FROM information_schema.tables 
-                        WHERE table_schema = :schema AND table_name = :table
-                    );
-                """), {"schema": target_schema, "table": f"intersect_{table_name}"}).scalar()
-
-                if not existing_intersect_table:
-                    print(f"Erstelle Intersect-Tabelle: {intersect_table}")
-                    conn.execute(text(f"""
-                        CREATE TABLE {intersect_table} AS
-                        SELECT 
-                            geb.*
-                        FROM {wohngebaeude_table} geb
-                        JOIN {source_schema}.{transformed_table} iso
-                        ON ST_Intersects(geb.{wohngebaeude_geom_col}, iso.geometry);
-                    """))
-
-                    # Index auf der Ergebnis-Tabelle erstellen (optional für Performance)
-                    print(f"Erstelle Index für Tabelle: {intersect_table}")
-                    conn.execute(text(f"""
-                        CREATE INDEX idx_{table_name}_geom ON {intersect_table} USING GIST(geometry);
-                    """))
-                else:
-                    print(f"Intersect-Tabelle {intersect_table} existiert bereits, überspringe Erstellung.")
+                        # Index auf der Ergebnis-Tabelle erstellen (optional für Performance)
+                        print(f"Erstelle Index für Tabelle: {intersect_table}")
+                        conn.execute(text(f"""
+                            CREATE INDEX idx_{table_name}_geom ON {intersect_table} USING GIST(geometry);
+                        """))
+                    else:
+                        print(f"Intersect-Tabelle {intersect_table} existiert bereits, überspringe Erstellung.")
             conn.commit()
             print("Alle Tabellen wurden transformiert und Intersect-Operationen abgeschlossen.")
         except Exception as e:
@@ -110,15 +122,34 @@ def intersect_buildings_isochrones(intersect_settings, db_con):
                 print(f"Ein Fehler ist aufgetreten: {e}")
 
 
-def duplicate_building_layer(db_con, prefix_new_table, target_schema, wohngebaeude_table,wohngebaeude_table_name):
+def duplicate_building_layer(db_con, prefix_new_table, target_schema, wohngebaeude_table, wohngebaeude_table_name):
     new_table_name = f"{prefix_new_table}_{wohngebaeude_table_name}"
     new_table_full_name = f"{target_schema}.{new_table_name}"
 
+    # Query to check if the table exists
+    check_query = text(f"""
+    SELECT EXISTS (
+        SELECT 1 
+        FROM information_schema.tables 
+        WHERE table_schema = '{target_schema}' 
+          AND table_name = '{new_table_name}'
+    );
+    """)
+
+    # Check if the table exists
+    result = db_con.execute(check_query).fetchone()
+
+    if result[0]:  # If the table exists
+        print(f"Table {new_table_full_name} already exists.")
+        return new_table_full_name
+
+    # If the table does not exist, create it
     copy_query = text(f"""
     CREATE TABLE {new_table_full_name} AS
     SELECT * FROM {wohngebaeude_table};
     """)
     db_con.execute(copy_query)
+    print(f"Table {new_table_full_name} created.")
     return new_table_full_name
 
 def get_field_name(table):
@@ -130,9 +161,12 @@ def get_field_name(table):
 def extract_mode_and_settings_from_field_name(field_name):
     # the input field name needs to have a structure like this: bicycle_iso_17_7km_ausserschulisch
     # it will return this part: bicycle_iso_17_7km
-    mode_and_settings = field_name.rsplit('_', 1)[0]
-    indicator_name = field_name.rsplit('_', 1)[1]
-    return mode_and_settings, indicator_name
+    print ("gets here 4")
+    test = field_name.rsplit('_', 2)[0]
+    print ("test")
+    print (test)
+    mode_and_settings = field_name.rsplit('_', 2)[0]
+    return mode_and_settings
 
 def get_tables(schema, db_con):
     fetch_tables_query = text(f"""
@@ -163,7 +197,7 @@ def create_indicator_boolean_fields (duplicated_building_layer, db_con, field_na
     ADD COLUMN {field_name} BOOLEAN DEFAULT FALSE;
     """)
     db_con.execute(alter_boolean_query)
-    print(f"8 additional boolean fields created successfully.")
+    print(f"Boolean field {field_name} was created.")
 
 
 
@@ -215,6 +249,16 @@ def add_intersect_feature_count(table_name, schema_name, wohngebaeude_table, fie
     """)
     db_con.execute(update_query)
 
+def does_field_match_table(created_field, table):
+    # table = intersect_bicycle_iso_4_916667km_ausserschulangebote_54311223 created_field = bicycle_iso_4_916667km_54311223
+    table_first_part, table_keyword_part = table.rsplit('_', 1) 
+    field_first_part, field_keyword_part = created_field.rsplit('_', 1)
+    if table_keyword_part == field_keyword_part and field_first_part in table_first_part:
+        return True
+    else:
+        return False
+    
+
 def execute_intersect_count_adding(intersect_settings, db_con, prefix_new_table):
 
     # target_schema = intersect_results
@@ -236,31 +280,30 @@ def execute_intersect_count_adding(intersect_settings, db_con, prefix_new_table)
             duplicated_layer = duplicate_building_layer(conn, prefix_new_table, wohngebaeude_schema, original_wohngebaeude_table, wohngebaeude_table_name)
             tables = get_tables(schema = intersect_results_schema, db_con= conn)
             print (f"this is all tables in execute: {tables}")
+
             for table in tables:
                 field_name = get_field_name(table)
-                mode_and_settings, indicator_name = extract_mode_and_settings_from_field_name(field_name)
-                if mode_and_settings not in created_aggregated_fields:
-                    print (f"this is aggregated field name that will be used: {mode_and_settings}")
-                    create_intersect_counting_field(duplicated_building_layer=duplicated_layer,db_con=conn, new_aggregated_field_name=mode_and_settings +"_"+ keyword)
-                    created_aggregated_fields.append(mode_and_settings)
-                create_indicator_boolean_fields(duplicated_building_layer=duplicated_layer, db_con=conn,field_name = field_name + "_" + keyword)
-                created_boolean_fields.append(field_name)
+                mode_and_settings = extract_mode_and_settings_from_field_name(field_name)
+                aggregated_field_name = mode_and_settings +"_"+ keyword
+                boolean_field_name = field_name 
+                if aggregated_field_name not in created_aggregated_fields:
+                    create_intersect_counting_field(duplicated_building_layer=duplicated_layer,db_con=conn, new_aggregated_field_name=aggregated_field_name)
+                    created_aggregated_fields.append(aggregated_field_name)
+                create_indicator_boolean_fields(duplicated_building_layer=duplicated_layer, db_con=conn,field_name = boolean_field_name)
+                created_boolean_fields.append(boolean_field_name)
             print (f"this is all created aggregated fields: {created_aggregated_fields}")
             print (f"this is all created boolean fields: {created_boolean_fields}")
             for table in tables:
                 for created_field in created_aggregated_fields:
-                    if created_field in table:
-                        # created field looks for example like this: bicycle_iso_17_7km
-                        # table name looks for example like this: intersect_bicycle_iso_17_7km_ausserschulisch
-                        print (f"MATCH: {table} count will be added in field {created_field}")
+                    if does_field_match_table(created_field, table):
+                        print (f"MATCH AGGREGATED: {table} count will be added in field {created_field}")
                         score_factor = extract_increment_factor(table, score_system)
                         add_intersect_feature_count(schema_name=intersect_results_schema,table_name = table, wohngebaeude_table=duplicated_layer, field_name=created_field, db_con=conn, score_factor=score_factor)
-                        print (f"count was added for {table} in field {mode_and_settings}")
                     else:
                         print (f"NO MATCH AGGREGATED:{table} and {created_field}")
                 for created_field in created_boolean_fields:
                     if created_field in table:
-                        print (f"MATCH: {table} boolean will be added in field {created_field}")
+                        print (f"MATCH BOOLEAN: {table} boolean will be added in field {created_field}")
                         add_intersect_boolean_values(schema_name=intersect_results_schema,table_name = table, wohngebaeude_table=duplicated_layer, field_name=created_field, db_con=conn)
                     else:
                         print (f"NO MATCH BOOLEAN:{table} and {created_field}")

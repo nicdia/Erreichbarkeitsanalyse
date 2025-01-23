@@ -86,7 +86,7 @@
     },
     "isochrone_building_intersection": [
       {
-        "keyword": "gr5spo4spi3kz1ka1pa2wa2au3",
+        "keyword": "54311223",
         "source_schema": "automated_otp_isochrones",
         "target_schema": "automated_intersect_results",
         "wohngebaeude_table": "flurstuecke.wohngebaeude",
@@ -94,15 +94,15 @@
           "grundschulen": 5,
           "sporthallen": 4,
           "spielplatz": 3,
-          "kinderarzt": 1,
-          "kinderzahnarzt": 1,
+          "kinderaerzte": 1,
+          "kinderzahnaerzte": 1,
           "parks": 2,
           "wald": 2,
-          "ausserschulisch": 3
+          "ausserschulangebote": 3
         }
       },
       {
-        "keyword": "gr1spo1spi1kz1ka1pa1wa1au1",
+        "keyword": "11111111",
         "source_schema": "automated_otp_isochrones",
         "target_schema": "automated_intersect_results2",
         "wohngebaeude_table": "flurstuecke.wohngebaeude",
@@ -110,11 +110,11 @@
           "grundschulen": 1,
           "sporthallen": 1,
           "spielplatz": 1,
-          "kinderarzt": 1,
-          "kinderzahnarzt": 1,
+          "kinderaerzte": 1,
+          "kinderzahnaerzte": 1,
           "parks": 1,
           "wald": 1,
-          "ausserschulisch": 1
+          "ausserschulangebote": 1
         }
       }
     ]

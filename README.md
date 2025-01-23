@@ -94,3 +94,34 @@ Zentroide erstellt für die Polygone in Naturerfahrungen, dann union ops laufen 
 3.  Create Centroids
 4.  Change Centroid layer name
 5.  Import to PostgreSQL Function - Achtung: Der Geometry-Field Name muss zum Rest passen, sonst klappt die UNION nicht!!
+
+FESTER INDEX GRUNDSCHULKINDER
+
+grundschulen 1 --> mit 1 gewichtet
+sporthallen 2--> mit 1 gewichtet
+spielplatz 3--> mit 1 gewichtet
+kinderaerzte 4--> mit 1 gewichtet
+kinderzanaerzte 5--> mit 1 gewichtet
+parks 6--> mit 1 gewichtet
+wald 7--> mit 1 gewichtet
+ausserschulangebote 8 --> mit 1 gewichtet
+
+--> ergibt das Keyword: 11111111
+
+grundschulen 1 --> mit 3 gewichtet
+sporthallen 2--> mit 5 gewichtet
+spielplatz 3--> mit 7 gewichtet
+kinderaerzte 4--> mit 2 gewichtet
+kinderzanaerzte 5--> mit 4 gewichtet
+parks 6--> mit 5 gewichtet
+wald 7--> mit 6 gewichtet
+ausserschulangebote 8 --> mit 2 gewichtet
+
+--> ergibt das keyword: 3524562
+
+Grund: Platzmangel im Feldnamen
+WICHTIG: Reihenfolge der Indikatoren MUSS gleich bleiben in der Config!!
+
+fetchApi auskommentieren --> ist noch auf 10 Features pro Tabelle eingestellt
+man muss fetchApi Skript separat callen --> vorher fetch data config Tabelle anpassen
+Dann die intersect Operationen kann man in main_data_processing callen, vorher drauf achten dass man config_data_processing angegeben hat
