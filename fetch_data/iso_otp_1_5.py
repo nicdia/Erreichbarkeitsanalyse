@@ -234,26 +234,34 @@ def get_otp_isos(db_con, params):
                 geojson_path = os.path.join(params["geojson_dir"], file_name)
                 convert_json_2_geojson(json_data = table_data, filename = geojson_path)
 
-            geojson_folder_path = params["geojson_dir"]
-            data, config = create_config_copy_like_config_setup_dbjsonfile(data_format = [".geojson"], schema_name = params["new_isochrone_schema"], geojson_path = geojson_folder_path )
-            print (f"this is data: {data}")
-            print (f"this is config: {config}")
-            create_schema(data = data, db_con= db_con,suffix = "" )
-            table_names_and_paths_and_schema = create_table_name(data = data, config = config, suffix = "")
-            print (f"this is table_names_and_paths_and_schema: {table_names_and_paths_and_schema}")
-            upload2db(upload_config = table_names_and_paths_and_schema, db_con = db_con)
-            print (f"Uploaded {table} to database")
+            # geojson_folder_path = params["geojson_dir"]
+            # data, config = create_config_copy_like_config_setup_dbjsonfile(data_format = [".geojson"], schema_name = params["new_isochrone_schema"], geojson_path = geojson_folder_path )
+            # print (f"this is data: {data}")
+            # print (f"this is config: {config}")
+            # create_schema(data = data, db_con= db_con,suffix = "" )
+            # table_names_and_paths_and_schema = create_table_name(data = data, config = config, suffix = "")
+            # print (f"this is table_names_and_paths_and_schema: {table_names_and_paths_and_schema}")
+            # upload2db(upload_config = table_names_and_paths_and_schema, db_con = db_con)
+            # print (f"Uploaded {table} to database")
             
             print ("Get otp isos is finished!")
             conn.commit()
-
-            
     except Exception as e:
-
-        print(f"Error: {e}")
+        print(f"Error in get_otp_isos: {e}")
         conn.rollback()
 
+def upload_fetched_isochrones_2_db(db_con, geojson_path, new_schema_name):
+    geojson_folder_path = params["geojson_dir"]
+    data, config = create_config_copy_like_config_setup_dbjsonfile(data_format = [".geojson"], schema_name = params["new_isochrone_schema"], geojson_path = geojson_folder_path )
+    print (f"this is data: {data}")
+    print (f"this is config: {config}")
+    create_schema(data = data, db_con= db_con,suffix = "" )
+    table_names_and_paths_and_schema = create_table_name(data = data, config = config, suffix = "")
+    print (f"this is table_names_and_paths_and_schema: {table_names_and_paths_and_schema}")
+    upload2db(upload_config = table_names_and_paths_and_schema, db_con = db_con)
+    print ("uploading to database succesful")
 
+            
 ############################################################################
 # 1. Geojson wird nicht korrekt erstellt, die [] ganz am Anfang und Ende müssen weg
 # 2. Es wird nur ein Polygon eingespeist und nicht alle von Hamburg
@@ -262,21 +270,25 @@ def get_otp_isos(db_con, params):
 ################################################################################
 with open ("C:\\Master\\GeoinfoPrj_Sem1\\Erreichbarkeitsanalyse\\fetch_data\\fetch_data_config.json", "r") as file:
     config = json.load(file)
-
-params = {
-    "url": config["fetch_otp"]["server_url"],
-    "new_isochrone_schema" : config["fetch_otp"]["new_isochrone_schema"],
-    "schema" : config["fetch_otp"]["schema"],
-    "geojson_dir": config["fetch_otp"]["geojson_dir"],
-    "mode": list(config["fetch_otp"]["calculation_params"]["mode"].keys())[0],
-    "speed": list(config["fetch_otp"]["calculation_params"]["mode"].values())[0],
-    "date": config["fetch_otp"]["calculation_params"]["date"],
-    "time": config["fetch_otp"]["calculation_params"]["time"],
-    "precision": config["fetch_otp"]["calculation_params"]["precisionMeters"],
-    "cutoff": config["fetch_otp"]["calculation_params"]["cutoffSec"]
-}
 db_con = connect2DB()
-get_otp_isos(db_con = db_con, params = params )
+geojson_path = config["fetch_otp"]["geojson_dir"]
+new_schema_name = config["fetch_otp"]["new_isochrone_schema"]
+for calc_set in config["fetch_otp"]["calculation_params"]:
+    params = {
+        "url": config["fetch_otp"]["server_url"],
+        "new_isochrone_schema" : config["fetch_otp"]["new_isochrone_schema"],
+        "schema" : config["fetch_otp"]["schema"],
+        "geojson_dir": config["fetch_otp"]["geojson_dir"],
+        "mode": list(calc_set["mode"].keys())[0],
+        "speed": list(calc_set["mode"].values())[0],
+        "date": calc_set["date"],
+        "time": calc_set["time"],
+        "precision": calc_set["precisionMeters"],
+        "cutoff": calc_set["cutoffSec"]
+    }
+
+    get_otp_isos(db_con = db_con, params = params )
+upload_fetched_isochrones_2_db(db_con = db_con, geojson_path = geojson_path, new_schema_name = new_schema_name)
 # only walk
 # http://localhost:8080/otp/routers/current/isochrone?algorithm=accSampling&fromPlace=53.59860878,9.99349447&mode=BICYCLE&bikeSpeed=4.916667&date=2024-12-12&time=10:00:00&precisionMeters=10&cutoffSec=900
 
