@@ -125,3 +125,6 @@ WICHTIG: Reihenfolge der Indikatoren MUSS gleich bleiben in der Config!!
 fetchApi auskommentieren --> ist noch auf 10 Features pro Tabelle eingestellt
 man muss fetchApi Skript separat callen --> vorher fetch data config Tabelle anpassen
 Dann die intersect Operationen kann man in main_data_processing callen, vorher drauf achten dass man config_data_processing angegeben hat
+
+To Do 14 FEB
+--> gucken ob die Intersect Ops funktionieren mit dem angepassten Fetch Data Code

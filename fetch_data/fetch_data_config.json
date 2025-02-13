@@ -7,7 +7,7 @@
     "calculation_params": [
       {
         "mode": {
-          "BICYCLE": 3
+          "BICYCLE": 3.54545
         },
         "date": "2024-12-12",
         "time": "10:00:00",
