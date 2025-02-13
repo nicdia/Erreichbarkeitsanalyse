@@ -1,0 +1,1724 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.00468,
+                    53.55291
+                ]
+            },
+            "properties": {
+                "name": "AllDent Zahnzentrum Hamburg",
+                "address": "Glockengießerwall 1, Hamburg",
+                "types": [
+                    "dentist",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.9,
+                "user_ratings_total": 2275
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.989545399999999,
+                    53.5482869
+                ]
+            },
+            "properties": {
+                "name": "Hamburg Smile | Zahnarzt Hamburg Innenstadt | Dr. Maximilian Donges & Kollegen",
+                "address": "Großer Burstah 25, Hamburg",
+                "types": [
+                    "dentist",
+                    "doctor",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 5,
+                "user_ratings_total": 68
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9884422,
+                    53.5542825
+                ]
+            },
+            "properties": {
+                "name": "Zahnarzt Hamburg - Dental21 (ehemals MVZ Dentalzentrum Hamburg Gänsemarkt GmbH)",
+                "address": "Poststraße 20, Hamburg",
+                "types": [
+                    "dentist",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 5,
+                "user_ratings_total": 199
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9886895,
+                    53.56455339999999
+                ]
+            },
+            "properties": {
+                "name": "Zahnarzt Hamburg - Dental21",
+                "address": "Rothenbaumchaussee 5, Hamburg",
+                "types": [
+                    "dentist",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.8,
+                "user_ratings_total": 328
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9983986,
+                    53.5501569
+                ]
+            },
+            "properties": {
+                "name": "Dentist Hamburg City - Z-24",
+                "address": "Speersort 8, Hamburg",
+                "types": [
+                    "dentist",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.9,
+                "user_ratings_total": 539
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0854637,
+                    53.65787899999999
+                ]
+            },
+            "properties": {
+                "name": "Zahnarztpraxis Alstertal - Dr. Pinto dos Santos",
+                "address": "Poppenbütteler Weg 234, Hamburg",
+                "types": [
+                    "dentist",
+                    "doctor",
+                    "health",
+                    "point_of_interest",
+                    "store",
+                    "establishment"
+                ],
+                "rating": 4.8,
+                "user_ratings_total": 30
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9967372,
+                    53.5508818
+                ]
+            },
+            "properties": {
+                "name": "Zahnarzt Hamburg - Dental21",
+                "address": "Kleine Rosenstr. 14 Europa Passage, Eingang, Mönckebergstraße, Hamburg",
+                "types": [
+                    "dentist",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.8,
+                "user_ratings_total": 241
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0646242,
+                    53.5730444
+                ]
+            },
+            "properties": {
+                "name": "Dr. Detlev Baumgarten",
+                "address": "Quarree 4, Hamburg",
+                "types": [
+                    "dentist",
+                    "health",
+                    "point_of_interest",
+                    "store",
+                    "establishment"
+                ],
+                "rating": 4.9,
+                "user_ratings_total": 177
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.960388199999999,
+                    53.5596082
+                ]
+            },
+            "properties": {
+                "name": "Zahnärztlicher Notdienst der kassenzahnärztlichen Vereinigung Hamburg",
+                "address": "Stresemannstraße 52, Hamburg",
+                "types": [
+                    "dentist",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.9,
+                "user_ratings_total": 165
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.967189999999999,
+                    53.56115
+                ]
+            },
+            "properties": {
+                "name": "Zahnarzt Hamburg - Dental21",
+                "address": "Sternstraße 105, Hamburg",
+                "types": [
+                    "dentist",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.8,
+                "user_ratings_total": 299
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.989832600000002,
+                    53.5577774
+                ]
+            },
+            "properties": {
+                "name": "Zahnarztpraxis Wonderful Smile Hamburg Innenstadt",
+                "address": "Colonnaden 51, Hamburg",
+                "types": [
+                    "dentist",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 5,
+                "user_ratings_total": 143
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0016519,
+                    53.5517526
+                ]
+            },
+            "properties": {
+                "name": "Zahnarztpraxis Dr. Elena Heinemann",
+                "address": "Spitalerstraße 16, Hamburg",
+                "types": [
+                    "dentist",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.9,
+                "user_ratings_total": 270
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9198703,
+                    53.6307355
+                ]
+            },
+            "properties": {
+                "name": "Zahnarztpraxis Schnelsen - Dr. Mehdi Solaty",
+                "address": "Wählingsweg 5, Hamburg",
+                "types": [
+                    "dentist",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.8,
+                "user_ratings_total": 91
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9998267,
+                    53.5512745
+                ]
+            },
+            "properties": {
+                "name": "Zahnärzte in der Hamburger City - Daria Niemietz",
+                "address": "Spitalerstraße 32, Hamburg",
+                "types": [
+                    "dentist",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.9,
+                "user_ratings_total": 164
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9447849,
+                    53.594463
+                ]
+            },
+            "properties": {
+                "name": "Zahnarztpraxis ZahnVitalis - Dr. Feridouni und Dr. Haribyan",
+                "address": "Julius-Vosseler-Straße 42, Hamburg",
+                "types": [
+                    "dentist",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 5,
+                "user_ratings_total": 101
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0761867,
+                    53.58895500000001
+                ]
+            },
+            "properties": {
+                "name": "Zahnarztpraxis Nekzai",
+                "address": "Tilsiter Str. 2, Hamburg",
+                "types": [
+                    "dentist",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.9,
+                "user_ratings_total": 117
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.987532999999999,
+                    53.5530142
+                ]
+            },
+            "properties": {
+                "name": "Medi-Kuss: Zahnärzte- und Ärzteteam in Hamburg",
+                "address": "Hohe Bleichen 10, Hamburg",
+                "types": [
+                    "dentist",
+                    "doctor",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.9,
+                "user_ratings_total": 137
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0104854,
+                    53.5823792
+                ]
+            },
+            "properties": {
+                "name": "Zahnärzte Mühlenkamp",
+                "address": "Mühlenkamp 43, Hamburg",
+                "types": [
+                    "dentist",
+                    "doctor",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 5,
+                "user_ratings_total": 165
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0767941,
+                    53.6169719
+                ]
+            },
+            "properties": {
+                "name": "Zahnarzt Hamburg Bramfeld - Dental21",
+                "address": "Seehofallee 3, Hamburg",
+                "types": [
+                    "dentist",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.8,
+                "user_ratings_total": 263
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9683576,
+                    53.5805784
+                ]
+            },
+            "properties": {
+                "name": "Zahnmedizin am Eppendorfer Weg",
+                "address": "Eppendorfer Weg 189, Hamburg",
+                "types": [
+                    "dentist",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.7,
+                "user_ratings_total": 34
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.1589794,
+                    53.6467797
+                ]
+            },
+            "properties": {
+                "name": "Zahnarztpraxis Hamburg Walddörfer Dr. Susanne Schmid",
+                "address": "Farmsener Landstraße 162, Hamburg",
+                "types": [
+                    "dentist",
+                    "doctor",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 5,
+                "user_ratings_total": 26
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.998345300000002,
+                    53.5500544
+                ]
+            },
+            "properties": {
+                "name": "Zahnarzt Notdienst Hamburg (Praxisintern) - Dr. P. Michaelis",
+                "address": "Speersort 8, Hamburg",
+                "types": [
+                    "dentist",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.9,
+                "user_ratings_total": 30
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0267798,
+                    53.5707932
+                ]
+            },
+            "properties": {
+                "name": "Zahnarzt Hamburg Mundsburg Dr. Wieben und Dr. Fleiner - Paropraxis | Parodontologie im Norden",
+                "address": "Winterhuder Weg 2, Hamburg",
+                "types": [
+                    "dentist",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.7,
+                "user_ratings_total": 37
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9897717,
+                    53.5650516
+                ]
+            },
+            "properties": {
+                "name": "Zahnarztpraxis Rotherbaum",
+                "address": "Rothenbaumchaussee 30, Hamburg",
+                "types": [
+                    "dentist",
+                    "doctor",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.9,
+                "user_ratings_total": 169
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.2074977,
+                    53.4929925
+                ]
+            },
+            "properties": {
+                "name": "Zahnikum - Bergedorf",
+                "address": "Alte Holstenstraße 23, Hamburg",
+                "types": [
+                    "dentist",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.9,
+                "user_ratings_total": 205
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0429475,
+                    53.5966542
+                ]
+            },
+            "properties": {
+                "name": "FITDENTIST Zahnarztpraxis Hamburg | Dr. med. dent. Neda Rahimian",
+                "address": "Fuhlsbüttler Str. 257, Hamburg",
+                "types": [
+                    "dentist",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 5,
+                "user_ratings_total": 48
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.994731,
+                    53.54967869999999
+                ]
+            },
+            "properties": {
+                "name": "CityZahn.de – Zahnarztpraxis Hamburg Innenstadt Dr. Ron Tehsmer",
+                "address": "Pelzerstraße 4, Hamburg",
+                "types": [
+                    "dentist",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.7,
+                "user_ratings_total": 77
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.981594099999999,
+                    53.545924
+                ]
+            },
+            "properties": {
+                "name": "Herr Dr. med. dent. Thomas Werning",
+                "address": "Schaarsteinwegsbrücke 2, Hamburg",
+                "types": [
+                    "dentist",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.8,
+                "user_ratings_total": 34
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9948538,
+                    53.5820588
+                ]
+            },
+            "properties": {
+                "name": "Dr. med. dent. Harold Eymer | Zahnarztpraxis an der Alster",
+                "address": "Heilwigstraße 26, Hamburg",
+                "types": [
+                    "dentist",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.8,
+                "user_ratings_total": 66
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.1551464,
+                    53.6038428
+                ]
+            },
+            "properties": {
+                "name": "P2 Dental Zahnarztpraxis Dres. Precht & Kollegen | Zahnarzt Hamburg Rahlstedt",
+                "address": "Rahlstedter Bahnhofstraße 23, Hamburg",
+                "types": [
+                    "dentist",
+                    "doctor",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.8,
+                "user_ratings_total": 37
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.8886986,
+                    53.57559089999999
+                ]
+            },
+            "properties": {
+                "name": "Dr.med.dent. Michael Petersson dentist",
+                "address": "Albert-Einstein-Ring 8-10, Hamburg",
+                "types": [
+                    "dentist",
+                    "doctor",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 5,
+                "user_ratings_total": 109
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9801251,
+                    53.5549027
+                ]
+            },
+            "properties": {
+                "name": "Zahnmedizin an der Musikhalle - Michael Ennen & Dres. Neumann",
+                "address": "Johannes-Brahms-Platz 9, Hamburg",
+                "types": [
+                    "dentist",
+                    "doctor",
+                    "health",
+                    "point_of_interest",
+                    "store",
+                    "establishment"
+                ],
+                "rating": 5,
+                "user_ratings_total": 23
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9978536,
+                    53.55038099999999
+                ]
+            },
+            "properties": {
+                "name": "CITYMEDent - Zahnarzt Hamburg Innenstadt",
+                "address": "Kreuslerstraße 10, Hamburg",
+                "types": [
+                    "dentist",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.8,
+                "user_ratings_total": 140
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9879888,
+                    53.5550685
+                ]
+            },
+            "properties": {
+                "name": "Dr. Maryam Taleh und Team, Ästhetische Zahnmedizin am Gänsemarkt in Hamburg",
+                "address": "Gänsemarkt 33, Hamburg",
+                "types": [
+                    "dentist",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.7,
+                "user_ratings_total": 70
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9778942,
+                    53.5725224
+                ]
+            },
+            "properties": {
+                "name": "Zahnarztpraxis Grindelberg Dr. Lichte",
+                "address": "Grindelberg 1, Hamburg",
+                "types": [
+                    "dentist",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.9,
+                "user_ratings_total": 100
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9844191,
+                    53.6038851
+                ]
+            },
+            "properties": {
+                "name": "Dr. Leila Saki-Amirzada",
+                "address": "Borsteler Chaussee 17, Hamburg",
+                "types": [
+                    "dentist",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 5,
+                "user_ratings_total": 30
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.983535999999999,
+                    53.59656889999999
+                ]
+            },
+            "properties": {
+                "name": "Zahnarztpraxis Ghafoor & Kollegen Eppendorf",
+                "address": "Tarpenbekstraße 75 - 77, Hamburg",
+                "types": [
+                    "dentist",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.9,
+                "user_ratings_total": 36
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0496121,
+                    53.5873696
+                ]
+            },
+            "properties": {
+                "name": "Praxis Dr. med. dent. Mathias Bahr",
+                "address": "Steilshooper Str. 54, Hamburg",
+                "types": [
+                    "dentist",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 5,
+                "user_ratings_total": 29
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9923732,
+                    53.54184859999999
+                ]
+            },
+            "properties": {
+                "name": "Zahnarztpraxis Am Kaiserkai",
+                "address": "Am Kaiserkai 4, Hamburg",
+                "types": [
+                    "dentist",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.7,
+                "user_ratings_total": 59
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0416623,
+                    53.57979150000001
+                ]
+            },
+            "properties": {
+                "name": "Zahnarztpraxis Irina Konradi – Ästhetik, Implantologie & Zahnersatz",
+                "address": "Dehnhaide 1, Hamburg",
+                "types": [
+                    "dentist",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.9,
+                "user_ratings_total": 60
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9956576,
+                    53.5515591
+                ]
+            },
+            "properties": {
+                "name": "Praxis Europapassage Dr. Ghaussy & Partner - Endodontologie",
+                "address": "Hermannstraße 22, Hamburg",
+                "types": [
+                    "dentist",
+                    "point_of_interest",
+                    "health",
+                    "establishment"
+                ],
+                "rating": 5,
+                "user_ratings_total": 21
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.998345300000002,
+                    53.5500544
+                ]
+            },
+            "properties": {
+                "name": "Dr. med. dent. Cyrus Khorram",
+                "address": "Speersort 8, Hamburg",
+                "types": [
+                    "dentist",
+                    "point_of_interest",
+                    "health",
+                    "establishment"
+                ],
+                "rating": 5,
+                "user_ratings_total": 56
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0111538,
+                    53.55752570000001
+                ]
+            },
+            "properties": {
+                "name": "Zahnarztpraxis Alsterschnute - Nilgün und Jülide Cakaloglu",
+                "address": "Lange Reihe 55, Hamburg",
+                "types": [
+                    "dentist",
+                    "point_of_interest",
+                    "health",
+                    "establishment"
+                ],
+                "rating": 4.8,
+                "user_ratings_total": 56
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9612112,
+                    53.59970020000001
+                ]
+            },
+            "properties": {
+                "name": "Dr. Jörg Sebastian Metz",
+                "address": "Vogt-Wells-Straße 18, Hamburg",
+                "types": [
+                    "dentist",
+                    "point_of_interest",
+                    "health",
+                    "establishment"
+                ],
+                "rating": 4.8,
+                "user_ratings_total": 22
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9880466,
+                    53.5507431
+                ]
+            },
+            "properties": {
+                "name": "Dentist Hamburg Mitte | City - Dr. Armin Hacker",
+                "address": "Neuer Wall 72, Hamburg",
+                "types": [
+                    "dentist",
+                    "point_of_interest",
+                    "health",
+                    "establishment"
+                ],
+                "rating": 4.8,
+                "user_ratings_total": 29
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0441879,
+                    53.5911517
+                ]
+            },
+            "properties": {
+                "name": "Dental practice Barmbek Dr. S. Heuer",
+                "address": "Fuhlsbüttler Str. 145, Hamburg",
+                "types": [
+                    "dentist",
+                    "point_of_interest",
+                    "health",
+                    "establishment"
+                ],
+                "rating": 4.9,
+                "user_ratings_total": 97
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0438818,
+                    53.59404379999999
+                ]
+            },
+            "properties": {
+                "name": "Zahnarztpraxis Patrick Frehland Hamburg Barmbek",
+                "address": "Fuhlsbüttler Str. 171, Hamburg",
+                "types": [
+                    "dentist",
+                    "point_of_interest",
+                    "health",
+                    "establishment"
+                ],
+                "rating": 4.9,
+                "user_ratings_total": 77
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0081045,
+                    53.5811848
+                ]
+            },
+            "properties": {
+                "name": "European CMD Centre - LOVE YOUR SMILE by HF - Dr. med.dent. Hamide Farshi, M.D. Sc.",
+                "address": "Poelchaukamp 22, Hamburg",
+                "types": [
+                    "dentist",
+                    "point_of_interest",
+                    "health",
+                    "establishment"
+                ],
+                "rating": 4.9,
+                "user_ratings_total": 98
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0675089,
+                    53.5725393
+                ]
+            },
+            "properties": {
+                "name": "Zahnzentrum Wandsbek | Zahnarzt Wandsbek Kegham Allahverdian",
+                "address": "Wandsbeker Marktstraße 97-99, Hamburg",
+                "types": [
+                    "dentist",
+                    "point_of_interest",
+                    "health",
+                    "establishment"
+                ],
+                "rating": 4.8,
+                "user_ratings_total": 108
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.973386,
+                    53.59011599999999
+                ]
+            },
+            "properties": {
+                "name": "Zahnarztpraxis im Spectrum am UKE - Dr. Timmermann & Kollegen",
+                "address": "Spectrum am UKE, Martinistrasse 64, Hamburg",
+                "types": [
+                    "dentist",
+                    "doctor",
+                    "point_of_interest",
+                    "health",
+                    "establishment"
+                ],
+                "rating": 4.7,
+                "user_ratings_total": 80
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0591468,
+                    53.59394349999999
+                ]
+            },
+            "properties": {
+                "name": "Dr. Ghaussy & Partner",
+                "address": "Bramfelder Ch 1, Hamburg",
+                "types": [
+                    "dentist",
+                    "point_of_interest",
+                    "health",
+                    "establishment"
+                ],
+                "rating": 4.8,
+                "user_ratings_total": 63
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0232593,
+                    53.553133
+                ]
+            },
+            "properties": {
+                "name": "Zahnarztpraxis Dr. Philipp Portmann und Dr. Norbert Lehmbäcker",
+                "address": "Beim Strohhause 34, Hamburg",
+                "types": [
+                    "dentist",
+                    "point_of_interest",
+                    "health",
+                    "establishment"
+                ],
+                "rating": 5,
+                "user_ratings_total": 39
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.1316335,
+                    53.5888067
+                ]
+            },
+            "properties": {
+                "name": "Al Dente-Praxis für Zahnheilkunde Zahnarztpraxis Wandsbek Tonndorf Jenfeld Rahlstedt",
+                "address": "Tonndorfer Hauptstraße 124, Hamburg",
+                "types": [
+                    "dentist",
+                    "doctor",
+                    "point_of_interest",
+                    "health",
+                    "establishment"
+                ],
+                "rating": 4.8,
+                "user_ratings_total": 75
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.927411,
+                    53.55712399999999
+                ]
+            },
+            "properties": {
+                "name": "Zahnarzt Hamburg Ottensen Dr. Flüs Dr. Janssen - Zahnarztpraxis in Hamburg Altona/Ottensen/Bahrenfeld",
+                "address": "Völckersstraße 8, Hamburg",
+                "types": [
+                    "dentist",
+                    "point_of_interest",
+                    "health",
+                    "establishment"
+                ],
+                "rating": 4.5,
+                "user_ratings_total": 32
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9984384,
+                    53.55015890000001
+                ]
+            },
+            "properties": {
+                "name": "DENTISTA HAMBURG",
+                "address": "Speersort 8, Hamburg",
+                "types": [
+                    "dentist",
+                    "point_of_interest",
+                    "health",
+                    "establishment"
+                ],
+                "rating": 4.8,
+                "user_ratings_total": 22
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.989560899999999,
+                    53.5542934
+                ]
+            },
+            "properties": {
+                "name": "Ihr Zahnarzt in Hamburg am Gänsemarkt | Kompetenz-Zentrum für Zahnmedizin",
+                "address": "Gerhofstraße 18, Hamburg",
+                "types": [
+                    "dentist",
+                    "doctor",
+                    "point_of_interest",
+                    "health",
+                    "establishment"
+                ],
+                "rating": 4.4,
+                "user_ratings_total": 106
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0144252,
+                    53.5801064
+                ]
+            },
+            "properties": {
+                "name": "Zahnarzt Zentren Hamburg - Uhlenhorst",
+                "address": "Hans-Henny-Jahnn-Weg 19, Hamburg",
+                "types": [
+                    "dentist",
+                    "point_of_interest",
+                    "health",
+                    "establishment"
+                ],
+                "rating": 4.9,
+                "user_ratings_total": 35
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0273259,
+                    53.551285
+                ]
+            },
+            "properties": {
+                "name": "Dental office Berliner Bogen",
+                "address": "Anckelmannspl. 1, Hamburg",
+                "types": [
+                    "dentist",
+                    "point_of_interest",
+                    "health",
+                    "establishment"
+                ],
+                "rating": 4.6,
+                "user_ratings_total": 32
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.2069224,
+                    53.4907854
+                ]
+            },
+            "properties": {
+                "name": "ZahnKunst - Dr. med. dent. K. Maroofi M.Sc. & Kollegen",
+                "address": "Herzg-Crl-Friedrich-Pl 1, Hamburg",
+                "types": [
+                    "dentist",
+                    "point_of_interest",
+                    "health",
+                    "establishment"
+                ],
+                "rating": 5,
+                "user_ratings_total": 106
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.1613196,
+                    53.6186076
+                ]
+            },
+            "properties": {
+                "name": "Zahnarzt Dr. Sven Marx - Rahlstedt/Hamburg",
+                "address": "Meiendorfer Str. 44, Hamburg",
+                "types": [
+                    "dentist",
+                    "point_of_interest",
+                    "health",
+                    "establishment"
+                ],
+                "rating": 5,
+                "user_ratings_total": 121
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0509444,
+                    53.5577204
+                ]
+            },
+            "properties": {
+                "name": "Zahnarzt am Hammer Park",
+                "address": "Carl-Petersen-Straße 101, Hamburg",
+                "types": [
+                    "dentist",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.8,
+                "user_ratings_total": 104
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9938892,
+                    53.5418063
+                ]
+            },
+            "properties": {
+                "name": "Zentrum für Zahnheilkunde Hamburg HafenCity",
+                "address": "Großer Grasbrook 9, Hamburg",
+                "types": [
+                    "dentist",
+                    "doctor",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.6,
+                "user_ratings_total": 51
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9860382,
+                    53.5522515
+                ]
+            },
+            "properties": {
+                "name": "Dr. Michael von Uexküll - UEXDENT - anspruchsvolle Zahnmedizin",
+                "address": "Große Bleichen 68, Hamburg",
+                "types": [
+                    "dentist",
+                    "point_of_interest",
+                    "health",
+                    "establishment"
+                ],
+                "rating": 5,
+                "user_ratings_total": 38
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.932603199999999,
+                    53.5523408
+                ]
+            },
+            "properties": {
+                "name": "Zahnarztpraxis im Mercado Altona / Dr. Azimian & Kollegen",
+                "address": "Ottenser Hauptstraße 10, Hamburg",
+                "types": [
+                    "dentist",
+                    "point_of_interest",
+                    "health",
+                    "establishment"
+                ],
+                "rating": 4.7,
+                "user_ratings_total": 43
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.935459999999999,
+                    53.55136
+                ]
+            },
+            "properties": {
+                "name": "Zahnarztpraxis im Kaiserhof Hamburg - Dr. Münster",
+                "address": "Paul-Nevermann-Platz 5, Hamburg",
+                "types": [
+                    "dentist",
+                    "health",
+                    "point_of_interest",
+                    "store",
+                    "establishment"
+                ],
+                "rating": 4.6,
+                "user_ratings_total": 74
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.898453499999999,
+                    53.5694039
+                ]
+            },
+            "properties": {
+                "name": "Zahnarztpraxis Mundwerk Hamburg",
+                "address": "Theodorstraße 42-90/Haus 3, Hamburg",
+                "types": [
+                    "dentist",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.4,
+                "user_ratings_total": 60
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9107867,
+                    53.5598489
+                ]
+            },
+            "properties": {
+                "name": "Zahnklinik - MVZ Dentologicum 290",
+                "address": "Friedensallee 290, Hamburg",
+                "types": [
+                    "dentist",
+                    "doctor",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.5,
+                "user_ratings_total": 120
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.9654282,
+                    53.5473777
+                ]
+            },
+            "properties": {
+                "name": "Zahnarztzentrum Astraturm",
+                "address": "Zirkusweg 2, Hamburg",
+                "types": [
+                    "dentist",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.9,
+                "user_ratings_total": 163
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0340247,
+                    53.5641364
+                ]
+            },
+            "properties": {
+                "name": "Zahnarzt- und Prophylaxepraxis Tania Emad (M.Sc.)",
+                "address": "Lübecker Str. 143, Hamburg",
+                "types": [
+                    "dentist",
+                    "point_of_interest",
+                    "health",
+                    "establishment"
+                ],
+                "rating": 4.9,
+                "user_ratings_total": 102
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.1253221,
+                    53.57074799999999
+                ]
+            },
+            "properties": {
+                "name": "Hanse dental | HAMBURG Dr. Janke & Partner",
+                "address": "Rodigallee 250, Hamburg",
+                "types": [
+                    "dentist",
+                    "doctor",
+                    "point_of_interest",
+                    "health",
+                    "establishment"
+                ],
+                "rating": 4.7,
+                "user_ratings_total": 64
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.1676542,
+                    53.6279414
+                ]
+            },
+            "properties": {
+                "name": "Zahnärzte Meiendorfer Höfe | Dr. Schila Ranjbaryan und Daniela Ranjbaryan",
+                "address": "Spitzbergenweg 34A, Hamburg",
+                "types": [
+                    "dentist",
+                    "point_of_interest",
+                    "health",
+                    "establishment"
+                ],
+                "rating": 4.9,
+                "user_ratings_total": 93
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.2042416,
+                    53.4879785
+                ]
+            },
+            "properties": {
+                "name": "AllDent Zahnzentrum Hamburg Bergedorf",
+                "address": "Weidenbaumsweg 55, Hamburg",
+                "types": [
+                    "dentist",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.9,
+                "user_ratings_total": 259
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0647304,
+                    53.5718793
+                ]
+            },
+            "properties": {
+                "name": "Dental office Wandsbek market - Dr.Laumann & Stüber",
+                "address": "Wandsbeker Königstraße 6, Hamburg",
+                "types": [
+                    "dentist",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 4.7,
+                "user_ratings_total": 145
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.0568431,
+                    53.5692901
+                ]
+            },
+            "properties": {
+                "name": "Zahnarztpraxis Saba Al-Dulaimi",
+                "address": "Wandsbeker Chaussee 224, Hamburg",
+                "types": [
+                    "dentist",
+                    "health",
+                    "point_of_interest",
+                    "store",
+                    "establishment"
+                ],
+                "rating": 4.8,
+                "user_ratings_total": 22
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.985915199999999,
+                    53.5563711
+                ]
+            },
+            "properties": {
+                "name": "Zahnärzte Hamburg City Dres Adam Friedrich Brinkmann",
+                "address": "Parkplätze in der Tiefgarage vorhanden, Drehbahn 7, Hamburg",
+                "types": [
+                    "dentist",
+                    "doctor",
+                    "health",
+                    "point_of_interest",
+                    "establishment"
+                ],
+                "rating": 5,
+                "user_ratings_total": 25
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.871438600000001,
+                    53.5713037
+                ]
+            },
+            "properties": {
+                "name": "Zahnarztpraxis Flottbeker Mühle - Hamburg",
+                "address": "Osdorfer Landstraße 20, Hamburg",
+                "types": [
+                    "dentist",
+                    "doctor",
+                    "health",
+                    "point_of_interest",
+                    "store",
+                    "establishment"
+                ],
+                "rating": 4.5,
+                "user_ratings_total": 70
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.00625,
+                    53.607808
+                ]
+            },
+            "properties": {
+                "name": "Zahnarzt Dr. med. dent. Andreas Saal | Implantologie in Hamburg Alsterdorf",
+                "address": "Alsterdorfer Str. 261, Hamburg",
+                "types": [
+                    "dentist",
+                    "doctor",
+                    "health",
+                    "point_of_interest",
+                    "store",
+                    "establishment"
+                ],
+                "rating": 4.8,
+                "user_ratings_total": 104
+            }
+        }
+    ]
+}

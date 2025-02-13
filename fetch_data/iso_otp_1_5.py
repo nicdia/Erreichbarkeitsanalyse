@@ -262,6 +262,7 @@ def get_otp_isos(db_con, params):
 ################################################################################
 with open ("C:\\Master\\GeoinfoPrj_Sem1\\Erreichbarkeitsanalyse\\fetch_data\\fetch_data_config.json", "r") as file:
     config = json.load(file)
+
 params = {
     "url": config["fetch_otp"]["server_url"],
     "new_isochrone_schema" : config["fetch_otp"]["new_isochrone_schema"],
