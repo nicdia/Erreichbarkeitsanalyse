@@ -307,8 +307,8 @@ for calc_set in config["fetch_otp"]["calculation_params"]:
         "cutoff": calc_set["cutoffSec"]
     }
 
-    get_otp_isos(db_con = db_con, params = params )
-#upload_fetched_isochrones_2_db(db_con = db_con, geojson_path = geojson_path, new_schema_name = new_schema_name)
+    #get_otp_isos(db_con = db_con, params = params )
+upload_fetched_isochrones_2_db(db_con = db_con, geojson_path = geojson_path, new_schema_name = new_schema_name)
 # only walk
 # http://localhost:8080/otp/routers/current/isochrone?algorithm=accSampling&fromPlace=53.59860878,9.99349447&mode=BICYCLE&bikeSpeed=4.916667&date=2024-12-12&time=10:00:00&precisionMeters=10&cutoffSec=900
 

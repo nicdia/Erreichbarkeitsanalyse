@@ -31,11 +31,11 @@ def main_processing():
     #       union_tables(db_con, union_config)
     
     if intersect_config:
-        #transform_otp_fetch_to_25832(intersect_settings= intersect_config, db_con=db_con)
+        transform_otp_fetch_to_25832(intersect_settings= intersect_config, db_con=db_con)
         for run in intersect_config:
             print (f"this is run: {run}")
             intersect_buildings_isochrones( run, db_con)
-            execute_intersect_count_adding (run, db_con, "10Feb")
+            execute_intersect_count_adding (run, db_con, "final")
 
 
 

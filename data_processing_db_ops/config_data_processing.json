@@ -86,25 +86,9 @@
     },
     "isochrone_building_intersection": [
       {
-        "keyword": "54311223",
-        "source_schema": "automated_otp_isochrones_10fts_13feb",
-        "target_schema": "automated_intersect_13feb",
-        "wohngebaeude_table": "flurstuecke.wohngebaeude",
-        "score_system": {
-          "grundschulen": 5,
-          "sporthallen": 4,
-          "spielplatz": 3,
-          "kinderaerzte": 1,
-          "kinderzahnaerzte": 1,
-          "parks": 2,
-          "wald": 2,
-          "ausserschulangebote": 3
-        }
-      },
-      {
         "keyword": "11111111",
-        "source_schema": "automated_otp_isochrones_10fts_13feb",
-        "target_schema": "automated_intersect_13feb",
+        "source_schema": "isos_students_walk",
+        "target_schema": "isos_students_walk_intersected",
         "wohngebaeude_table": "flurstuecke.wohngebaeude",
         "score_system": {
           "grundschulen": 1,

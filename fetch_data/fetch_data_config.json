@@ -2,8 +2,8 @@
   "fetch_otp": {
     "server_url": "http://localhost:8080/otp/routers/current/isochrone",
     "schema": "fertige_studenten",
-    "new_isochrone_schema": "automated_otp_isochrones_10ft_15feb_kid",
-    "geojson_dir": "C:\\Master\\GeoinfoPrj_Sem1\\OTPAbfragen\\Bicycle\\students",
+    "new_isochrone_schema": "isos_students_walk",
+    "geojson_dir": "C:\\Master\\GeoinfoPrj_Sem1\\OTPAbfragen\\Walk\\students",
     "calculation_params": [
       {
         "mode": {
