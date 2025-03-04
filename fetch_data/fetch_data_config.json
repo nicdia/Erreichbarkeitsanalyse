@@ -1,34 +1,34 @@
 {
   "fetch_otp": {
     "server_url": "http://localhost:8080/otp/routers/current/isochrone",
-    "schema": "fertigepunktlayer_kids",
-    "new_isochrone_schema": "automated_otp_isochrones_10fts_13feb",
-    "geojson_dir": "C:\\temp\\otpabfragen_13Feb",
+    "schema": "fertige_studenten",
+    "new_isochrone_schema": "automated_otp_isochrones_10ft_15feb_kid",
+    "geojson_dir": "C:\\Master\\GeoinfoPrj_Sem1\\OTPAbfragen\\Bicycle\\students",
     "calculation_params": [
       {
         "mode": {
-          "BICYCLE": 3.54545
+          "BICYCLE": 13.59
         },
         "date": "2024-12-12",
-        "time": "10:00:00",
+        "time": "07:45:00",
         "precisionMeters": 10,
         "cutoffSec": 900
       },
       {
         "mode": {
-          "BICYCLE": 4
+          "BICYCLE": 15.1
         },
         "date": "2024-12-12",
-        "time": "10:00:00",
+        "time": "07:45:00",
         "precisionMeters": 10,
         "cutoffSec": 900
       },
       {
         "mode": {
-          "BICYCLE": 5
+          "BICYCLE": 16.61
         },
         "date": "2024-12-12",
-        "time": "10:00:00",
+        "time": "07:45:00",
         "precisionMeters": 10,
         "cutoffSec": 900
       }

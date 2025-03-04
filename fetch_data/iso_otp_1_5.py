@@ -147,11 +147,19 @@ def print_progress_bar(iteration, total, prefix='', suffix='', length=50, fill='
 #         error_results[table] = []
 #         total_coords = len(cor_dict[table])
 #         current_coord_index = 0
+#         if "WALK" in mode:
+#             mode_speed = "walk"
+#         elif mode == "BICYCLE":
+#             mode_speed = "bike"
+#         else:
+#             mode = None
+#             print ("Check mode config because the speed param was set to None because it was not written WALK, TRANSIT or BICYCLE")
 
 #         for cor in cor_dict[table]:
 #             current_coord_index += 1
 #             print_progress_bar(current_coord_index, total_coords, prefix=f'Processing coordinates for table {table}:', suffix='Complete', length=50)
-#             request_url = f"{url}?algorithm=accSampling&fromPlace={cor[0][0]},{cor[0][1]}&mode={mode}&bikeSpeed={speed}&date={date}&time={time}&precisionMeters={precision}&cutoffSec={cutoff}"
+#             request_url = f"{url}?algorithm=accSampling&fromPlace={cor[0][0]},{cor[0][1]}&mode={mode}&{mode_speed}Speed={speed}&date={date}&time={time}&precisionMeters={precision}&cutoffSec={cutoff}"
+#             #print (f"This is request url: {request_url}")
 #             try: 
 #                 response = requests.get(request_url)
 #                 response.raise_for_status() 
@@ -179,16 +187,27 @@ def fetch_otp_api(cor_dict, url, precision, cutoff, mode, speed, date, time):
         error_results[table] = []
         total_coords = min(10, len(cor_dict[table]))  # Nur die ersten 10 Features berücksichtigen
         current_coord_index = 0
+        if "WALK" in mode:
+            mode_speed = "walk"
+        elif mode == "BICYCLE":
+            mode_speed = "bike"
+        else:
+            mode = None
+            print ("Check mode config because the speed param was set to None because it was not written WALK, TRANSIT or BICYCLE")
+
 
         for cor in cor_dict[table][:10]:  # Slice auf die ersten 10 Features
             current_coord_index += 1
             print_progress_bar(current_coord_index, total_coords, prefix=f'Processing coordinates for table {table}:', suffix='Complete', length=50)
-            request_url = f"{url}?algorithm=accSampling&fromPlace={cor[0][0]},{cor[0][1]}&mode={mode}&bikeSpeed={speed}&date={date}&time={time}&precisionMeters={precision}&cutoffSec={cutoff}"
+            request_url = f"{url}?algorithm=accSampling&fromPlace={cor[0][0]},{cor[0][1]}&mode={mode}&{mode_speed}Speed={speed}&date={date}&time={time}&precisionMeters={precision}&cutoffSec={cutoff}"
             try: 
                 response = requests.get(request_url)
                 response.raise_for_status() 
                 response_data = response.json()
                 results[table].append(response_data)
+                file_name = params["mode"].lower() + "_iso_" + str(params["speed"]).replace(".", "_") + "km_" + table.lower().replace(".", "_") + ".geojson"
+                geojson_path = os.path.join(params["geojson_dir"], file_name)
+                convert_json_2_geojson(json_data = results[table], filename = geojson_path)
             except requests.exceptions.RequestException as e:
                 print(f"Error fetching data for coordinates {cor} in table {table}: {e}")
                 results[table].append(None) 
@@ -229,10 +248,11 @@ def get_otp_isos(db_con, params):
             cor_dict = extract_cors(db_con=conn, schema = params["schema"])
             fetch_results, error_results = fetch_otp_api(cor_dict = cor_dict,url = url, precision = precision, cutoff= cutoff, mode = mode, speed = speed, date = date, time = time)
 
-            for table, table_data in fetch_results.items():
-                file_name = params["mode"].lower() + "_iso_" + str(params["speed"]).replace(".", "_") + "km_" + table.lower().replace(".", "_") + ".geojson"
-                geojson_path = os.path.join(params["geojson_dir"], file_name)
-                convert_json_2_geojson(json_data = table_data, filename = geojson_path)
+            # for table, table_data in fetch_results.items():
+                # file_name = params["mode"].lower() + "_iso_" + str(params["speed"]).replace(".", "_") + "km_" + table.lower().replace(".", "_") + ".geojson"
+                # geojson_path = os.path.join(params["geojson_dir"], file_name)
+                # convert_json_2_geojson(json_data = table_data, filename = geojson_path)
+                
 
             # geojson_folder_path = params["geojson_dir"]
             # data, config = create_config_copy_like_config_setup_dbjsonfile(data_format = [".geojson"], schema_name = params["new_isochrone_schema"], geojson_path = geojson_folder_path )
@@ -288,7 +308,7 @@ for calc_set in config["fetch_otp"]["calculation_params"]:
     }
 
     get_otp_isos(db_con = db_con, params = params )
-upload_fetched_isochrones_2_db(db_con = db_con, geojson_path = geojson_path, new_schema_name = new_schema_name)
+#upload_fetched_isochrones_2_db(db_con = db_con, geojson_path = geojson_path, new_schema_name = new_schema_name)
 # only walk
 # http://localhost:8080/otp/routers/current/isochrone?algorithm=accSampling&fromPlace=53.59860878,9.99349447&mode=BICYCLE&bikeSpeed=4.916667&date=2024-12-12&time=10:00:00&precisionMeters=10&cutoffSec=900
 

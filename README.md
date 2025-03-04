@@ -1,3 +1,6 @@
+OTP Server starten:
+java -Xmx8G -jar otp.jar --router current --graphs graphs --server
+
 WICHTIG:
 Daran denken wenn man eine neue DB erstellt Postgis Extension zu aktivieren! Alles andere ist automatisiert, man muss nur die configs richtig anpassenf
 
@@ -128,3 +131,5 @@ Dann die intersect Operationen kann man in main_data_processing callen, vorher d
 
 To Do 14 FEB
 --> gucken ob die Intersect Ops funktionieren mit dem angepassten Fetch Data Code
+
+--> TRANSIT, WALK, BICYCLE -->
