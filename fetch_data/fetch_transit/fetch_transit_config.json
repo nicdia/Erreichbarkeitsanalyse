@@ -1,13 +1,13 @@
 {
   "fetch_otp": {
     "server_url": "http://localhost:8080/otp/routers/current/isochrone",
-    "schema": "fertige_studenten",
-    "new_isochrone_schema": "isos_students_bicycle",
-    "geojson_dir": "C:\\Master\\GeoinfoPrj_Sem1\\OTPAbfragen\\Bicycle\\students",
+    "schema": "fertigepunktlayer_kids",
+    "new_isochrone_schema": "isos_kids_transit",
+    "geojson_dir": "C:\\Master\\GeoinfoPrj_Sem1\\OTPAbfragen\\Transit\\kids",
     "calculation_params": [
       {
         "mode": {
-          "BICYCLE": 13.59
+          "TRANSIT,WALK": 0.98
         },
         "date": "2024-12-12",
         "time": "07:45:00",
@@ -16,7 +16,7 @@
       },
       {
         "mode": {
-          "BICYCLE": 15.1
+          "TRANSIT,WALK": 1.29
         },
         "date": "2024-12-12",
         "time": "07:45:00",
@@ -25,7 +25,7 @@
       },
       {
         "mode": {
-          "BICYCLE": 16.61
+          "TRANSIT,WALK": 1.66
         },
         "date": "2024-12-12",
         "time": "07:45:00",

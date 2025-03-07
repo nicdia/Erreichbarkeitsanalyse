@@ -87,18 +87,18 @@
     "isochrone_building_intersection": [
       {
         "keyword": "11111111",
-        "source_schema": "isos_students_bicycle",
-        "target_schema": "isos_students_bicycle_intersected",
+        "source_schema": "isos_kids_walk",
+        "target_schema": "isos_kids_walk_intersected",
         "wohngebaeude_table": "flurstuecke.wohngebaeude",
         "score_system": {
-          "bars": 1,
-          "clubs": 1,
-          "hausaerzte": 1,
-          "zahnaerzte": 1,
-          "lebensmitteleinkauf": 1,
+          "grundschulen": 1,
+          "sporthallen": 1,
+          "spielplatz": 1,
+          "kinderaerzte": 1,
+          "kinderzahnaerzte": 1,
           "parks": 1,
-          "sport": 1,
-          "universitaet": 1
+          "wald": 1,
+          "ausserschulangebote": 1
         }
       }
     ]
