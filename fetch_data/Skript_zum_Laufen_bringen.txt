@@ -1,4 +1,7 @@
-1. in Skripten Config Pfade anpassen
-2. in bat Pfade zu den Skripten anpassen
+1. in Skripten Config Pfade anpassen - check
+2. in bat Pfade zu den Skripten anpassen - check 
 3. Die Configs selbst anpassen --> in data processing auch die namen bei score system!
-4. Die Pfade in main_data_processing anpassen
+4. Die Pfade in main_data_processing anpassen check
+OTP Server hochfahren
+env anpassen
+requests runterladen
