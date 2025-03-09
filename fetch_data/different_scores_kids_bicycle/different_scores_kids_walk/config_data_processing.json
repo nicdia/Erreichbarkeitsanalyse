@@ -1,0 +1,106 @@
+{
+  "table_processing": {
+    "geom_field": "geometry",
+    "attribute_filtering": {
+      "ausserschulangebote": {
+        "haus_der_jugend_meta": {
+          "attribute": "kinder_6_bis_unter_10_jahre",
+          "value": "Ja",
+          "new_table_name": "haus_d_jugend_6_10"
+        },
+
+        "jugendcafe_meta": {
+          "attribute": "kinder_6_bis_unter_10_jahre",
+          "value": "Ja",
+          "new_table_name": "jugendcafe_6_10"
+        },
+        "jugendklub_meta": {
+          "attribute": "kinder_6_bis_unter_10_jahre",
+          "value": "Ja",
+          "new_table_name": "jugendklub_6_10"
+        },
+        "jugendverband_meta": {
+          "attribute": "kinder_6_bis_unter_10_jahre",
+          "value": "Ja",
+          "new_table_name": "jugendverband_6_10"
+        },
+        "kindertreff_meta": {
+          "attribute": "kinder_6_bis_unter_10_jahre",
+          "value": "Ja",
+          "new_table_name": "kindertreff_6_10"
+        },
+        "spielhaus_meta": {
+          "attribute": "kinder_6_bis_unter_10_jahre",
+          "value": "Ja",
+          "new_table_name": "spielhaus_6_10"
+        },
+        "spielmobil_meta": {
+          "attribute": "kinder_6_bis_unter_10_jahre",
+          "value": "Ja",
+          "new_table_name": "spielmobil_6_10"
+        }
+      },
+      "schools": {
+        "staatliche_schulen_meta": {
+          "attribute": "kapitelbezeichnung",
+          "value": "Grundschulen",
+          "new_table_name": "grundschulen"
+        }
+      },
+      "spielflaechen": {
+        "bauspielplatz_meta": {
+          "attribute": "kinder_6_bis_unter_10_jahre",
+          "value": "Ja",
+          "new_table_name": "bauspielplatz_6_10"
+        }
+      }
+    },
+    "union_data": {
+      "natuererfahrung": {
+        "badegewaesser_meta": {
+          "name": "name",
+          "source": "source",
+          "geometry": "geometry"
+        },
+        "zentroide_bannwald_heuckenlock_meta": {
+          "name": "name",
+          "source": "source",
+          "geometry": "geometry"
+        },
+        "zentroide_bannwald_stadtwald_hamburg": {
+          "name": "name",
+          "source": "source",
+          "geometry": "geometry"
+        },
+        "zentroide_stadtwald_meta": {
+          "name": "foersterei",
+          "source": "source",
+          "geometry": "geometry"
+        },
+        "zentroide_uebriger_wald_meta": {
+          "name": "bezirk",
+          "source": "source",
+          "geometry": "geometry"
+        }
+      }
+    },
+    "isochrone_building_intersection": [
+      {
+        "keyword": "11111111",
+        "source_schema": "isos_kids_walk",
+        "target_schema": "isos_kids_walk_intersected",
+        "wohngebaeude_table": "flurstuecke.wohngebaeude",
+        "score_system": {
+          "grundschulen": 3,
+          "sporthallen": 2,
+          "spielplatz": 2,
+          "kinderaerzte": 1,
+          "kinderzahnaerzte": 1,
+          "parks": 2,
+          "wald": 2,
+          "ausserschulangebote": 2
+        }
+      }
+    ]
+  }
+}
