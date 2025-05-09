@@ -1,4 +1,4 @@
-This project was developed as part of a master's thesis. The objective was to analyze accessibility for two target groups in the context of the "15-minute city" concept, considering eight essential indicators for these groups. Three different modes of transport were evaluated and compared: walking, cycling, and public transport.
+This project was developed as part of a uni course. The objective was to analyze accessibility for two target groups in the context of the "15-minute city" concept, considering eight essential indicators for these groups. Three different modes of transport were evaluated and compared: walking, cycling, and public transport.
 
 This repository contains all the scripts used for the analysis. It is further divided into the functional sections of the workflow. All scripts utilize the SQL Alchemy library to interact with a locally running PostgreSQL database with the PostGIS extension. In general, the scripts dynamically construct queries for executing ELT and ETL processes.
 
